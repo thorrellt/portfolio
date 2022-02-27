@@ -21,7 +21,7 @@ body {
 header {
     display: flex;
     height: 10rem;
-    background: black;
+    background: rgba(0, 0, 0, .5);
     justify-content: right;
     align-items: center;
 }
@@ -68,6 +68,14 @@ header h1 span{
     margin-bottom: 0;
 }
 
+#video-bg {
+    position: fixed;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 nav {
     display: inline-block;
     width: auto;
@@ -77,7 +85,6 @@ nav {
     display: inline-block;
     width: auto;
     margin-top: .5rem;
-    background: black;
     list-style: none;
 }
 
