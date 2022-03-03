@@ -96,14 +96,50 @@ nav {
     display: inline-block;
     padding: 1rem 2rem;
     text-decoration: none;
+    -webkit-transition: all 0.4s ease;
+	transition: all 0.4s ease;
 }
 
 .nav-item a {
     color: white;
+    position: relative;
     font-size: 1.5rem;
     font-weight: 700;
     text-decoration: none;
+    padding-bottom: .25rem;
 }
+
+.nav-item a:after {
+	content: "";
+	position: absolute;
+	height: 2px;
+	background-color: white;
+	width: 50%;
+	left: 50%;
+    margin-top: 1rem;
+	bottom: 0;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+	-webkit-transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+  	transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+}
+
+
+.nav-item a:hover:after {
+	width: 100%;
+}
+
+.nav-item a:focus {
+    outline: none;
+	width: 100%;
+}
+
+.nav-item a:focus:after {
+    text-decoration: none;
+	width: 100%;
+}
+
 header {
     display: none;
 }
