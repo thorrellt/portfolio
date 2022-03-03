@@ -67,19 +67,30 @@ h2 {
     align-items: center;
 }
 
-#nav-bar h1{
+#nav-bar h2{
     height: 5rem;
     display: flex;
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
-    align-items:  center;
+    align-items:center;
     margin: 0;
     margin-left: 2%;
-    font-size: 2rem;
-    color: white;
-}   
+    font-size: 4rem;
+    font-weight: 700;
+
+
+}
+
+.shadow {
+    text-shadow: .25rem .125rem var(--red);
+    -webkit-text-stroke-width: 1px;
+    -moz-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    -moz-text-stroke-color: white;
+    color: transparent;
+}
 
 nav {
     display: inline-block;
@@ -124,7 +135,6 @@ nav {
 	-webkit-transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
   	transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
 }
-
 
 .nav-item a:hover:after {
 	width: 100%;
