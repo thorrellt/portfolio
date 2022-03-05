@@ -96,16 +96,12 @@ h2 {
     color: transparent;
 }
 
-nav {
-    display: inline-block;
-    width: auto;
-    text-align: center;
-    outline: black solid 3px;
-}
+
 .nav-list {
-    display: inline-block;
-    width: auto;
+    display: flex;
     list-style: none;
+    padding: 0;
+    outline: black solid 3px;
 }
 
 .nav-item {
