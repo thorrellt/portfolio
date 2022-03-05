@@ -161,19 +161,6 @@ header {
     /* display: none; */
 }
 
-header h2{
-    font-family: 'IBM Plex Mono', monospace;
-    color: white;
-    flex-basis: 100%;
-    text-align: center;
-    font-weight: 700;
-    /* outline: black solid 3px; */
-}
-
-header ul {
-    display: none;
-}
-
 .welcome-card {
     display: flex;
     flex-wrap: wrap;
@@ -181,14 +168,62 @@ header ul {
     width: 15em;
     min-width: 20rem;
     margin: 0 2rem;
-    height: 28.5rem;
-    align-content: center;
+    /* height: 28.5rem; */
     justify-content: center;
     background: radial-gradient(55% 60% at center, rgba(55, 56, 51, 1), rgba(55, 56, 51, 0));
-    outline: black solid 3px; 
+    /* outline: black solid 3px;  */
 }
 
 .welcome-card h1 {
+    align-self: flex-start;
+    margin: 3rem 2rem 0;
     color: white;
     text-align: center;
+    /* outline: black solid 3px;  */
+}
+
+
+
+.welcome-card h2{
+    font-family: 'IBM Plex Mono', monospace;
+    margin: 2rem 2rem;
+    color: white;
+    flex-basis: 100%;
+    text-align: center;
+    font-weight: 700;
+    align-self: center;
+    /* outline: black solid 3px; */
+}
+
+#contact-icons {
+    display: flex;
+    margin: 1rem 2rem;
+    width: 100%;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    align-self: flex-end;
+    margin-bottom: 1rem;
+    /* outline: black solid 3px; */
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 4.5rem;
+    min-height: 4.5rem;
+    /* outline: black solid 3px; */
+}
+
+.contact a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 2rem;
+    min-width: 3.375rem;
+    min-height: 3.375rem;
+    /* outline: black solid 3px; */
 }
