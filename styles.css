@@ -72,7 +72,8 @@ h2 {
     align-items: center;
 }
 
-#nav-bar h2{
+#nav-bar span{
+    font-family: 'IBM Plex Mono', monospace;
     height: 5rem;
     display: flex;
     position: absolute;
@@ -171,7 +172,7 @@ header {
     flex-wrap: wrap;
     align-self: center;
     font-size: 3.75rem;
-    transform: translate(0, 3rem);
+    transform: translate(0, 5rem);
     width: 15em;
     min-width: 20rem;
     margin: 0 2rem;
@@ -262,17 +263,18 @@ header {
     CONTENT
  **************/
 
-section {
+section,
+.thought-bubble {
     display: flex;
     min-width: 20rem;
+    width: 80%;
+    margin: 0 auto;
 }
  /**************
     ABOUT ME
  **************/
 .about-me-section {
     display: flex;
-    width: 80%;
-    margin: 0 auto;
     justify-content: center;
     /* outline: blue solid 3px; */
 }
@@ -336,7 +338,7 @@ section {
     padding-left: .5rem;
     /* outline: green solid 3px; */
 }
-.about-me-titleh1 span {
+.about-me-title h1 span {
     display: inline-block;
 }
 
@@ -353,4 +355,31 @@ section {
     margin-left: auto;
     /* outline: red solid 3px; */
     background-color: white;
+}
+.about-me p span{
+    font-family: 'IBM Plex Mono', monospace; 
+       
+}
+
+.about-me p .shadow{
+    text-shadow: .07rem .05rem var(--dark-olive);
+    -webkit-text-stroke-width: 1px;
+    -moz-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--red);
+    -moz-text-stroke-color: var(--red);
+    color: transparent;       
+}
+
+text-shadow: .25rem .125rem var(--red);
+-webkit-text-stroke-width: 1px;
+-moz-text-stroke-width: 1px;
+-webkit-text-stroke-color: white;
+-moz-text-stroke-color: white;
+color: transparent;
+}
+
+
+.thought-bubble {
+    aspect-ratio: 5/1;
+
 }
