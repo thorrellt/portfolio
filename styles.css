@@ -168,50 +168,54 @@ h2 {
 header {
     display: flex;
     flex-wrap: wrap;
-    /* align-items: center; */
     justify-content: center;
+    align-items: center;
+
     min-height: 100vh;
-    max-height: 100vh;
-    /* outline: black solid 3px; */
-    /* display: none; */
-    outline: green solid 3px;
+
+    /* outline: green solid 3px; */
 }
 
 .welcome-card {
     display: flex;
     flex-wrap: wrap;
-    align-self: center;
+    justify-content: center;
+    align-items: center;
+
     margin-block-start: min(40vw, 20vh);
     margin-inline: 5%;
-    justify-content: center;
     background: radial-gradient(55% 60% at center, rgba(55, 56, 51, 1), rgba(55, 56, 51, 0));
-    outline: red solid 3px; 
+
+    /* outline: red solid 3px;  */
 }
 
 .welcome-card h1 {
-    flex-basis: 100%;
-    justify-content: center;
     display: flex;
-    margin: 1rem 0rem 0;
-    outline: black solid 3px; 
+    justify-content: center;
+    flex-basis: 100%;
+    
+    margin-block: 0rem;
+
+    /* outline: black solid 3px;  */
 }
 
 
 .welcome-card h2{
     display: flex;
-    margin-block: 2rem;
-    outline: black solid 3px;
+
+    margin-block: min(5vh, 8vw);
+    /* outline: black solid 3px; */
 }
 
 #contact-icons {
     display: flex;
     flex-wrap: wrap;
-    flex-basis: 100%;
-    align-self: center;
     justify-content: center;
     align-items: center;
-    margin-block: 2rem 5rem;
-    outline: green solid 3px;
+    flex-basis: 100%;
+
+    margin-block: 2rem;
+    /* outline: green solid 3px; */
 }
 
 #contact-icons a{
@@ -219,25 +223,30 @@ header {
     justify-content: center;
     align-items: center;
     max-width: 100%;
-    margin-inline: 1.4rem;
 
+    margin-inline: max(4vw, 3vh);
 }
 
 #contact-icons a img{
     display: flex;
-    min-width: 2rem;
+    flex-grow: 1;
+
+    min-width: min(4vw, 7vh);
 }
+
 .container-down-arrow {
     display: flex;
     width: 100%;
     align-self: flex-end;
     justify-content: center;
+
     /* outline: black solid 3px; */
 }
 
 .container-down-arrow > img {
     width: 10vh;
     color: white;
+
     margin-bottom: 1vh;
 }
 
