@@ -401,18 +401,6 @@ section {
  /*******************
     EDUCATION SECTION
  *********************/
-.education {
-    display: flex;
-    flex-basis: 100%;
-    flex-direction: row;
-    /* background-color: var(--dark-olive); */
-    background-color: none;
-    overflow: hidden;
-    padding-inline: 0%;
-
-
-    /* outline: red solid 3px; */
-}
 
 .education-title {
     padding: .5rem 2rem;
@@ -421,12 +409,11 @@ section {
     margin-bottom: 0;
     background-color: var(--dark-olive);
     flex-basis: 100%;
-    /* min-width: fit-content; */
     max-height: fit-content;
     /* outline: green solid 3px; */
 }
 
-.education-card {
+#education .card {
     display: flex;
     flex-basis: 100%;
     flex-wrap: wrap;
@@ -440,7 +427,7 @@ section {
     padding-inline-start: 0%;
 }
 
-.education-card .degree {
+#degree {
     display: flex;
     flex-wrap: wrap;
     background: none;
@@ -455,12 +442,7 @@ section {
     /* outline: blue solid 3px; */
 }
 
-/* .education-card h4 {
-
-    outline: green solid 3px;
-} */
-
-.cs {
+#degree-field {
     font-size: clamp(1.8rem, 4rem, 2.75vw);
     display: block;
     color: black;
@@ -473,15 +455,7 @@ section {
     /* outline: green solid 3px; */
 }
 
-
-.education-card p {
-    flex-basis: 100%;
-    padding-inline-start: 3vw;
-    line-height: 110%;
-
-}
-
-.education-card .degree .type {
+#degree-type {
     display: inline-block;
     padding-inline-start: 0%;
     transform: rotate(-15deg);
@@ -489,15 +463,21 @@ section {
     flex-basis: auto;
 
     /* outline: green solid 3px; */
+}
+
+#education p {
+    flex-basis: 100%;
+    padding-inline-start: 3vw;
+    line-height: 110%;
 
 }
 
-.college-name {
+#college-name {
     font-size: clamp(1rem, 1.15rem, 1.35rem);
     font-weight: 600;
 }
 
-.skills-title {
+#skills-title {
     margin-left: auto;
     border-color: white;
     color: white;
