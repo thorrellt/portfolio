@@ -323,27 +323,14 @@ section {
  /**************
     ABOUT ME
  **************/
-.about-me-section {
+#about-me {
     display: flex;
     flex-wrap: wrap;    
     justify-content: center;
     /* outline: blue solid 3px; */
 }
 
-/* .about-me,
-.education {
-    display: flex;
-    flex-wrap: wrap; 
-    flex-direction: row-reverse;
-    flex-basis: 100%;
-    justify-content: space-between;
-    
-    overflow: hidden;
-
-    outline: red solid 3px;
-}*/
-
-.about-me {
+#about-me .content-block {
     flex-direction: row-reverse;
     background-color: var(--light-gray);
     padding-inline-end: 0%;
@@ -353,34 +340,18 @@ section {
     float: right;
 }
 
-.about-me img {
-    display: flex;
-
-    /* flex: 1 0 min(25rem, 100%); */
-    max-width:min(rem, 100%);
-    /* max-height: 100rem; */
-    /* min-width: 20rem; */
-    /* max-height: 10rem; */
-    margin-inline: auto;
-    filter: drop-shadow(7px 7px 7px #666666);
-    -webkit-filter: drop-shadow(7px 7px 7px #666666);
-
-    /* outline: red solid 3px; */
-}
-
-.about-me article {
+#about-me article {
     display: flex;
     flex: 1 0 min(27rem, 100%);
     max-width: 50rem;
     
     align-content: start;
     flex-wrap: wrap;
-    /* max-height: 10rem; */
     overflow: hidden;
     /* outline: black solid 3px; */
 }
 
-.about-me-title,
+#about-me .title,
 .education-title {
     padding: .5rem 2rem;
     display: flex;
@@ -393,19 +364,11 @@ section {
     /* outline: green solid 3px; */
 }
 
-.about-me-title h3{
+#about-me  h3{
     display: flex;
 }
 
-.about-me-title h1:last-child {
-    padding-left: .5rem;
-    /* outline: green solid 3px; */
-}
-.about-me-title h1 span {
-    display: inline-block;
-}
-
-.about-me p {
+#about-me  p {
 
     margin-top: 0;
     margin-inline-start: clamp(.25rem, 2.5vw, 2.5rem);
@@ -419,18 +382,28 @@ section {
     /* outline: red solid 3px; */
     
 }
-.about-me p span{
+#about-me p span{
     font-family: 'IBM Plex Mono', monospace; 
        
 }
 
-.about-me p .shadow{
+#about-me  p .shadow{
     text-shadow: .07rem .05rem var(--dark-olive);
     -webkit-text-stroke-width: 1px;
     -moz-text-stroke-width: 1px;
     -webkit-text-stroke-color: var(--red);
     -moz-text-stroke-color: var(--red);
     color: transparent;       
+}
+
+#about-me .content-block img {
+    display: flex;
+    max-width:min(rem, 100%);
+    margin-inline: auto;
+    filter: drop-shadow(7px 7px 7px #666666);
+    -webkit-filter: drop-shadow(7px 7px 7px #666666);
+
+    /* outline: red solid 3px; */
 }
 
 
@@ -447,6 +420,18 @@ section {
 
 
     /* outline: red solid 3px; */
+}
+
+.education-title {
+    padding: .5rem 2rem;
+    display: flex;
+    margin-top: 1em;
+    margin-bottom: 0;
+    background-color: var(--dark-olive);
+    flex-basis: 100%;
+    /* min-width: fit-content; */
+    max-height: fit-content;
+    /* outline: green solid 3px; */
 }
 
 .education-card {
