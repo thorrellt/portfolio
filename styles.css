@@ -43,9 +43,25 @@ h3 {
 }
 
 h4 {
-    color: black;
-    font-size: clamp(.8rem, 1.5rem, 1.2vw);
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 1vw;
+    /* font-size: clamp(.8rem, 2rem, 4vw); */
+    letter-spacing: .3rem;
     font-weight: 400;
+    margin-inline-start: 1vw;
+    padding-block: .2rem;
+    border-bottom: .2rem solid var(--dark-olive);
+    flex-basis: 100%;
+
+    color: black;
+    flex-wrap: wrap;
+    line-height: 92%;
+    
+    max-width: fit-content;
+    
+    margin-block: 0;
+
     /* outline: black solid 3px; */
 }
 
@@ -426,10 +442,14 @@ section,
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - (400px - 100vw) * -.15), 0% 100%);
 }
 
-.education-title {
+.education-card .degree {
+    display: flex;
+    flex-wrap: wrap;
     background: none;
     padding: 0;
     padding-inline-start: 2vw;
+    flex-basis: 100%;
+    margin-block-start: 1%;
     /* padding-inline-start: clamp(.1rem, .5rem, 3vw); */
     
     justify-self: flex-start;
@@ -437,38 +457,45 @@ section,
     /* outline: blue solid 3px; */
 }
 
-.education-card h3 {
-    font-size: clamp(1.5rem, 4rem, 2vw);
-    margin: 0;
+/* .education-card h4 {
 
-    color: black;
-    flex-wrap: wrap;
-    line-height: 92%;
-    
-    max-width: fit-content;
-    
-    margin-block: 0;
-
-    /* outline: green solid 3px; */
-}
+    outline: green solid 3px;
+} */
 
 .cs {
-    font-size: clamp(1.8rem, 4rem, 3vw);
+    font-size: clamp(1.8rem, 4rem, 2.75vw);
     display: block;
     color: black;
-    padding-bottom: 5%;
+    flex-basis: 100%;
+    line-height: 85%;
+    margin-block-end: .75%;
     
     font-family: 'IBM Plex Mono', monospace;
 
     /* outline: green solid 3px; */
 }
 
-.education-card h4,
 .education-card h5,
-.education-card h6 {
+.education-card p {
     flex-basis: 100%;
-    padding-inline-start: 2vw;
-    line-height: 96%;
+    padding-inline-start: 3vw;
+    line-height: 110%;
 
+}
+
+.education-card .degree .type {
+    display: inline-block;
+    padding-inline-start: 0%;
+    transform: rotate(-15deg);
+    
+    flex-basis: auto;
+
+    /* outline: green solid 3px; */
+
+}
+
+.college-name {
+    font-size: clamp(1rem, 1.15rem, 1.35rem);
+    font-weight: 600;
 }
 
