@@ -42,6 +42,21 @@ h3 {
     font-weight: 900;
 }
 
+h4 {
+    color: black;
+    font-size: clamp(.8rem, 1.5rem, 1.2vw);
+    font-weight: 400;
+    /* outline: black solid 3px; */
+}
+
+h5 {
+    color: black;
+    font-size: clamp(1.1rem, 2rem, 1.4vw);
+    font-weight: 600;
+    /* outline: black solid 3px; */
+}
+
+
 p {
     font-size: clamp(1rem, 1.05rem, 1.15rem);
     /* font-size: 1.1rem; */
@@ -296,7 +311,8 @@ section,
     /* justify-content: space-between; */
     background-color: var(--light-gray);
     overflow: hidden;
-    outline: red solid 3px;
+
+    /* outline: red solid 3px; */
 }
 
 .drop-shadow {
@@ -314,7 +330,8 @@ section,
     margin-inline: auto;
     filter: drop-shadow(7px 7px 7px #666666);
     -webkit-filter: drop-shadow(7px 7px 7px #666666);
-    outline: red solid 3px;
+
+    /* outline: red solid 3px; */
 }
 
 .about-me article {
@@ -326,7 +343,7 @@ section,
     flex-wrap: wrap;
     /* max-height: 10rem; */
     overflow: hidden;
-    outline: black solid 3px;
+    /* outline: black solid 3px; */
 }
 
 .about-me-title,
@@ -388,27 +405,70 @@ section,
     display: flex;
     flex-basis: 100%;
     flex-direction: row;
-    background-color: var(--light-gray);
+    background-color: var(--dark-olive);
     overflow: hidden;
-    outline: red solid 3px;
+
+
+
+    /* outline: red solid 3px; */
 }
 
 .education-card {
     display: flex;
+    flex-basis: 100%;
     flex-wrap: wrap;
+    padding-bottom: 5vh;
+    background-color: var(--light-gray);
+    overflow: visible;
+    /*  target the 0% value to adjust triange  */
+    --rawBasis: calc(100% - (400px - 100vw) * -.2);
+    --widthBasis: max(0,var(--rawBasis));
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - (400px - 100vw) * -.15), 0% 100%);
+}
+
+.education-title {
+    background: none;
+    padding: 0;
+    padding-inline-start: 2vw;
+    /* padding-inline-start: clamp(.1rem, .5rem, 3vw); */
+    
+    justify-self: flex-start;
+
+    /* outline: blue solid 3px; */
 }
 
 .education-card h3 {
-    color: white;
-    flex-wrap: wrap;
-    outline: green solid 3px;
-    max-width: fit-content;
+    font-size: clamp(1.5rem, 4rem, 2vw);
+    margin: 0;
 
+    color: black;
+    flex-wrap: wrap;
+    line-height: 92%;
+    
+    max-width: fit-content;
+    
     margin-block: 0;
+
+    /* outline: green solid 3px; */
 }
 
 .cs {
-    color: white;
-    outline: green solid 3px;
+    font-size: clamp(1.8rem, 4rem, 3vw);
+    display: block;
+    color: black;
+    padding-bottom: 5%;
+    
     font-family: 'IBM Plex Mono', monospace;
+
+    /* outline: green solid 3px; */
 }
+
+.education-card h4,
+.education-card h5,
+.education-card h6 {
+    flex-basis: 100%;
+    padding-inline-start: 2vw;
+    line-height: 96%;
+
+}
+
