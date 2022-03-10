@@ -320,20 +320,20 @@ section {
 
 
 
- /**************
-    ABOUT ME
- **************/
+ /*******************
+    ABOUT ME SECTION
+ *********************/
 #about-me {
-    display: flex;
-    flex-wrap: wrap;    
     justify-content: center;
+
     /* outline: blue solid 3px; */
 }
 
 #about-me .content-block {
     flex-direction: row-reverse;
-    background-color: var(--light-gray);
+    
     padding-inline-end: 0%;
+    background-color: var(--light-gray);
 } 
 
 .drop-shadow {
@@ -342,25 +342,25 @@ section {
 
 #about-me article {
     display: flex;
-    flex: 1 0 min(27rem, 100%);
-    max-width: 50rem;
-    
-    align-content: start;
     flex-wrap: wrap;
+    flex: 1 0 min(27rem, 100%);
+
+    max-width: 50rem;
+    align-content: start;
+    
     overflow: hidden;
     /* outline: black solid 3px; */
 }
 
 #about-me .title,
 .education-title {
-    padding: .5rem 2rem;
     display: flex;
-    margin-top: 1em;
-    margin-bottom: 0;
-    background-color: var(--dark-olive);
     flex-basis: 100%;
-    /* min-width: fit-content; */
+    
     max-height: fit-content;
+    margin-block: 1em 0;
+    padding: .5rem 2rem;
+    background-color: var(--dark-olive);
     /* outline: green solid 3px; */
 }
 
@@ -369,37 +369,27 @@ section {
 }
 
 #about-me  p {
-
-    margin-top: 0;
+    flex-basis:max(90%, 25rem);
+    
+    margin-block-start: 0;
     margin-inline-start: clamp(.25rem, 2.5vw, 2.5rem);
     margin-inline-end: clamp(.5rem, 5vw, 5rem); 
-    
-    flex-basis:max(90%, 25rem);
-    align-content: flex-start;
     padding: 2rem 2rem;
-    /* margin-left: auto; */
     background-color: white;
     /* outline: red solid 3px; */
     
 }
 #about-me p span{
-    font-family: 'IBM Plex Mono', monospace; 
-       
+    font-family: 'IBM Plex Mono', monospace;        
 }
 
-#about-me  p .shadow{
-    text-shadow: .07rem .05rem var(--dark-olive);
-    -webkit-text-stroke-width: 1px;
-    -moz-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--red);
-    -moz-text-stroke-color: var(--red);
-    color: transparent;       
-}
 
 #about-me .content-block img {
     display: flex;
-    max-width:min(rem, 100%);
+
+    max-width:min(25rem, 100%);
     margin-inline: auto;
+
     filter: drop-shadow(7px 7px 7px #666666);
     -webkit-filter: drop-shadow(7px 7px 7px #666666);
 
@@ -408,7 +398,9 @@ section {
 
 
 
-
+ /*******************
+    EDUCATION SECTION
+ *********************/
 .education {
     display: flex;
     flex-basis: 100%;
