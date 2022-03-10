@@ -45,12 +45,14 @@ h3 {
 h4 {
     font-family: 'Montserrat', sans-serif;
     color: white;
-    font-size: 1vw;
-    /* font-size: clamp(.8rem, 2rem, 4vw); */
+    /* font-size: .75rem; */
+    font-size: clamp(.75rem, 2rem, 1.1vw);
     letter-spacing: .3rem;
     font-weight: 400;
-    margin-inline-start: 1vw;
-    padding-block: .2rem;
+    margin-inline: clamp(1rem, 2.5rem, 3vw);
+    /* padding-block: .2rem; */
+    padding-block: min(1.5vw, 1vh);
+    margin-block: 1vh;
     border-bottom: .2rem solid var(--dark-olive);
     flex-basis: 100%;
 
@@ -60,7 +62,7 @@ h4 {
     
     max-width: fit-content;
     
-    margin-block: 0;
+    
 
     /* outline: black solid 3px; */
 }
@@ -301,11 +303,21 @@ header {
     CONTENT
  **************/
 
-section,
-.thought-bubble {
+section {
     display: flex;
     margin-inline: clamp(.5rem, 5vw, 5rem);
+    flex-wrap: wrap;
 }
+
+.content-block {
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline: clamp(.5rem, 5vw, 5rem); 
+    flex-basis: 100%;
+    overflow: hidden;
+}
+
+
 
 
  /**************
@@ -318,18 +330,24 @@ section,
     /* outline: blue solid 3px; */
 }
 
-.about-me,
+/* .about-me,
 .education {
     display: flex;
     flex-wrap: wrap; 
     flex-direction: row-reverse;
     flex-basis: 100%;
-    /* justify-content: space-between; */
-    background-color: var(--light-gray);
+    justify-content: space-between;
+    
     overflow: hidden;
 
-    /* outline: red solid 3px; */
-}
+    outline: red solid 3px;
+}*/
+
+.about-me {
+    flex-direction: row-reverse;
+    background-color: var(--light-gray);
+    padding-inline-end: 0%;
+} 
 
 .drop-shadow {
     float: right;
@@ -390,12 +408,13 @@ section,
 .about-me p {
 
     margin-top: 0;
-
+    margin-inline-start: clamp(.25rem, 2.5vw, 2.5rem);
+    margin-inline-end: clamp(.5rem, 5vw, 5rem); 
     
     flex-basis:max(90%, 25rem);
     align-content: flex-start;
     padding: 2rem 2rem;
-    margin-left: auto;
+    /* margin-left: auto; */
     background-color: white;
     /* outline: red solid 3px; */
     
@@ -421,9 +440,10 @@ section,
     display: flex;
     flex-basis: 100%;
     flex-direction: row;
-    background-color: var(--dark-olive);
+    /* background-color: var(--dark-olive); */
+    background-color: none;
     overflow: hidden;
-
+    padding-inline: 0%;
 
 
     /* outline: red solid 3px; */
@@ -436,10 +456,11 @@ section,
     padding-bottom: 5vh;
     background-color: var(--light-gray);
     overflow: visible;
-    /*  target the 0% value to adjust triange  */
+    /*  target the 0% value to adjust triange
     --rawBasis: calc(100% - (400px - 100vw) * -.2);
-    --widthBasis: max(0,var(--rawBasis));
+    --widthBasis: max(0,var(--rawBasis)); */
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - (400px - 100vw) * -.15), 0% 100%);
+    padding-inline-start: 0%;
 }
 
 .education-card .degree {
@@ -475,7 +496,7 @@ section,
     /* outline: green solid 3px; */
 }
 
-.education-card h5,
+
 .education-card p {
     flex-basis: 100%;
     padding-inline-start: 3vw;
@@ -499,3 +520,8 @@ section,
     font-weight: 600;
 }
 
+.skills-title {
+    margin-left: auto;
+    border-color: white;
+    color: white;
+}
