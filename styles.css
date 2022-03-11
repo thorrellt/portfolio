@@ -44,7 +44,7 @@ h3 {
 
 h4 {
     font-family: 'Montserrat', sans-serif;
-    color: black
+    color: black;
     font-size: clamp(.75rem, 2rem, 1.1vw);
     letter-spacing: .3rem;
     font-weight: 400;
@@ -300,7 +300,6 @@ section {
     flex-wrap: wrap;
     flex-basis: 100%;
     padding-inline: clamp(.5rem, 5vw, 5rem); 
-    flex-basis: 100%;
     overflow: hidden;
 }
 
@@ -461,9 +460,6 @@ section {
     font-weight: 600;
 }
 
-div.content-block:nth-child(2){
-    justify-content: flex-end;
-}
 
 
  /**********************
@@ -471,6 +467,7 @@ div.content-block:nth-child(2){
  ************************/
 #skills .content-block {
     padding-inline: 0%;
+    justify-content: center;
 }
 
 #skills .title {
@@ -486,4 +483,26 @@ div.content-block:nth-child(2){
     color: white;
 
     /* outline: green solid 3px; */
+}
+
+#skill-icons {
+    
+    margin-top: 5rem;
+    max-width: 100%;
+    /* column-gap: 1%; */
+    row-gap: 5vh;
+}
+
+#skills .icon-container {
+    display: flex;
+    flex-basis: min(45vw, 19rem);
+    /* flex-basis: 17rem; */
+    min-width: 7em;
+    outline: green solid 3px;
+    justify-content: center;
+}
+
+#skills img {
+    display: flex;
+    max-width: min(5rem, 20vw);
 }
