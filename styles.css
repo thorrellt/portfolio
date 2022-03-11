@@ -532,6 +532,7 @@ section {
     flex-basis: 40%;
     max-width: 33%;
     min-width: 33%;
+    border: white 3px solid;
     /* outline: white 3px solid; */
  }
 
@@ -540,6 +541,7 @@ section {
     flex-basis: 100%;
     flex-wrap: wrap;
     max-width: 100%;
+    /* border: white 3px solid; */
  }
 
  #projects .card img {
@@ -548,6 +550,9 @@ section {
     flex-basis: 100%;
     flex-wrap: wrap;
     align-self: center;
+    outline: white 3px solid;
+    /* outline: white 3px solid; */
+    
  }
 
  .link {
@@ -555,6 +560,8 @@ section {
     flex-wrap: wrap;
     flex-basis: 50%;
     justify-content: center;
+    outline: white 3px solid;
+
 
     /* outline: white 3px solid; */
  }
@@ -566,10 +573,47 @@ section {
  }
 
  .stack {
-     display: flex;
-     flex-wrap: wrap;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    width: min-content;
+    /* outline: white 3px solid; */
+    justify-content: center;
+    align-items: center;
+    margin-inline: 2%;
+    align-self: center;
+    row-gap: 10vh;
+
  }
 
- .stack img {
+
+
+ .details {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    /* outline: white 3px solid; */
+ }
+
+.icon{
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* flex-basis: min(45vw, 19rem); */
+    flex-basis: 20%;
+    /* min-width: 7em; */
+    /* outline: green solid 3px; */
+    justify-content: center;
+}
+
+.stack img {
     max-width: min(2rem, 20vw);
+    /* outline: white 3px solid; */
+ }
+ .desc {
+    flex-basis: 85%;
+ }
+ #projects p {
+    color: white;
+    margin-block: 1rem;
+
  }
