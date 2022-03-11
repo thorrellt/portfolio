@@ -526,13 +526,23 @@ section {
     PROJECTS
  ************************/
 
+ #projects {
+     background-color: var(--light-gray);
+
+ }
+
+ #projects .content-block {
+     justify-content: space-around;
+
+ }
+
  .project {
     display: flex;
     flex-wrap: wrap;
     flex-basis: 40%;
     max-width: 33%;
     min-width: 33%;
-    border: white 3px solid;
+    border: black  3px solid;
     /* outline: white 3px solid; */
  }
 
@@ -550,7 +560,7 @@ section {
     flex-basis: 100%;
     flex-wrap: wrap;
     align-self: center;
-    outline: white 3px solid;
+    outline: black 3px solid;
     /* outline: white 3px solid; */
     
  }
@@ -560,7 +570,7 @@ section {
     flex-wrap: wrap;
     flex-basis: 50%;
     justify-content: center;
-    outline: white 3px solid;
+    outline: black 3px solid;
 
 
     /* outline: white 3px solid; */
@@ -586,7 +596,32 @@ section {
 
  }
 
+#projects > .title {
+    background-color: var(--dark-olive);
+    display: flex;
+    flex-basis: 100%;
+    margin-block: 2rem;
+    margin-inline-end: 50%;
+    justify-content: flex-end;
+    
 
+}
+
+ #projects h3 {
+    display: flex;
+    width: fit-content;
+    color: white;
+    padding: .5rem 4rem;
+    justify-self: flex-end;
+
+}
+
+#projects h4 {
+    width: fit-content;
+    color: black;
+    padding: .5rem 2rem;
+
+}
 
  .details {
     display: flex;
@@ -607,13 +642,14 @@ section {
 
 .stack img {
     max-width: min(2rem, 20vw);
+    color: black;
     /* outline: white 3px solid; */
  }
  .desc {
     flex-basis: 85%;
  }
  #projects p {
-    color: white;
+    color: black;
     margin-block: 1rem;
 
  }
