@@ -44,25 +44,11 @@ h3 {
 
 h4 {
     font-family: 'Montserrat', sans-serif;
-    color: white;
-    /* font-size: .75rem; */
+    color: black
     font-size: clamp(.75rem, 2rem, 1.1vw);
     letter-spacing: .3rem;
     font-weight: 400;
-    margin-inline: clamp(1rem, 2.5rem, 3vw);
-    /* padding-block: .2rem; */
-    padding-block: min(1.5vw, 1vh);
-    margin-block: 1vh;
-    border-bottom: .2rem solid var(--dark-olive);
-    flex-basis: 100%;
-
-    color: black;
-    flex-wrap: wrap;
     line-height: 92%;
-    
-    max-width: fit-content;
-    
-    
 
     /* outline: black solid 3px; */
 }
@@ -312,6 +298,7 @@ section {
 .content-block {
     display: flex;
     flex-wrap: wrap;
+    flex-basis: 100%;
     padding-inline: clamp(.5rem, 5vw, 5rem); 
     flex-basis: 100%;
     overflow: hidden;
@@ -398,78 +385,82 @@ section {
 
 
 
- /*******************
+ /**********************
     EDUCATION SECTION
- *********************/
+ ************************/
 
-.education-title {
-    padding: .5rem 2rem;
-    display: flex;
-    margin-top: 1em;
-    margin-bottom: 0;
-    background-color: var(--dark-olive);
-    flex-basis: 100%;
-    max-height: fit-content;
-    /* outline: green solid 3px; */
-}
 
-#education .card {
-    display: flex;
+
+#education .content-block {
     flex-basis: 100%;
     flex-wrap: wrap;
-    padding-bottom: 5vh;
+
+}
+
+#education > div:first-child{
     background-color: var(--light-gray);
     overflow: visible;
-    /*  target the 0% value to adjust triange
-    --rawBasis: calc(100% - (400px - 100vw) * -.2);
-    --widthBasis: max(0,var(--rawBasis)); */
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - (400px - 100vw) * -.15), 0% 100%);
-    padding-inline-start: 0%;
+    padding-inline: 0%;
+    padding-bottom: 5vh;
+    border-bottom: var(--dark-olive);
 }
+
+#education .title {
+    margin-block: 1vh;
+    padding-block: min(1.5vw, 1vh); 
+    border-bottom: .2rem solid;
+}
+
+#education > div:first-child .title{
+    margin-inline: clamp(1rem, 2.5rem, 3vw);
+}
+
 
 #degree {
     display: flex;
     flex-wrap: wrap;
-    background: none;
-    padding: 0;
-    padding-inline-start: 2vw;
     flex-basis: 100%;
-    margin-block-start: 1%;
-    /* padding-inline-start: clamp(.1rem, .5rem, 3vw); */
-    
+
     justify-self: flex-start;
+    
+    padding-inline-start: 2vw;
+    margin-block-start: 1%;
+    background: none;
 
     /* outline: blue solid 3px; */
 }
 
-#degree-field {
-    font-size: clamp(1.8rem, 4rem, 2.75vw);
-    display: block;
-    color: black;
+#education p {
     flex-basis: 100%;
-    line-height: 85%;
-    margin-block-end: .75%;
-    
-    font-family: 'IBM Plex Mono', monospace;
+    line-height: 110%;
+}
 
+#degree-field {
+    display: block;
+    flex-basis: 100%;
+
+    margin-block-end: .75%;
+
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: clamp(1.8rem, 4rem, 2.75vw);
+    line-height: 85%;
+    color: black;
     /* outline: green solid 3px; */
 }
 
 #degree-type {
     display: inline-block;
-    padding-inline-start: 0%;
-    transform: rotate(-15deg);
     
-    flex-basis: auto;
+    max-width: fit-content;
+
+    transform: rotate(-15deg);
 
     /* outline: green solid 3px; */
 }
 
-#education p {
-    flex-basis: 100%;
+.deg-info {
     padding-inline-start: 3vw;
-    line-height: 110%;
-
 }
 
 #college-name {
@@ -477,8 +468,20 @@ section {
     font-weight: 600;
 }
 
-#skills-title {
+div.content-block:nth-child(2){
+    justify-content: flex-end;
+}
+
+.skills-title {
+    max-width: fit-content;
+    
+    
+    padding-inline: 0%;
     margin-left: auto;
+
+    
     border-color: white;
     color: white;
+
+    /* outline: green solid 3px; */
 }
