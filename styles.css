@@ -304,6 +304,12 @@ section {
     overflow: hidden;
 }
 
+.title {
+    margin-block: 1vh;
+    padding-block: min(1.5vw, 1vh); 
+    border-bottom: .2rem solid;
+}
+
 
 
 
@@ -392,12 +398,6 @@ section {
 
 
 #education .content-block {
-    flex-basis: 100%;
-    flex-wrap: wrap;
-
-}
-
-#education > div:first-child{
     background-color: var(--light-gray);
     overflow: visible;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - (400px - 100vw) * -.15), 0% 100%);
@@ -406,16 +406,9 @@ section {
     border-bottom: var(--dark-olive);
 }
 
-#education .title {
-    margin-block: 1vh;
-    padding-block: min(1.5vw, 1vh); 
-    border-bottom: .2rem solid;
-}
-
-#education > div:first-child .title{
+#education .title{
     margin-inline: clamp(1rem, 2.5rem, 3vw);
 }
-
 
 #degree {
     display: flex;
@@ -472,12 +465,21 @@ div.content-block:nth-child(2){
     justify-content: flex-end;
 }
 
-.skills-title {
+
+ /**********************
+    SKILLS SECTION
+ ************************/
+#skills .content-block {
+    padding-inline: 0%;
+}
+
+#skills .title {
     max-width: fit-content;
     
     
     padding-inline: 0%;
-    margin-left: auto;
+    margin-inline: clamp(1rem, 2.5rem, 3vw);
+    margin-inline-start: auto;
 
     
     border-color: white;
