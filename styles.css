@@ -61,7 +61,8 @@ h5 {
 }
 
 
-p {
+p,
+a {
     font-size: clamp(1rem, 1.05rem, 1.15rem);
     /* font-size: 1.1rem; */
     line-height: 1.7rem;
@@ -579,7 +580,7 @@ section {
  #projects a{
     display: flex;
     text-decoration: none;
-    color: white;
+    color: black;
  }
 
  .stack {
@@ -619,7 +620,8 @@ section {
 #projects h4 {
     width: fit-content;
     color: black;
-    padding: .5rem 2rem;
+    padding-block: .5rem;
+    margin-inline: clamp(1rem, 2.5rem, 3vw);
 
 }
 
