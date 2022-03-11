@@ -344,10 +344,10 @@ section {
     /* outline: black solid 3px; */
 }
 
-#about-me .title,
-.education-title {
+#about-me .title{
     display: flex;
     flex-basis: 100%;
+    border: none;
     
     max-height: fit-content;
     margin-block: 1em 0;
@@ -493,8 +493,6 @@ section {
     row-gap: 5vh;
 }
 
-
-
 #skills .icon-container {
     display: flex;
     flex-wrap: wrap;
@@ -519,3 +517,59 @@ section {
     max-width: min(5rem, 20vw);
     align-self: flex-start;
 }
+
+
+
+
+
+ /**********************
+    PROJECTS
+ ************************/
+
+ .project {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 40%;
+    max-width: 33%;
+    min-width: 33%;
+    /* outline: white 3px solid; */
+ }
+
+ .card {
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+ }
+
+ #projects .card img {
+    display: flex;
+    min-width: 100%;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    align-self: center;
+ }
+
+ .link {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 50%;
+    justify-content: center;
+
+    /* outline: white 3px solid; */
+ }
+
+ #projects a{
+    display: flex;
+    text-decoration: none;
+    color: white;
+ }
+
+ .stack {
+     display: flex;
+     flex-wrap: wrap;
+ }
+
+ .stack img {
+    max-width: min(2rem, 20vw);
+ }
