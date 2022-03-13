@@ -118,6 +118,15 @@ section {
   border-bottom: .2rem solid;
 }
 
+.shadow {
+  text-shadow: 0.25rem 0.125rem var(--red);
+  -webkit-text-stroke-width: 1px;
+  -moz-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  -moz-text-stroke-color: white;
+  color: transparent;
+}
+
 /**************
     NAV BAR
  **************/

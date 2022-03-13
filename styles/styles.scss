@@ -95,7 +95,6 @@
 /************************
     HEADER/WELCOME PAGE
  ************************/
-
  header {
     display: flex;
     flex-wrap: wrap;
@@ -236,7 +235,6 @@
     font-family: 'IBM Plex Mono', monospace;        
 }
 
-
 #about-me .content-block img {
     display: flex;
 
@@ -249,12 +247,11 @@
 }
 
 
+
+
 /**********************
     EDUCATION SECTION
  ************************/
-
-
-
 #education .content-block {
     background-color: var(--light-gray);
     overflow: visible;
