@@ -73,3 +73,9 @@ section {
 .stack img {
     max-width: min(2rem, 20vw);
 }
+
+#projects 
+.project {
+    max-width: min(35rem, 100%);
+}
+

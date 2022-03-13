@@ -392,96 +392,111 @@
 
     .content-block {
         justify-content: space-around;
+        column-gap: 2rem;
+        row-gap: 7vh;
 
-        .project {
+        .container {
             display: flex;
-            flex-wrap: wrap;
-            flex-basis: 40%;
-            max-width: 33%;
-            min-width: 33%;
-            border: black  3px solid;
-            /* outline: white 3px solid; */
+            flex-wrap: wrap;  
+            flex:1 1 25rem;
+            outline: green solid 10px;
+            justify-content: center;
+            align-items: center;
+            
+        
 
-            .card {
+            .project {
                 display: flex;
-                flex-basis: 100%;
                 flex-wrap: wrap;
-                max-width: 100%;
-                /* border: white 3px solid; */
-
-                img {
+    
+                border: black  3px solid;
+                /* outline: white 3px solid; */
+    
+                .card {
                     display: flex;
-                    min-width: 100%;
                     flex-basis: 100%;
                     flex-wrap: wrap;
-                    align-self: center;
-                    outline: black 3px solid;
-                    /* outline: white 3px solid; */
-                }
-
-                .link {
-                    display: flex;
-                    flex-wrap: wrap;
-                    flex-basis: 50%;
-                    justify-content: center;
-                    outline: black 3px solid;
-                 
-                    /* outline: white 3px solid; */
-                }
-
-                a{
-                    display: flex;
-                    text-decoration: none;
-                    color: black;
-                }
-            }
-
-            .details {
-                display: flex;
-                flex-wrap: wrap;
-                flex-basis: 100%;
-                /* outline: white 3px solid; */
-
-                .desc {
-                    flex-basis: 85%;
-                    
-                    h4 {
-                        width: fit-content;
-                        color: black;
-                        padding-block: .5rem;
-                        margin-inline: clamp(1rem, 2.5rem, 3vw);
+                    max-width: 100%;
+                    /* border: white 3px solid; */
+    
+                    img {
+                        display: flex;
+                        // min-width: 100%;
+                        max-width: 100%;
+                        flex-basis: 100%;
+                        flex-wrap: wrap;
+                        align-self: center;
+                        outline: black 3px solid;
+                        /* outline: white 3px solid; */
+                    }
+    
+                    .link {
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex-basis: 50%;
+                        justify-content: center;
+                        outline: black 3px solid;
                      
+                        /* outline: white 3px solid; */
+                    }
+    
+                    a{
+                        display: flex;
+                        text-decoration: none;
+                        color: black;
                     }
                 }
-
-                .stack {
+    
+                .details {
                     display: flex;
-                    flex-grow: 1;
                     flex-wrap: wrap;
-                    width: min-content;
+                    flex-basis: 100%;
                     /* outline: white 3px solid; */
-                    justify-content: center;
-                    align-items: center;
-                    margin-inline: 2%;
-                    align-self: center;
-                    row-gap: 10vh;
-                 
-                     .icon{
-                         display: flex;
-                         /* flex-wrap: wrap; */
-                         /* flex-basis: min(45vw, 19rem); */
-                         flex-basis: 20%;
-                         /* min-width: 7em; */
-                         /* outline: green solid 3px; */
-                         justify-content: center;
-                 
-                         img {
-                             color: black;
-                             /* outline: white 3px solid; */
-                          }
+    
+                    .desc {
+                        flex-basis: 85%;
+                        
+                        h4 {
+                            width: fit-content;
+                            color: black;
+                            padding-block: .5rem;
+                            margin-inline: clamp(1rem, 2.5rem, 3vw);
+                         
+                        }
+                    }
+    
+                    .stack {
+                        display: flex;
+                        flex-grow: 1;
+                        flex-wrap: wrap;
+                        width: min-content;
+                        /* outline: white 3px solid; */
+                        justify-content: center;
+                        align-items: center;
+                        margin-inline: 2%;
+                        align-self: center;
+                        row-gap: 10vh;
+                     
+                         .icon{
+                             display: flex;
+                             /* flex-wrap: wrap; */
+                             /* flex-basis: min(45vw, 19rem); */
+                             flex-basis: 20%;
+                             /* min-width: 7em; */
+                             /* outline: green solid 3px; */
+                             justify-content: center;
+                     
+                             img {
+                                 color: black;
+                                 /* outline: white 3px solid; */
+                              }
+                         }
                      }
-                 }
-            }
-        }    
+                }
+            } 
+
+        }
+
+           
     }
 }

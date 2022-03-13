@@ -591,23 +591,40 @@ header .container-down-arrow img {
 #projects .content-block {
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+  row-gap: 7vh;
 }
 
-#projects .content-block .project {
+#projects .content-block .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-preferred-size: 40%;
-      flex-basis: 40%;
-  max-width: 33%;
-  min-width: 33%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25rem;
+          flex: 1 1 25rem;
+  outline: green solid 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#projects .content-block .container .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   border: black  3px solid;
   /* outline: white 3px solid; */
 }
 
-#projects .content-block .project .card {
+#projects .content-block .container .project .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -619,11 +636,11 @@ header .container-down-arrow img {
   /* border: white 3px solid; */
 }
 
-#projects .content-block .project .card img {
+#projects .content-block .container .project .card img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-width: 100%;
+  max-width: 100%;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   -ms-flex-wrap: wrap;
@@ -634,7 +651,7 @@ header .container-down-arrow img {
   /* outline: white 3px solid; */
 }
 
-#projects .content-block .project .card .link {
+#projects .content-block .container .project .card .link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -649,7 +666,7 @@ header .container-down-arrow img {
   /* outline: white 3px solid; */
 }
 
-#projects .content-block .project .card a {
+#projects .content-block .container .project .card a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -657,7 +674,7 @@ header .container-down-arrow img {
   color: black;
 }
 
-#projects .content-block .project .details {
+#projects .content-block .container .project .details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -668,12 +685,12 @@ header .container-down-arrow img {
   /* outline: white 3px solid; */
 }
 
-#projects .content-block .project .details .desc {
+#projects .content-block .container .project .details .desc {
   -ms-flex-preferred-size: 85%;
       flex-basis: 85%;
 }
 
-#projects .content-block .project .details .desc h4 {
+#projects .content-block .container .project .details .desc h4 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -682,7 +699,7 @@ header .container-down-arrow img {
   margin-inline: clamp(1rem, 2.5rem, 3vw);
 }
 
-#projects .content-block .project .details .stack {
+#projects .content-block .container .project .details .stack {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -707,7 +724,7 @@ header .container-down-arrow img {
   row-gap: 10vh;
 }
 
-#projects .content-block .project .details .stack .icon {
+#projects .content-block .container .project .details .stack .icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -722,7 +739,7 @@ header .container-down-arrow img {
           justify-content: center;
 }
 
-#projects .content-block .project .details .stack .icon img {
+#projects .content-block .container .project .details .stack .icon img {
   color: black;
   /* outline: white 3px solid; */
 }
