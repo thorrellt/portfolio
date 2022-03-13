@@ -17,6 +17,7 @@
 @media all and (max-width: 900px){
     nav{
       padding: 5px 30px;
+      align-items: flex-start;
     }
     nav ul .nav-item{
       width: 100%;
