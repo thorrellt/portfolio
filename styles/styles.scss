@@ -6,7 +6,7 @@
 /**************
     NAV BAR
  **************/
-#nav-bar {
+nav {
     display: flex;
     position: fixed;
     z-index: 1;
@@ -15,80 +15,116 @@
     /* background: rgba(55, 56, 51, .4); */
     justify-content: center;
     align-items: center;
-}
 
-#nav-bar span{
-    font-family: 'IBM Plex Mono', monospace;
-    height: 5rem;
-    display: flex;
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    align-items:center;
-    margin: 0;
-    margin-left: 2%;
-    font-size: 4rem;
-    font-weight: 700
-}
+    span{
+        font-family: 'IBM Plex Mono', monospace;
+        height: 5rem;
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        align-items:center;
+        margin: 0;
+        margin-left: 2%;
+        font-size: 4rem;
+        font-weight: 700;
+        user-select: none;
+        cursor: default;
+    }
 
-.nav-list {
-    display: flex;
-    
-    list-style: none;
-    padding: 0;
-    outline: black solid 3px;
-}
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        // outline: black solid 3px;
 
-.nav-item {
-    /* min-width: 12em; */
-    padding: 1rem 2rem;
-    text-decoration: none;
-    text-align: center;
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-    outline: black solid 3px;
-}
+        .btn{
+            display: none;
+        }
 
-.nav-item a {
-    color: white;
-    position: relative;
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-decoration: none;
-    padding-bottom: .25rem;
-}
+        
 
-.nav-item a:after {
-    content: "";
-    position: absolute;
-    height: 2px;
-    background-color: white;
-    width: 50%;
-    left: 50%;
-    margin-top: 1rem;
-    bottom: 0;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    -webkit-transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
-    transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
-}
+        li {
+            /* min-width: 12em; */
+            padding: 1rem 2rem;
+            text-align: center;
+            -webkit-transition: all 0.4s ease;
+            transition: all 0.4s ease;
+            outline: black solid 3px;
+            cursor: pointer;
 
-.nav-item a:hover:after {
-    width: 100%;
-}
 
-.nav-item a:focus {
-    outline: none;
-    width: 100%;
-}
 
-.nav-item a:focus:after {
-    text-decoration: none;
-    width: 100%;
+            a {
+                color: white;
+                position: relative;
+                font-size: 1.5rem;
+                font-weight: 700;
+                text-decoration: none;
+                padding-bottom: .25rem;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    height: 2px;
+                    background-color: white;
+                    width: 50%;
+                    left: 50%;
+                    margin-top: 1rem;
+                    bottom: 0;
+                    -webkit-transform: translateX(-50%);
+                    -ms-transform: translateX(-50%);
+                    transform: translateX(-50%);
+                    -webkit-transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+                    transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+                }
+
+                &:focus {
+                    outline: none;
+                    width: 100%;
+                }
+
+                &:hover:after {
+                    width: 100%;
+                }
+
+                &:focus:after {
+                    text-decoration: none;
+                    width: 100%;
+                }
+
+                
+            }
+        }
+
+        .nav-item{
+            position: relative;
+            width: auto;
+            margin: 0 16px;
+            text-align: center;
+            order: 3;
+        }
+        .nav-item:after{
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 5px;
+            height: 2px;
+            width: 100%;
+            background: #33ffff;
+            opacity: 0;
+            transition: all 0.2s linear;
+        }
+        .nav-item:hover:after{
+            opacity: 1;
+            bottom: 8px;
+        }
+    } 
 }
-    
 
 
 

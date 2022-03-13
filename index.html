@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="media-query.css">
     <title>Document</title>
 </head>
 <body>
-    <!-- <nav id="nav-bar">
+    <nav id="nav-bar">
         <span class="shadow">t</span>
            
         <ul class="nav-list">
@@ -22,8 +25,18 @@
             <li class="nav-item">
                 <a href="#" class="nav-link">Contact</a>
             </li>
+            <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
         </ul>
-    </nav> -->
+    </nav>
+
+    <script>
+        $(document).ready(function(){
+          $('.btn').click(function(){
+            $('.nav-item').toggleClass("show");
+            $('ul li').toggleClass("hide");
+          });
+        });
+     </script>
 
     <video id="video-bg" poster="images/img-bg-stillshot.png" autoplay muted loop>
         <source src="images/video-blurred-bg.mp4" type="video/mp4">

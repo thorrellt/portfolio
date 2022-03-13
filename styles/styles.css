@@ -134,7 +134,7 @@ section {
 /**************
     NAV BAR
  **************/
-#nav-bar {
+nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -151,7 +151,7 @@ section {
           align-items: center;
 }
 
-#nav-bar span {
+nav span {
   font-family: 'IBM Plex Mono', monospace;
   height: 5rem;
   display: -webkit-box;
@@ -168,28 +168,44 @@ section {
   margin-left: 2%;
   font-size: 4rem;
   font-weight: 700;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: default;
 }
 
-.nav-list {
+nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   list-style: none;
   padding: 0;
-  outline: black solid 3px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.nav-item {
+nav ul .btn {
+  display: none;
+}
+
+nav ul li {
   /* min-width: 12em; */
   padding: 1rem 2rem;
-  text-decoration: none;
   text-align: center;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   outline: black solid 3px;
+  cursor: pointer;
 }
 
-.nav-item a {
+nav ul li a {
   color: white;
   position: relative;
   font-size: 1.5rem;
@@ -198,7 +214,7 @@ section {
   padding-bottom: .25rem;
 }
 
-.nav-item a:after {
+nav ul li a:after {
   content: "";
   position: absolute;
   height: 2px;
@@ -213,18 +229,46 @@ section {
   transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
 }
 
-.nav-item a:hover:after {
-  width: 100%;
-}
-
-.nav-item a:focus {
+nav ul li a:focus {
   outline: none;
   width: 100%;
 }
 
-.nav-item a:focus:after {
+nav ul li a:hover:after {
+  width: 100%;
+}
+
+nav ul li a:focus:after {
   text-decoration: none;
   width: 100%;
+}
+
+nav ul .nav-item {
+  position: relative;
+  width: auto;
+  margin: 0 16px;
+  text-align: center;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+nav ul .nav-item:after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 5px;
+  height: 2px;
+  width: 100%;
+  background: #33ffff;
+  opacity: 0;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+nav ul .nav-item:hover:after {
+  opacity: 1;
+  bottom: 8px;
 }
 
 /************************

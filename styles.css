@@ -1,4 +1,8 @@
 
+nav ul .btn.hide i:before{
+    content: '\f00d';
+  }
+
 /************************
     HEADER/WELCOME PAGE
  ************************/
