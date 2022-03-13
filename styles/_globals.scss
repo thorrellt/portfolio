@@ -1,0 +1,115 @@
+:root {
+    --red: #FA2742;
+    --dark-olive: #373833;
+    --light-gray: #E8EAE3;
+    --dark-gray: #DBDCD5;
+
+}
+
+/* RESET RULE */
+* {
+    margin: 0; padding: 0; border: 0; box-sizing: border-box;
+}
+body {
+    min-height: 100 vh;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+
+
+
+
+
+/**************
+   TYPOGRAPHY
+ **************/
+ h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: clamp(2.5rem, 5rem, 5vw);
+    font-weight: 900;
+}
+
+h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    color: white;
+    font-size: clamp(2rem, 3rem, 3.5vw);
+    font-weight: 700;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: clamp(2rem, 4rem, 3vw);
+    font-weight: 900;
+}
+
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-size: clamp(.75rem, 2rem, 1.1vw);
+    letter-spacing: .3rem;
+    font-weight: 400;
+    line-height: 92%;
+
+    /* outline: black solid 3px; */
+}
+
+h5 {
+    color: black;
+    font-size: clamp(1.1rem, 2rem, 1.4vw);
+    font-weight: 600;
+    /* outline: black solid 3px; */
+}
+
+
+p,
+a {
+    font-size: clamp(1rem, 1.05rem, 1.15rem);
+    /* font-size: 1.1rem; */
+    line-height: 1.7rem;
+    letter-spacing: .03rem;
+    font-weight: 500;
+}
+
+
+/**************
+   BACKGROUND
+ **************/
+ #video-bg {
+    position: fixed;
+    z-index: -2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.color-screen {
+    position: fixed;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    background: rgba(55, 56, 51, .6);
+}
+
+
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content-block {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    overflow: hidden;
+}
+
+.title {
+    margin-block: 1vh;
+    border-bottom: .2rem solid;
+}
