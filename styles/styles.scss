@@ -345,7 +345,7 @@
         .icon-container {
             display: flex;
             flex-wrap: wrap;
-            /* flex-basis: 17rem; */
+            flex-basis: 21%;
             min-width: 7em;
             /* outline: green solid 3px; */
             justify-content: center;
@@ -399,9 +399,12 @@
             display: flex;
             flex-wrap: wrap;  
             flex:1 1 25rem;
-            outline: green solid 10px;
+            min-width: 34%;
+            
             justify-content: center;
             align-items: center;
+
+            // outline: green solid 10px;
             
         
 

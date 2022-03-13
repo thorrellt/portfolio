@@ -531,7 +531,8 @@ header .container-down-arrow img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  /* flex-basis: 17rem; */
+  -ms-flex-preferred-size: 21%;
+      flex-basis: 21%;
   min-width: 7em;
   /* outline: green solid 3px; */
   -webkit-box-pack: center;
@@ -605,7 +606,7 @@ header .container-down-arrow img {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 25rem;
           flex: 1 1 25rem;
-  outline: green solid 10px;
+  min-width: 34%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
