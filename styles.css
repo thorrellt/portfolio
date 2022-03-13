@@ -27,7 +27,8 @@ nav ul .btn.hide i:before{
 /**************
     CONTENT
  **************/
-section {
+section, 
+.main-block {
     margin-inline: clamp(.5rem, 5vw, 5rem);
 }
 

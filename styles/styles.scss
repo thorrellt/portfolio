@@ -400,12 +400,16 @@ nav {
     }   
 }
 
- /**********************
+
+
+
+/**********************
          PROJECTS
- ************************/
+************************/
 
 #projects {
     background-color: var(--light-gray);
+    padding-block-end: 4rem;
 
     p {
         color: black;
@@ -453,6 +457,8 @@ nav {
     
                 border: black  3px solid;
                 /* outline: white 3px solid; */
+
+                
     
                 .card {
                     display: flex;
@@ -540,5 +546,59 @@ nav {
         }
 
            
+    }
+}
+
+
+/**********************
+       FOOTER
+************************/
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    outline: white solid 3px;
+
+    & > .container {
+        display: flex;
+        flex-wrap: wrap;
+        p{
+            margin-inline: .25rem;
+            color: white;
+        }
+    
+        p:first-child {
+            text-transform: uppercase;
+            letter-spacing: .15rem;
+        }
+    
+        p:nth-child(2) {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 1.2rem;
+        }
+
+    }
+
+
+
+    .contact-icons {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-inline-start: auto;
+        outline: white solid 3px;
+        gap: 5vw;
+
+        .container {
+            display: flex;
+            align-items: center;
+
+            a {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                
+            }
+        }
     }
 }

@@ -94,7 +94,8 @@ a {
   background: rgba(55, 56, 51, 0.6);
 }
 
-section {
+section,
+.main-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -599,9 +600,11 @@ header .container-down-arrow img {
 
 /**********************
          PROJECTS
- ************************/
+************************/
 #projects {
   background-color: var(--light-gray);
+  -webkit-padding-after: 4rem;
+          padding-block-end: 4rem;
 }
 
 #projects p {
@@ -790,5 +793,78 @@ header .container-down-arrow img {
 #projects .content-block .container .project .details .stack .icon img {
   color: black;
   /* outline: white 3px solid; */
+}
+
+/**********************
+       FOOTER
+************************/
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  outline: white solid 3px;
+}
+
+footer > .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer > .container p {
+  margin-inline: .25rem;
+  color: white;
+}
+
+footer > .container p:first-child {
+  text-transform: uppercase;
+  letter-spacing: .15rem;
+}
+
+footer > .container p:nth-child(2) {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.2rem;
+}
+
+footer .contact-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-margin-start: auto;
+          margin-inline-start: auto;
+  outline: white solid 3px;
+  gap: 5vw;
+}
+
+footer .contact-icons .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .contact-icons .container a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=styles.css.map */

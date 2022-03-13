@@ -92,7 +92,8 @@ a {
 
 
 
-section {
+section,
+.main-block {
     display: flex;
     flex-wrap: wrap;
 }
