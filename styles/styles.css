@@ -435,11 +435,17 @@ header .container-down-arrow img {
   border-bottom: var(--dark-olive);
 }
 
-#education .title {
+#education .content-block p {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  line-height: 110%;
+}
+
+#education .content-block .title {
   margin-inline: clamp(1rem, 2.5rem, 3vw);
 }
 
-#degree {
+#education .content-block #degree {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -456,13 +462,17 @@ header .container-down-arrow img {
   /* outline: blue solid 3px; */
 }
 
-#education p {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  line-height: 110%;
+#education .content-block #degree #degree-type {
+  display: inline-block;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+  /* outline: green solid 3px; */
 }
 
-#degree-field {
+#education .content-block #degree #degree-field {
   display: block;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
@@ -475,22 +485,12 @@ header .container-down-arrow img {
   /* outline: green solid 3px; */
 }
 
-#degree-type {
-  display: inline-block;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  -webkit-transform: rotate(-15deg);
-          transform: rotate(-15deg);
-  /* outline: green solid 3px; */
-}
-
-.deg-info {
+#education .content-block .deg-info {
   -webkit-padding-start: 3vw;
           padding-inline-start: 3vw;
 }
 
-#college-name {
+#education .content-block #college-name {
   font-size: clamp(1rem, 1.15rem, 1.35rem);
   font-weight: 600;
 }
@@ -518,14 +518,14 @@ header .container-down-arrow img {
   /* outline: green solid 3px; */
 }
 
-#skill-icons {
+#skills #skill-icons {
   margin-top: 5rem;
   max-width: 100%;
   /* column-gap: 1%; */
   row-gap: 5vh;
 }
 
-#skill-icons p {
+#skills #skill-icons p {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   text-align: center;

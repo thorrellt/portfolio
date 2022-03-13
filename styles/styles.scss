@@ -248,111 +248,112 @@
 /**********************
     EDUCATION SECTION
  ************************/
-#education .content-block {
+#education {
+    .content-block {
     background-color: var(--light-gray);
     overflow: visible;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - (400px - 100vw) * -.15), 0% 100%);
     padding-inline: 0%;
     padding-bottom: 5vh;
     border-bottom: var(--dark-olive);
+
+        p {
+            flex-basis: 100%;
+            line-height: 110%;
+        }
+
+        .title{
+            margin-inline: clamp(1rem, 2.5rem, 3vw);
+        }
+
+        #degree {
+            display: flex;
+            flex-wrap: wrap;
+            flex-basis: 100%;
+        
+            justify-self: flex-start;
+            
+            padding-inline-start: 2vw;
+            margin-block-start: 1%;
+            background: none;
+        
+            /* outline: blue solid 3px; */
+
+            #degree-type {
+                display: inline-block;
+                
+                max-width: fit-content;
+            
+                transform: rotate(-15deg);
+            
+                /* outline: green solid 3px; */
+            }
+
+            #degree-field {
+                display: block;
+                flex-basis: 100%;
+            
+                margin-block-end: .75%;
+            
+                font-family: 'IBM Plex Mono', monospace;
+                font-size: clamp(1.8rem, 4rem, 2.75vw);
+                line-height: 85%;
+                color: black;
+                /* outline: green solid 3px; */
+            }
+        }
+
+        .deg-info {
+            padding-inline-start: 3vw;
+        }
+        
+        #college-name {
+            font-size: clamp(1rem, 1.15rem, 1.35rem);
+            font-weight: 600;
+        }
+    }
 }
 
-#education .title{
-    margin-inline: clamp(1rem, 2.5rem, 3vw);
-}
 
-#degree {
-    display: flex;
-    flex-wrap: wrap;
-    flex-basis: 100%;
-
-    justify-self: flex-start;
-    
-    padding-inline-start: 2vw;
-    margin-block-start: 1%;
-    background: none;
-
-    /* outline: blue solid 3px; */
-}
-
-#education p {
-    flex-basis: 100%;
-    line-height: 110%;
-}
-
-#degree-field {
-    display: block;
-    flex-basis: 100%;
-
-    margin-block-end: .75%;
-
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: clamp(1.8rem, 4rem, 2.75vw);
-    line-height: 85%;
-    color: black;
-    /* outline: green solid 3px; */
-}
-
-#degree-type {
-    display: inline-block;
-    
-    max-width: fit-content;
-
-    transform: rotate(-15deg);
-
-    /* outline: green solid 3px; */
-}
-
-.deg-info {
-    padding-inline-start: 3vw;
-}
-
-#college-name {
-    font-size: clamp(1rem, 1.15rem, 1.35rem);
-    font-weight: 600;
-}
 
 
 /**********************
     SKILLS SECTION
  ************************/
- #skills .content-block {
+ #skills {
+    .content-block {
     padding-inline: 0%;
     justify-content: center;
-}
+    }
 
-#skills .title {
-    max-width: fit-content;
+    .title {
+        max-width: fit-content;
+        
+        padding-inline: 0%;
+        margin-inline: clamp(1rem, 2.5rem, 3vw);
+        margin-inline-start: auto;
     
+        
+        border-color: white;
+        color: white;
     
-    padding-inline: 0%;
-    margin-inline: clamp(1rem, 2.5rem, 3vw);
-    margin-inline-start: auto;
+        /* outline: green solid 3px; */
+    }
 
-    
-    border-color: white;
-    color: white;
+    #skill-icons {
+        margin-top: 5rem;
+        max-width: 100%;
+        /* column-gap: 1%; */
+        row-gap: 5vh;
 
-    /* outline: green solid 3px; */
+        p {
+            flex-basis: 100%;
+            text-align: center;
+            color: white;
+            font-family: 'IBM Plex Mono', monospace;
+        }   
+    }   
 }
-
-#skill-icons {
-    
-    margin-top: 5rem;
-    max-width: 100%;
-    /* column-gap: 1%; */
-    row-gap: 5vh;
-}
-
-
-#skill-icons p {
-    flex-basis: 100%;
-    text-align: center;
-    color: white;
-    font-family: 'IBM Plex Mono', monospace;
-
-}
-
 
  /**********************
          PROJECTS
