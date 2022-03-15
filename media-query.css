@@ -20,7 +20,8 @@
       align-items: flex-start;
     }
     nav ul .nav-item{
-      width: 100%;
+      width: 70%;
+      padding: 1rem .5rem;
       display: none;
     }
     nav ul .nav-item.show{
@@ -28,6 +29,7 @@
     }
     nav ul li.btn{
       display: block;
+      padding: 1rem 1rem;
     }
     nav ul .nav-item:hover{
       border-radius: 5px;
