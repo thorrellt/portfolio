@@ -270,11 +270,6 @@ nav ul .nav-item:after {
   transition: all 0.2s linear;
 }
 
-nav ul .nav-item:hover:after {
-  opacity: 1;
-  bottom: 8px;
-}
-
 /************************
     HEADER/WELCOME PAGE
  ************************/
