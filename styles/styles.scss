@@ -57,7 +57,7 @@ nav {
             text-align: center;
             -webkit-transition: all 0.4s ease;
             transition: all 0.4s ease;
-            outline: black solid 3px;
+            // outline: black solid 3px;
             cursor: pointer;
 
 
@@ -553,24 +553,35 @@ footer {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    outline: white solid 3px;
+    
 
     & > .container {
         display: flex;
+        flex: 1 1 100%;
         flex-wrap: wrap;
+        align-items: center;
+        margin-inline: auto;
+
         p{
-            margin-inline: .25rem;
             color: white;
+            flex: 1 1 35%;
         }
     
         p:first-child {
             text-transform: uppercase;
             letter-spacing: .15rem;
+            text-align: right;
+            font-size: clamp(0.9rem, .90rem, 1.15rem);
+            padding-inline-end: .25rem;
+            
         }
     
         p:nth-child(2) {
             font-family: 'IBM Plex Mono', monospace;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
+            min-width: fit-content;
+            padding-inline-start: .25rem;
+            
         }
 
     }
@@ -580,9 +591,10 @@ footer {
     .contact-icons {
         display: flex;
         flex-wrap: wrap;
+        flex: 1 1 100%;
         align-items: center;
-        margin-inline-start: auto;
-        outline: white solid 3px;
+        justify-content: center;
+        // outline: white solid 3px;
         gap: 5vw;
 
         .container {
