@@ -14,7 +14,7 @@ nav {
     height: 5rem;
     justify-content: center;
     align-items: center;
-    background-color: var(--dark-olive);
+    background-color: $prim-700;
 
     span{
         display: flex;
@@ -39,7 +39,7 @@ nav {
         padding: 0;
         align-items: center;
         justify-content: center;
-        background-color: var(--dark-olive);
+        background-color: $prim-700;
         list-style: none;
         // outline: black solid 3px;
 
@@ -224,7 +224,7 @@ nav {
         flex-direction: row-reverse;
         
         padding-inline-end: 0%;
-        background-color: var(--light-gray);
+        background-color: $sec-300;
 
         article {
             display: flex;
@@ -244,7 +244,7 @@ nav {
                 max-height: fit-content;
                 margin-block: 1em 0;
                 padding: .5rem 2rem;
-                background-color: var(--dark-olive);
+                background-color: $prim-700;
                 /* outline: green solid 3px; */
                 
                 h3{
@@ -287,12 +287,12 @@ nav {
  ************************/
 #education {
     .content-block {
-    background-color: var(--light-gray);
+    background-color: $sec-300;
     overflow: visible;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - (400px - 100vw) * -.15), 0% 100%);
     padding-inline: 0%;
     padding-bottom: 5vh;
-    border-bottom: var(--dark-olive);
+    border-bottom: $prim-700;
 
         p {
             flex-basis: 100%;
@@ -410,7 +410,7 @@ nav {
 ************************/
 
 #projects {
-    background-color: var(--light-gray);
+    background-color: $sec-300;
     padding-block-end: 4rem;
 
     p {
@@ -419,7 +419,7 @@ nav {
      }     
 
     & > .title {
-        background-color: var(--dark-olive);
+        background-color: $prim-700;
         display: flex;
         flex-basis: 100%;
         margin-block: 2rem;

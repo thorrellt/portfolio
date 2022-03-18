@@ -1,13 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&family=Montserrat:wght@700;800;900&display=swap");
-:root {
-  --red: #FA2742;
-  --dark-olive: #373833;
-  --light-gray: #E8EAE3;
-  --dark-gray: #DBDCD5;
-}
-
 /* RESET RULE */
-* {
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&family=Montserrat:wght@700;800;900&display=swap");
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   border: 0;
@@ -21,53 +16,57 @@ body {
 }
 
 /**************
+   VARIABLES
+**************/
+/**************
+   MIX-INS
+**************/
+/**************
    TYPOGRAPHY
  **************/
 h1 {
   font-family: 'Montserrat', sans-serif;
-  color: white;
   font-size: clamp(2.5rem, 5rem, 5vw);
   font-weight: 900;
+  color: white;
 }
 
 h2 {
   font-family: 'IBM Plex Mono', monospace;
-  color: white;
   font-size: clamp(2rem, 3rem, 3.5vw);
   font-weight: 700;
+  color: white;
 }
 
 h3 {
   font-family: 'Montserrat', sans-serif;
-  color: white;
   font-size: clamp(2rem, 4rem, 3vw);
   font-weight: 900;
+  color: white;
 }
 
 h4 {
   font-family: 'Montserrat', sans-serif;
-  color: black;
   font-size: clamp(0.75rem, 2rem, 1.1vw);
   letter-spacing: .3rem;
   font-weight: 400;
   line-height: 92%;
-  /* outline: black solid 3px; */
+  color: #2e302c;
 }
 
 h5 {
-  color: black;
   font-size: clamp(1.1rem, 2rem, 1.4vw);
   font-weight: 600;
-  /* outline: black solid 3px; */
+  color: #2e302c;
 }
 
 p,
 a {
   font-size: clamp(1rem, 1.05rem, 1.15rem);
-  /* font-size: 1.1rem; */
   line-height: 1.7rem;
   letter-spacing: .03rem;
   font-weight: 500;
+  color: #686962;
 }
 
 /**************
@@ -120,7 +119,7 @@ section,
 }
 
 .shadow {
-  text-shadow: 0.25rem 0.125rem var(--red);
+  text-shadow: 0.25rem 0.125rem #FA2742;
   -webkit-text-stroke-width: 1px;
   -moz-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
@@ -149,7 +148,7 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: var(--dark-olive);
+  background-color: #373833;
 }
 
 nav span {
@@ -189,7 +188,7 @@ nav ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: var(--dark-olive);
+  background-color: #373833;
   list-style: none;
 }
 
@@ -405,7 +404,7 @@ header .container-down-arrow img {
           flex-direction: row-reverse;
   -webkit-padding-end: 0%;
           padding-inline-end: 0%;
-  background-color: var(--light-gray);
+  background-color: #E8EAE3;
 }
 
 #about-me .content-block article {
@@ -433,7 +432,7 @@ header .container-down-arrow img {
   max-height: fit-content;
   margin-block: 1em 0;
   padding: .5rem 2rem;
-  background-color: var(--dark-olive);
+  background-color: #373833;
   /* outline: green solid 3px; */
 }
 
@@ -473,13 +472,13 @@ header .container-down-arrow img {
     EDUCATION SECTION
  ************************/
 #education .content-block {
-  background-color: var(--light-gray);
+  background-color: #E8EAE3;
   overflow: visible;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - (400px - 100vw) * -.15), 0% 100%);
           clip-path: polygon(0 0, 100% 0, 100% calc(100% - (400px - 100vw) * -.15), 0% 100%);
   padding-inline: 0%;
   padding-bottom: 5vh;
-  border-bottom: var(--dark-olive);
+  border-bottom: #373833;
 }
 
 #education .content-block p {
@@ -601,7 +600,7 @@ header .container-down-arrow img {
          PROJECTS
 ************************/
 #projects {
-  background-color: var(--light-gray);
+  background-color: #E8EAE3;
   -webkit-padding-after: 4rem;
           padding-block-end: 4rem;
 }
@@ -612,7 +611,7 @@ header .container-down-arrow img {
 }
 
 #projects > .title {
-  background-color: var(--dark-olive);
+  background-color: #373833;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

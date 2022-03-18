@@ -1,13 +1,7 @@
-:root {
-    --red: #FA2742;
-    --dark-olive: #373833;
-    --light-gray: #E8EAE3;
-    --dark-gray: #DBDCD5;
-
-}
-
 /* RESET RULE */
-* {
+*, 
+*::after,
+*::before {
     margin: 0; padding: 0; border: 0; box-sizing: border-box;
 }
 body {
@@ -15,56 +9,97 @@ body {
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
+
 /**************
-   TYPOGRAPHY
- **************/
- h1 {
+   VARIABLES
+**************/
+
+$prim-500: #686962;
+$prim-700: #373833;
+$prim-900: #2e302c;
+
+$sec-300: #E8EAE3;
+$tert-500: #FA2742;
+
+$white: white;
+
+
+/**************
+   MIX-INS
+**************/
+@mixin h1($color: $white){
     font-family: 'Montserrat', sans-serif;
-    color: white;
     font-size: clamp(2.5rem, 5rem, 5vw);
     font-weight: 900;
+    color: $color;
+    
 }
 
-h2 {
+@mixin h2($color: $white){
     font-family: 'IBM Plex Mono', monospace;
-    color: white;
     font-size: clamp(2rem, 3rem, 3.5vw);
     font-weight: 700;
+    color: $color;
 }
 
-h3 {
+@mixin h3($color: $white){
     font-family: 'Montserrat', sans-serif;
-    color: white;
     font-size: clamp(2rem, 4rem, 3vw);
     font-weight: 900;
+    color: $color;
 }
 
-h4 {
+@mixin h4($color: $prim-900){
     font-family: 'Montserrat', sans-serif;
-    color: black;
     font-size: clamp(.75rem, 2rem, 1.1vw);
     letter-spacing: .3rem;
     font-weight: 400;
     line-height: 92%;
+    color: $color;
+}
 
-    /* outline: black solid 3px; */
+@mixin h5($color: $prim-900){
+    font-size: clamp(1.1rem, 2rem, 1.4vw);
+    font-weight: 600;
+    color: $color;
+}
+
+
+@mixin p($color: $prim-500){
+    font-size: clamp(1rem, 1.05rem, 1.15rem);
+    line-height: 1.7rem;
+    letter-spacing: .03rem;
+    font-weight: 500;
+    color: $color;
+}
+
+/**************
+   TYPOGRAPHY
+ **************/
+ h1 {
+     @include h1();
+}
+
+h2 {
+    @include h2();
+}
+
+h3 {
+    @include h3();
+}
+
+h4 {
+    @include h4();
 }
 
 h5 {
-    color: black;
-    font-size: clamp(1.1rem, 2rem, 1.4vw);
-    font-weight: 600;
-    /* outline: black solid 3px; */
+    @include h5();
 }
 
 
 p,
 a {
-    font-size: clamp(1rem, 1.05rem, 1.15rem);
-    /* font-size: 1.1rem; */
-    line-height: 1.7rem;
-    letter-spacing: .03rem;
-    font-weight: 500;
+    @include p();
 }
 
 
@@ -111,7 +146,7 @@ section,
 }
 
 .shadow {
-    text-shadow: .25rem .125rem var(--red);
+    text-shadow: .25rem .125rem $tert-500;
     -webkit-text-stroke-width: 1px;
     -moz-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
