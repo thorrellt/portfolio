@@ -12,6 +12,8 @@
     <title>Document</title>
 </head>
 <body>
+    
+
     <nav id="nav-bar">
         <span class="shadow">t</span>
            
@@ -29,14 +31,6 @@
         </ul>
     </nav>
 
-    <script>
-        $(document).ready(function(){
-          $('.btn').click(function(){
-            $('.nav-item').toggleClass("show");
-            $('ul li').toggleClass("hide");
-          });
-        });
-     </script>
 
     <video id="video-bg" poster="images/img-bg-stillshot.png" autoplay muted loop>
         <source src="images/video-blurred-bg.mp4" type="video/mp4">
@@ -49,19 +43,19 @@
             <h1>Hello World<span class="shadow">!</span> </h1>
             <h1>I'm</h1>
             <div class="container">
-                <h2 class="url">linkedin.com/in/</h2>
+                <h2 class="typed" id="urlDisp"></h2>
             </div>
             
             <h2>thorrell <span class="shadow">t</span></h2>
 
             <div id="contact-icons">
-                <a href="#" class="contact">
+                <a href="#" class="contact" id="gitHub">
                     <img src="images/icon-gh.svg" alt="github">
                 </a>            
-                <a href="#" class="contact">
+                <a href="#" class="contact" id="linkedIn">
                     <img src="images/icon-li.svg" alt="linked in">
                 </a>             
-                <a href="#" class="contact">
+                <a href="#" class="contact" id="email">
                     <img src="images/icon-mail.svg" alt="email">
                 </a>                    
             </div>
@@ -353,5 +347,6 @@
                                
         </div>
     </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>

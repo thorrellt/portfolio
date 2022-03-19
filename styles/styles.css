@@ -131,6 +131,47 @@ section,
   float: right;
 }
 
+.typed {
+  -webkit-animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+          animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+/* The typing effect */
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@-webkit-keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
 /**************
     NAV BAR
  **************/
@@ -307,8 +348,6 @@ header .welcome-card {
   margin-inline: 5%;
   background: radial-gradient(55% 60% at center, #373833, rgba(55, 56, 51, 0));
   /* outline: red solid 3px;  */
-  /* The typing effect */
-  /* The typewriter cursor effect */
 }
 
 header .welcome-card h1 {
@@ -328,6 +367,8 @@ header .welcome-card .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 header .welcome-card h2 {
@@ -336,54 +377,12 @@ header .welcome-card h2 {
   display: flex;
 }
 
-header .welcome-card .url {
+header .welcome-card #urlDisp {
   color: #fff;
   overflow: hidden;
-  /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange;
-  /* The typwriter cursor */
+  border-right: 0.15em solid white;
   white-space: nowrap;
-  /* Keeps the content on a single line */
   margin: 0 auto;
-  /* Gives that scrolling effect as the typing happens */
-  -webkit-animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
-          animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
-}
-
-@-webkit-keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@-webkit-keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: orange;
-  }
-}
-
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: orange;
-  }
 }
 
 header .welcome-card #contact-icons {
