@@ -15,26 +15,26 @@ $(document).ready(function () {
 let gh = document.getElementById('gitHub');
 let urlDisp = document.getElementById('urlDisp');
 
+const contactIcons = document.querySelectorAll('.contact');
+
+
+
 const shadow_t = `<span class="shadow">t</span>`
+
 const DISPLAY_URLS = {
-    gitHub: 'github.com/thorrell',
-    linkedIn: 'linkedin.com/in/thorrell',
-    mail: '@gmail.com'};
+    gitHub: 'github.com/thorrell<span class="shadow">t</span>',
+    linkedIn: 'linkedin.com/in/thorrell<span class="shadow">t</span>',
+    email: 'thorrell<span class="shadow">t</span>@gmail.com'
+};
 
 function typeText(btnId) {
-    if (btnId === "mail") {
-        console.log("i read hg");
-        urlDisp.textContent = "thorrell";
-        urlDisp.insertAdjacentHTML("beforeend", shadow_t);
-        urlDisp.insertAdjacentHTML("beforeend", DISPLAY_URLS[btnId]);
-        return true;
-    }
-
-    urlDisp.textContent = DISPLAY_URLS[btnId];
-    urlDisp.insertAdjacentHTML("beforeend", shadow_t);
+    urlDisp.textContent = "";
+    urlDisp.insertAdjacentHTML("beforeend", DISPLAY_URLS[btnId]);
 }
 
-gh.addEventListener('mouseover', function(){
+//add event listender to every html element of class type 'key'
+//if the heard even is a 'transitionend' call our func removeTransition()
+contactIcons.forEach( key => key.addEventListener('mouseover', function(){
 
     urlDisp.style.animationDirection = "normal";
     console.log(DISPLAY_URLS[this["id"]]);
@@ -49,7 +49,25 @@ gh.addEventListener('mouseover', function(){
     void urlDisp.offsetWidth;
     urlDisp.classList.add("typed");
 
-});
+}));
+
+
+// gh.addEventListener('mouseover', function(){
+
+//     urlDisp.style.animationDirection = "normal";
+//     console.log(DISPLAY_URLS[this["id"]]);
+
+//     // urlDisp.textContent = "linkedin.com/in/thorrell";
+//     // urlDisp.insertAdjacentHTML("beforeend", shadow_t);
+
+//     typeText(this["id"]);
+
+//     //code to restart animation on hover
+//     urlDisp.classList.remove("typed");
+//     void urlDisp.offsetWidth;
+//     urlDisp.classList.add("typed");
+
+// });
 
 gh.addEventListener('mouseout', function(){
 
