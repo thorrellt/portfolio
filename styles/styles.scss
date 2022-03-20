@@ -170,6 +170,7 @@ nav {
 
         h2{
             display: flex;
+            transition: 2s;
         }
 
         #urlDisp {
@@ -177,7 +178,8 @@ nav {
             overflow: hidden;
             border-right: .15em solid $white; 
             white-space: nowrap;
-            margin: 0 auto;            
+            margin: 0 auto;
+            animation-direction: reverse;            
           }
 
 
