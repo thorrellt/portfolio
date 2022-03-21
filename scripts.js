@@ -1,9 +1,3 @@
-let isTyping = false;
-let isDeleting = false;
-let mouseHoverId = null;
-
-
-
 $(document).ready(function () {
     $('.btn').click(function () {
         $('.nav-item').toggleClass("show");
@@ -12,20 +6,28 @@ $(document).ready(function () {
 });
 
 
+/***************************
+ * URL TYPING WHEN HOVERING
+ * OVER CONTACT BUTTON
+****************************/
 
-let gh = document.getElementById('gitHub');
-let urlDisp = document.getElementById('urlDisp');
+//Variables & Utilities
+const urlDisp = document.getElementById('urlDisp');
+const contactIcons = document.querySelectorAll('.contact');
 
-urlDisp.isEmpty = function() {
-    console.log("animation direction:: " + urlDisp.style.animationDirection);
-    return urlDisp.style.animationDirection === "reverse";
-}
+let isTyping = false;
+let isDeleting = false;
+let mouseHoverId = "none";
 
-urlDisp.addEventListener('animationend', function(){
-    isTyping = false;
-    isDeleting = false;
-}
-);
+urlDisp.isEmpty = function() {return urlDisp.style.animationDirection === "reverse";}
+urlDisp.isAnimating = function() {return (isDeleting || isTyping);}
+
+const DISPLAY_URLS = {
+    gitHub: 'github.com/thorrell<span class="shadow">t</span>',
+    linkedIn: 'linkedin.com/in/thorrell<span class="shadow">t</span>',
+    email: 'thorrell<span class="shadow">t</span>@gmail.com',
+    none: 'thorrell<span class="shadow">t</span>'
+};
 
 urlDisp.textStatus = function() {
     if(isTyping) return "TYPING";
@@ -34,32 +36,16 @@ urlDisp.textStatus = function() {
     return "FULL";
 }
 
-urlDisp.dispCurrent = function () {
+urlDisp.dispIsCurrent = function () {
     return (DISPLAY_URLS[mouseHoverId] === urlDisp.innerHTML);
 }
 
-const contactIcons = document.querySelectorAll('.contact');
 
-
-const DISPLAY_URLS = {
-    gitHub: 'github.com/thorrell<span class="shadow">t</span>',
-    linkedIn: 'linkedin.com/in/thorrell<span class="shadow">t</span>',
-    email: 'thorrell<span class="shadow">t</span>@gmail.com'
-};
-
+//Animation & Display Functions
 function replaceText() {
-
-    if (DISPLAY_URLS[mouseHoverId]){
     urlDisp.textContent = "";
     urlDisp.insertAdjacentHTML("beforeend", DISPLAY_URLS[mouseHoverId]);
     return true;
-    }
-
-    urlDisp.textContent = "";
-    urlDisp.insertAdjacentHTML("beforeend", `thorrell<span class="shadow">t</span>`);
-
-
-
 }
 
 function restartAnimation(){
@@ -70,7 +56,6 @@ function restartAnimation(){
 }
 
 function typeDisplay (speed = "1s") {
-    console.log("animation stated");
     urlDisp.style.animationDirection = "normal";
     urlDisp.style.animationDuration = speed;
     restartAnimation();
@@ -80,8 +65,6 @@ function typeDisplay (speed = "1s") {
 function deleteDisplay(speed = "0.6s") {    
     urlDisp.style.animationDirection = "reverse";
     urlDisp.style.animationDuration = speed;
-    
-    
     restartAnimation();
     isDeleting = true;
 }
@@ -89,15 +72,12 @@ function deleteDisplay(speed = "0.6s") {
 
 //urlDisp listener for animation ending
 urlDisp.addEventListener('animationend', function(){
-    console.log("animation ended");
     isTyping = false;
     isDeleting = false;
-    console.log("urDisp Status:: " + urlDisp.textStatus());
-    console.log("urDisp dispCurrent::  " + urlDisp.dispCurrent());
 
 
     if(urlDisp.textStatus() === "FULL"){
-        if (urlDisp.dispCurrent() || mouseHoverId === null) {
+        if (urlDisp.dispIsCurrent() || mouseHoverId === null) {
             return true;
         }
         console.log("event heard full and called delete");
@@ -112,61 +92,40 @@ urlDisp.addEventListener('animationend', function(){
 }
 );
 
-//contact-btn Hover listener
-contactIcons.forEach( key => key.addEventListener('mouseover', function(){
-    mouseHoverId = this["id"];
+//this handles hover behaviors ONLY when 
+//animation is not currently executing 
+function hoverChange() {
+    //filter out if animation running
+    if (urlDisp.isAnimating()){
+        return false;
+    } 
 
-
-    console.log("textStatus on Hover:: " + urlDisp.textStatus());
-    console.log("display current on hover:: " + urlDisp.dispCurrent());
-
-    if (isTyping || isDeleting) return false;
-
-    //display is current and either typing, or complete
-    if (urlDisp.dispCurrent() && urlDisp.textStatus() !== "DELETING") {
-        return true;
-    }
-
-    //display is full but wrong content
+    //animate the deletion of incorrect contect
     if(urlDisp.textStatus() === "FULL"){
-        deleteDisplay(".3s");
+        //filter out if URL content already current
+        if (urlDisp.dispIsCurrent()) {
+            return true;
+        }
+        deleteDisplay();
         return false;
     }
 
-    //display is empty. 
+    //animate the typing of the correct contect
     if(urlDisp.textStatus() === "EMPTY"){
         typeDisplay();
         return false;
     }
+} 
 
-
-    urlDisp.style.animationDuration = "0.3s";
-    urlDisp.style.animationPlayState = "paused";
+//contact-btn Hover listener
+contactIcons.forEach( key => key.addEventListener('mouseover', function(){
+    mouseHoverId = this["id"];
+    hoverChange();
 }));
 
 
 //contact-btn Hover-out listener
 contactIcons.forEach( key => key.addEventListener('mouseout', function(){
-    mouseHoverId = null;
-
-    console.log(DISPLAY_URLS[this["id"]]);
-    if (isTyping || isDeleting) return false;
-
-    if (urlDisp.dispCurrent() && urlDisp.textStatus() !== "DELETING") {
-        return true;
-    }
-
-    if(urlDisp.textStatus() === "FULL"){
-        deleteDisplay();
-        return false;
-    }
-
-    if(urlDisp.textStatus() === "EMPTY"){
-        typeDisplay();
-        return false;
-    }
-
+    mouseHoverId = "none";
+    hoverChange();
 }));
-
-
-
