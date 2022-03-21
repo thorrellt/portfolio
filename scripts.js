@@ -69,25 +69,21 @@ function restartAnimation(){
 
 }
 
-function typeDisplay (speed = "2s") {
+function typeDisplay (speed = "1s") {
     console.log("animation stated");
     urlDisp.style.animationDirection = "normal";
     urlDisp.style.animationDuration = speed;
-
-    replaceText();
     restartAnimation();
     isTyping = true;
 }
 
-function deleteDisplay(speed = "1s") {    
+function deleteDisplay(speed = "0.6s") {    
     urlDisp.style.animationDirection = "reverse";
     urlDisp.style.animationDuration = speed;
     
     
     restartAnimation();
     isDeleting = true;
-
-    replaceText();
 }
 
 
@@ -110,7 +106,8 @@ urlDisp.addEventListener('animationend', function(){
 
     if(urlDisp.textStatus() === "EMPTY") {
         console.log("event heard empty and called typing");
-        typeDisplay("2s");
+        replaceText();
+        typeDisplay();
     }
 }
 );
@@ -122,6 +119,8 @@ contactIcons.forEach( key => key.addEventListener('mouseover', function(){
 
     console.log("textStatus on Hover:: " + urlDisp.textStatus());
     console.log("display current on hover:: " + urlDisp.dispCurrent());
+
+    if (isTyping || isDeleting) return false;
 
     //display is current and either typing, or complete
     if (urlDisp.dispCurrent() && urlDisp.textStatus() !== "DELETING") {
@@ -140,8 +139,9 @@ contactIcons.forEach( key => key.addEventListener('mouseover', function(){
         return false;
     }
 
-    console.log(urlDisp.innerHTML);
-    console.log(DISPLAY_URLS[this["id"]]);
+
+    urlDisp.style.animationDuration = "0.3s";
+    urlDisp.style.animationPlayState = "paused";
 }));
 
 
@@ -150,8 +150,21 @@ contactIcons.forEach( key => key.addEventListener('mouseout', function(){
     mouseHoverId = null;
 
     console.log(DISPLAY_URLS[this["id"]]);
+    if (isTyping || isDeleting) return false;
 
-    deleteDisplay();
+    if (urlDisp.dispCurrent() && urlDisp.textStatus() !== "DELETING") {
+        return true;
+    }
+
+    if(urlDisp.textStatus() === "FULL"){
+        deleteDisplay();
+        return false;
+    }
+
+    if(urlDisp.textStatus() === "EMPTY"){
+        typeDisplay();
+        return false;
+    }
 
 }));
 
