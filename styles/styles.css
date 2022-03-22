@@ -458,12 +458,7 @@ header .container-down-arrow img {
 }
 
 #about-me .content-block {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  -webkit-padding-end: 0%;
-          padding-inline-end: 0%;
+  padding-inline: 0%;
   background-color: #E8EAE3;
 }
 
@@ -518,14 +513,67 @@ header .container-down-arrow img {
   font-family: 'IBM Plex Mono', monospace;
 }
 
-#about-me .content-block img {
+#about-me .content-block .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
   margin-inline: auto;
+}
+
+#about-me .content-block .container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  min-height: 40vh;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  border: 3px green solid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#about-me .content-block .container ul .slide {
+  position: absolute;
+  opacity: 0;
+}
+
+#about-me .content-block .container ul .slide[data-active] {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 1;
+  max-width: 100%;
+}
+
+#about-me .content-block .container ul .slide[data-active] img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  min-width: 100%;
   filter: drop-shadow(7px 7px 7px #666666);
   -webkit-filter: drop-shadow(7px 7px 7px #666666);
-  /* outline: red solid 3px; */
+  outline: red solid 3px;
 }
 
 /**********************

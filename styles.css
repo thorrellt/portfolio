@@ -57,6 +57,9 @@ section,
     max-width:min(25rem, 100%);
 }
 
+.slide {
+    width: max(43%, 600px);
+}
 
 
  /**********************

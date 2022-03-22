@@ -129,3 +129,6 @@ contactIcons.forEach( key => key.addEventListener('mouseout', function(){
     mouseHoverId = "none";
     hoverChange();
 }));
+
+
+const carouselImages = document.querySelectorAll('.slide');
