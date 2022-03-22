@@ -308,12 +308,13 @@ nav {
                     
 
                 }
+
                 .slide[data-active]{
                     position: relative;
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
-                    opacity: 1;
+                    
                     max-width: 100%;
 
                     img {
@@ -328,6 +329,11 @@ nav {
                     }
     
                 }
+
+                .visible {
+                    opacity: 1;
+                }
+                
             }
         }
 

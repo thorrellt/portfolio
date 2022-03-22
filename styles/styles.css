@@ -559,7 +559,6 @@ header .container-down-arrow img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  opacity: 1;
   max-width: 100%;
 }
 
@@ -574,6 +573,10 @@ header .container-down-arrow img {
   filter: drop-shadow(7px 7px 7px #666666);
   -webkit-filter: drop-shadow(7px 7px 7px #666666);
   outline: red solid 3px;
+}
+
+#about-me .content-block .container ul .visible {
+  opacity: 1;
 }
 
 /**********************

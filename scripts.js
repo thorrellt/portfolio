@@ -1,3 +1,8 @@
+import {Carousel} from './carousel.js';
+
+let carousel = new Carousel();
+carousel.startCarousel();
+
 $(document).ready(function () {
     $('.btn').click(function () {
         $('.nav-item').toggleClass("show");
@@ -131,4 +136,3 @@ contactIcons.forEach( key => key.addEventListener('mouseout', function(){
 }));
 
 
-const carouselImages = document.querySelectorAll('.slide');
