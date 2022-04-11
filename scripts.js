@@ -1,7 +1,7 @@
 import {Carousel} from './carousel.js';
 
-let carousel = new Carousel();
-carousel.startCarousel();
+// let carousel = new Carousel();
+// carousel.startCarousel();
 
 $(document).ready(function () {
     $('.btn').click(function () {

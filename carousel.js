@@ -14,7 +14,6 @@ export class Carousel {
         console.log("#slidespeed:: " + this.#slidespeed );
         console.log("#animationSpeed:: " + this.#animationSpeed );
         console.log("#activeSlide :: " + this.#activeSlide  );
-        // this.#carouselImages[this.#slideCount].classList.add()
 
     }
 
@@ -40,12 +39,10 @@ export class Carousel {
         this.#carouselImages[this.#slideCount].classList.remove('visible');
         setTimeout(() => { this.#nextImage(); }, this.#opacityTransitionSpeed);
         setTimeout(() => { this.#carouselImages[this.#slideCount].classList.add('visible');}, this.#opacityTransitionSpeed+1);
-        // this.#carouselImages[this.#slideCount].classList.add('visible');
     }
 
 
     startCarousel()  {
-        // setInterval(this.#cycleImage(), this.#slidespeed);
         setInterval(() => { this.#cycleImage(); }, this.#slidespeed);
     }
 }
