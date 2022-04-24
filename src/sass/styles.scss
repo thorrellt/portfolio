@@ -565,6 +565,11 @@ nav {
     
                     .desc {
                         flex-basis: 85%;
+
+                        .lessons {
+                            border-bottom: .2rem solid;
+                            outline: black 3px solid;
+                        }
                         
                         h4 {
                             width: fit-content;
@@ -676,4 +681,93 @@ footer {
             }
         }
     }
+}
+
+
+nav ul .btn.hide i:before{
+    content: '\f00d';
+  }
+
+/************************
+    HEADER/WELCOME PAGE
+ ************************/
+.welcome-card {
+    margin-block-start: min(40vw, 20vh);
+}
+
+.welcome-card h2{
+    margin-block: min(5vh, 8vw);
+}
+
+#contact-icons a{
+    margin-inline: max(4vw, 3vh);
+}
+
+#contact-icons a img{
+    min-width: min(4vw, 7vh);
+}
+
+
+
+/**************
+    CONTENT
+ **************/
+section, 
+.main-block {
+    margin-inline: clamp(.5rem, 5vw, 5rem);
+}
+
+.content-block {
+    padding-inline: clamp(.5rem, 5vw, 5rem); 
+}
+
+.title {
+    padding-block: min(1.5vw, 1vh);
+}
+
+
+
+ /*******************
+    ABOUT ME SECTION
+ *********************/
+#about-me article {
+    flex: 1 0 min(27rem, 100%);
+}
+
+#about-me  p {
+    flex-basis:max(90%, 25rem);
+}
+
+#about-me .content-block img {
+    max-width:min(25rem, 100%);
+}
+
+.slide {
+    width: max(43%, 600px);
+}
+
+
+ /**********************
+    SKILLS SECTION
+ ************************/
+#skills .icon-container {
+    flex-basis: min(45vw, 19rem);
+}
+
+#skills img {
+    max-width: min(5rem, 20vw);
+}
+
+
+
+ /**********************
+          PROJECTS
+ ************************/
+.stack img {
+    max-width: min(2rem, 20vw);
+}
+
+#projects 
+.project {
+    max-width: min(35rem, 100%);
 }

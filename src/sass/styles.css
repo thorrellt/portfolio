@@ -850,6 +850,11 @@ header .container-down-arrow img {
       flex-basis: 85%;
 }
 
+#projects .content-block .container .project .details .desc .lessons {
+  border-bottom: .2rem solid;
+  outline: black 3px solid;
+}
+
 #projects .content-block .container .project .details .desc h4 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
