@@ -132,7 +132,6 @@ nav {
 }
 
 
-
 /************************
     HEADER/WELCOME PAGE
  ************************/
@@ -151,6 +150,7 @@ nav {
         justify-content: center;
         align-items: center;
         margin-inline: 5%;
+        margin-block-start: min(40vw, 20vh);
         background: radial-gradient(55% 60% at center, rgba(55, 56, 51, 1), rgba(55, 56, 51, 0));
         /* outline: red solid 3px;  */
 
@@ -171,6 +171,7 @@ nav {
         h2{
             display: flex;
             transition: 2s;
+            margin-block: min(5vh, 8vw);
         }
 
         #urlDisp {
@@ -199,10 +200,12 @@ nav {
                 justify-content: center;
                 align-items: center;
                 max-width: 100%;
+                margin-inline: max(4vw, 3vh)
 
                 img{
                     display: flex;
                     flex-grow: 1;
+                    min-width: min(4vw, 7vh);
                 }
             }     
         }
@@ -226,8 +229,21 @@ nav {
 }
 
 
-
-
+/**************
+    CONTENT
+ **************/
+ section, 
+ .main-block {
+     margin-inline: clamp(.5rem, 5vw, 5rem);
+ }
+ 
+ .content-block {
+     padding-inline: clamp(.5rem, 5vw, 5rem); 
+ }
+ 
+ .title {
+     padding-block: min(1.5vw, 1vh);
+ }
 
 /*******************
    ABOUT ME SECTION
@@ -244,6 +260,7 @@ nav {
         article {
             display: flex;
             flex-wrap: wrap;
+            flex: 1 0 min(27rem, 100%);
         
             max-width: 50rem;
             align-content: start;
@@ -268,6 +285,8 @@ nav {
             }
 
             p {
+                flex-basis:max(90%, 25rem);
+                
                 margin-block-start: 0;
                 margin-inline-start: clamp(.25rem, 2.5vw, 2.5rem);
                 margin-inline-end: clamp(.5rem, 5vw, 5rem); 
@@ -280,6 +299,10 @@ nav {
                     font-family: 'IBM Plex Mono', monospace;        
                 }
             }
+        }
+
+        img {
+            max-width:min(25rem, 100%);
         }
 
         .container{
@@ -300,9 +323,9 @@ nav {
                 border: 3px green solid;
                 justify-content: center;
 
-                
 
                 .slide {
+                    width: max(43%, 600px);
                     position: absolute;
                     opacity: 0;
                     
@@ -437,6 +460,11 @@ nav {
         /* outline: green solid 3px; */
     }
 
+    img {
+        max-width: min(5rem, 20vw);
+    }
+    
+
     #skill-icons {
         margin-top: 5rem;
         max-width: 100%;
@@ -444,6 +472,7 @@ nav {
         row-gap: 5vh;
 
         .icon-container {
+            flex-basis: min(45vw, 19rem);
             display: flex;
             flex-wrap: wrap;
             flex-basis: 21%;
@@ -463,8 +492,6 @@ nav {
 }
 
 
-
-
 /**********************
          PROJECTS
 ************************/
@@ -472,6 +499,10 @@ nav {
 #projects {
     background-color: $sec-300;
     padding-block-end: 4rem;
+
+    .project {
+        max-width: min(35rem, 100%);
+    }
 
     p {
         color: black;
@@ -520,8 +551,7 @@ nav {
                 border: black  3px solid;
                 /* outline: white 3px solid; */
 
-                
-    
+
                 .card {
                     display: flex;
                     flex-basis: 100%;
@@ -603,6 +633,7 @@ nav {
                      
                              img {
                                  color: black;
+                                 max-width: min(2rem, 20vw);
                                  /* outline: white 3px solid; */
                               }
                          }
@@ -688,86 +719,19 @@ nav ul .btn.hide i:before{
     content: '\f00d';
   }
 
-/************************
-    HEADER/WELCOME PAGE
- ************************/
-.welcome-card {
-    margin-block-start: min(40vw, 20vh);
-}
-
-.welcome-card h2{
-    margin-block: min(5vh, 8vw);
-}
-
-#contact-icons a{
-    margin-inline: max(4vw, 3vh);
-}
-
-#contact-icons a img{
-    min-width: min(4vw, 7vh);
-}
 
 
 
-/**************
-    CONTENT
- **************/
-section, 
-.main-block {
-    margin-inline: clamp(.5rem, 5vw, 5rem);
-}
-
-.content-block {
-    padding-inline: clamp(.5rem, 5vw, 5rem); 
-}
-
-.title {
-    padding-block: min(1.5vw, 1vh);
-}
 
 
 
- /*******************
-    ABOUT ME SECTION
- *********************/
-#about-me article {
-    flex: 1 0 min(27rem, 100%);
-}
-
-#about-me  p {
-    flex-basis:max(90%, 25rem);
-}
-
-#about-me .content-block img {
-    max-width:min(25rem, 100%);
-}
-
-.slide {
-    width: max(43%, 600px);
-}
-
-
- /**********************
-    SKILLS SECTION
- ************************/
-#skills .icon-container {
-    flex-basis: min(45vw, 19rem);
-}
-
-#skills img {
-    max-width: min(5rem, 20vw);
-}
 
 
 
- /**********************
-          PROJECTS
- ************************/
-.stack img {
-    max-width: min(2rem, 20vw);
-}
 
-#projects 
-.project {
-    max-width: min(35rem, 100%);
-}
+
+
+
+
+
+
