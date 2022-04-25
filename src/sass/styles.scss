@@ -535,6 +535,7 @@ nav {
             display: flex;
             flex-wrap: wrap;  
             flex:1 1 25rem;
+            align-self: flex-start;
             min-width: 34%;
             
             justify-content: center;
@@ -591,14 +592,15 @@ nav {
                     display: flex;
                     flex-wrap: wrap;
                     flex-basis: 100%;
+                    padding-block: 1rem;
                     /* outline: white 3px solid; */
     
                     .desc {
                         flex-basis: 85%;
 
-                        .lessons {
-                            border-bottom: .2rem solid;
-                            outline: black 3px solid;
+                        p,
+                        ul {
+                            padding-inline: clamp(1rem, 2.5rem, 3vw);
                         }
                         
                         h4 {
@@ -606,7 +608,34 @@ nav {
                             color: black;
                             padding-block: .5rem;
                             margin-inline: clamp(1rem, 2.5rem, 3vw);
-                         
+                            
+                        }
+
+                        ul {
+                            display: flex;
+                            flex-wrap: wrap;
+                            flex-basis: 100%;
+                            
+                            li {
+                                font-size: .95rem;
+                                letter-spacing: 0.03rem;
+                                font-weight: 400;
+                                color: black;
+                                margin-block-end: .5rem;
+
+                                span {
+                                    font-size: 1rem;
+                                    font-weight: 900;
+                                }
+                            }
+                        }
+
+                        .lessons {
+                            display: flex;
+                            padding: 0;
+                            max-width: fit-content;
+                            border-bottom: .2rem solid;
+                            margin-inline: clamp(1rem, 2.5rem, 3vw);
                         }
                     }
     
@@ -687,8 +716,6 @@ footer {
         }
 
     }
-
-
 
     .contact-icons {
         display: flex;
