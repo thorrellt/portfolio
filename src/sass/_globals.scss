@@ -73,6 +73,11 @@ $white: white;
     color: $color;
 }
 
+@mixin icon-color{
+    // filter:invert(0%) sepia(8%) saturate(100%) hue-rotate(115deg) brightness(0) contrast(107%);
+    filter: brightness(0) saturate(100%) invert(43%) sepia(8%) saturate(292%) hue-rotate(29deg) brightness(91%) contrast(89%);
+}
+
 /**************
    TYPOGRAPHY
  **************/

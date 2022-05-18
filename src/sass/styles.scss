@@ -663,6 +663,8 @@ nav {
                              img {
                                  color: black;
                                  max-width: min(2rem, 20vw);
+                                 min-width: 2rem;
+                                 @include icon-color;
                                  /* outline: white 3px solid; */
                               }
                          }
