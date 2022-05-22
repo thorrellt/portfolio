@@ -574,7 +574,7 @@ nav {
                     .link {
                         display: flex;
                         flex-wrap: wrap;
-                        flex-basis: 50%;
+                        flex: 1 1 50%;
                         justify-content: center;
                         outline: black 3px solid;
                      
@@ -641,15 +641,15 @@ nav {
     
                     .stack {
                         display: flex;
+                        height: 100%;
                         flex-grow: 1;
                         flex-wrap: wrap;
-                        width: min-content;
-                        /* outline: white 3px solid; */
+                        width: min-content;                        
                         justify-content: center;
                         align-items: center;
                         margin-inline: 2%;
                         align-self: center;
-                        row-gap: 10vh;
+                        // outline: white 3px solid;
                      
                          .icon{
                              display: flex;
