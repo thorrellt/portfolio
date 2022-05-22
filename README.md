@@ -1,3 +1,7 @@
+<div align="center"> 
+	<img src="https://user-images.githubusercontent.com/64343445/169721301-f74116ea-9447-4034-a6ad-539e1d89df81.jpeg" width= "1000">
+</div> 
+
 # thorrellt.com
 
 Welcome to the repo for thorrellt.com. This is written in HTML, CSS, & JS with a little JQuery.
