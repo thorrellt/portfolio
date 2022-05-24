@@ -1,0 +1,776 @@
+/* RESET RULE */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&family=Montserrat:wght@700;800;900&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100 vh;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+/**************
+   VARIABLES
+**************/
+/**************
+   MIX-INS
+**************/
+/**************
+   TYPOGRAPHY
+ **************/
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(2.5rem, 5rem, 5vw);
+  font-weight: 900;
+  color: white;
+}
+
+h2 {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: clamp(2rem, 3rem, 3.5vw);
+  font-weight: 700;
+  color: white;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(2rem, 4rem, 3vw);
+  font-weight: 900;
+  color: white;
+}
+
+h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(0.75rem, 2rem, 1.1vw);
+  letter-spacing: 0.3rem;
+  font-weight: 400;
+  line-height: 92%;
+  color: #2e302c;
+}
+
+h5 {
+  font-size: clamp(1.1rem, 2rem, 1.4vw);
+  font-weight: 600;
+  color: #2e302c;
+}
+
+p,
+a {
+  font-size: 1.05rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.03rem;
+  font-weight: 500;
+  color: #686962;
+}
+
+/**************
+   BACKGROUND
+ **************/
+#video-bg {
+  position: fixed;
+  z-index: -2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.color-screen {
+  position: fixed;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  background: rgba(55, 56, 51, 0.6);
+}
+
+section,
+.main-block {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content-block {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  overflow: hidden;
+}
+
+.title {
+  margin-block: 1vh;
+  border-bottom: 0.2rem solid;
+}
+
+.shadow {
+  text-shadow: 0.25rem 0.125rem #FA2742;
+  -webkit-text-stroke-width: 1px;
+  -moz-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  -moz-text-stroke-color: white;
+  color: transparent;
+}
+
+.drop-shadow {
+  float: right;
+}
+
+.typed {
+  animation: typing 2s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+/**************
+    NAV BAR
+ **************/
+nav {
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 5rem;
+  justify-content: center;
+  align-items: center;
+  background-color: #373833;
+}
+nav span {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 5rem;
+  margin: 0;
+  margin-left: 2%;
+  align-items: center;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 4rem;
+  font-weight: 700;
+  user-select: none;
+  cursor: default;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: #373833;
+  list-style: none;
+}
+nav ul .btn {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+nav ul .btn a::after {
+  height: 0;
+}
+nav ul li {
+  /* min-width: 12em; */
+  padding: 1rem 2rem;
+  text-align: center;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+nav ul li a {
+  color: white;
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding-bottom: 0.25rem;
+}
+nav ul li a:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: white;
+  width: 50%;
+  left: 50%;
+  margin-top: 1rem;
+  bottom: 0;
+  transform: translateX(-50%);
+  transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+}
+nav ul li a:focus {
+  outline: none;
+  width: 100%;
+}
+nav ul li a:hover:after {
+  width: 100%;
+}
+nav ul li a:focus:after {
+  text-decoration: none;
+  width: 100%;
+}
+nav ul .nav-item {
+  position: relative;
+  width: auto;
+  margin: 0 16px;
+  text-align: center;
+  order: 3;
+}
+nav ul .nav-item:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  height: 2px;
+  width: 100%;
+  background: #33ffff;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+
+/************************
+    HEADER/WELCOME PAGE
+ ************************/
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* outline: green solid 3px; */
+}
+header .welcome-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-inline: 5%;
+  margin-block-start: min(40vw, 20vh);
+  background: radial-gradient(55% 60% at center, rgb(55, 56, 51), rgba(55, 56, 51, 0));
+  /* outline: red solid 3px;  */
+}
+header .welcome-card h1 {
+  display: flex;
+  justify-content: center;
+  flex-basis: 100%;
+  margin-block: 0rem;
+  /* outline: black solid 3px;  */
+}
+header .welcome-card .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+header .welcome-card h2 {
+  display: flex;
+  transition: 2s;
+  margin-block: min(5vh, 8vw);
+}
+header .welcome-card #urlDisp {
+  color: #fff;
+  overflow: hidden;
+  border-right: 0.15em solid white;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation-direction: reverse;
+}
+header .welcome-card #contact-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
+  margin-block: 2rem;
+  /* outline: green solid 3px; */
+}
+header .welcome-card #contact-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  margin-inline: max(4vw, 3vh);
+}
+header .welcome-card #contact-icons a img {
+  display: flex;
+  flex-grow: 1;
+  min-width: min(4vw, 7vh);
+}
+header .container-down-arrow {
+  display: flex;
+  width: 100%;
+  align-self: flex-end;
+  justify-content: center;
+  /* outline: black solid 3px; */
+}
+header .container-down-arrow img {
+  width: 10vh;
+  color: white;
+  margin-bottom: 1vh;
+}
+
+/**************
+    CONTENT
+ **************/
+section,
+.main-block {
+  margin-inline: clamp(0.5rem, 5vw, 5rem);
+}
+
+.content-block {
+  padding-inline: clamp(0.5rem, 5vw, 5rem);
+}
+
+.title {
+  padding-block: min(1.5vw, 1vh);
+}
+
+/*******************
+   ABOUT ME SECTION
+*********************/
+#about-me {
+  justify-content: center;
+  /* outline: blue solid 3px; */
+}
+#about-me .content-block {
+  padding-inline: 0%;
+  background-color: #E8EAE3;
+}
+#about-me .content-block article {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 0 min(27rem, 100%);
+  max-width: 50rem;
+  align-content: start;
+  overflow: hidden;
+  /* outline: black solid 3px; */
+}
+#about-me .content-block article .title {
+  display: flex;
+  flex-basis: 100%;
+  border: none;
+  max-height: fit-content;
+  margin-block: 1em 0;
+  padding: 0.5rem 2rem;
+  background-color: #373833;
+  /* outline: green solid 3px; */
+}
+#about-me .content-block article .title h3 {
+  display: flex;
+}
+#about-me .content-block article p {
+  flex-basis: max(90%, 25rem);
+  margin-block-start: 0;
+  margin-inline-start: clamp(0.25rem, 2.5vw, 2.5rem);
+  margin-inline-end: clamp(0.5rem, 5vw, 5rem);
+  padding: 2rem 2rem;
+  background-color: white;
+  /* outline: red solid 3px; */
+}
+#about-me .content-block article p span {
+  font-family: "IBM Plex Mono", monospace;
+}
+#about-me .content-block img {
+  max-width: min(25rem, 100%);
+}
+#about-me .content-block .container {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 50%;
+  margin-inline: auto;
+}
+#about-me .content-block .container ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: flex-end;
+  min-height: 40vh;
+  flex-basis: 100%;
+  border: 3px green solid;
+  justify-content: center;
+}
+#about-me .content-block .container ul .slide {
+  width: max(43%, 600px);
+  position: absolute;
+  opacity: 0;
+}
+#about-me .content-block .container ul .slide[data-active] {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+}
+#about-me .content-block .container ul .slide[data-active] img {
+  display: flex;
+  flex: 1 1 100%;
+  min-width: 100%;
+  filter: drop-shadow(7px 7px 7px #666666);
+  -webkit-filter: drop-shadow(7px 7px 7px #666666);
+  outline: red solid 3px;
+}
+#about-me .content-block .container ul .visible {
+  opacity: 1;
+}
+#about-me .content-block #education {
+  background-color: #E8EAE3;
+  overflow: visible;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - (400px - 100vw) * -0.15), 0% 100%);
+  padding-inline: 0%;
+  padding-bottom: 5vh;
+  border-bottom: #373833;
+}
+#about-me .content-block #education p {
+  flex-basis: 100%;
+  line-height: 110%;
+}
+#about-me .content-block #education .title {
+  margin-inline: clamp(1rem, 2.5rem, 3vw);
+}
+#about-me .content-block #education #degree {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  justify-self: flex-start;
+  padding-inline-start: 2vw;
+  margin-block-start: 1%;
+  background: none;
+  /* outline: blue solid 3px; */
+}
+#about-me .content-block #education #degree #degree-type {
+  display: inline-block;
+  max-width: fit-content;
+  transform: rotate(-15deg);
+  /* outline: green solid 3px; */
+}
+#about-me .content-block #education #degree #degree-field {
+  display: block;
+  flex-basis: 100%;
+  margin-block-end: 0.75%;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: clamp(1.8rem, 4rem, 2.75vw);
+  line-height: 85%;
+  color: black;
+  /* outline: green solid 3px; */
+}
+#about-me .content-block #education .deg-info {
+  padding-inline-start: 3vw;
+}
+#about-me .content-block #education #college-name {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+/**********************
+    EDUCATION SECTION
+ ************************/
+#education .content-block {
+  background-color: #E8EAE3;
+  overflow: visible;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - (400px - 100vw) * -0.15), 0% 100%);
+  padding-inline: 0%;
+  padding-bottom: 5vh;
+  border-bottom: #373833;
+}
+#education .content-block p {
+  flex-basis: 100%;
+  line-height: 110%;
+}
+#education .content-block .title {
+  margin-inline: clamp(1.1rem, 2.5rem, 3vw);
+}
+#education .content-block #degree {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  justify-self: flex-start;
+  padding-inline-start: 2vw;
+  margin-block-start: 1%;
+  background: none;
+  /* outline: blue solid 3px; */
+}
+#education .content-block #degree #degree-type {
+  display: inline-block;
+  max-width: fit-content;
+  transform: rotate(-15deg);
+  /* outline: green solid 3px; */
+}
+#education .content-block #degree #degree-field {
+  display: block;
+  flex-basis: 100%;
+  margin-block-end: 0.75%;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: clamp(1.8rem, 4rem, 2.75vw);
+  line-height: 85%;
+  color: black;
+  /* outline: green solid 3px; */
+}
+#education .content-block .deg-info {
+  padding-inline-start: 3vw;
+}
+#education .content-block #college-name {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+/**********************
+    SKILLS SECTION
+ ************************/
+#skills .content-block {
+  padding-inline: 0%;
+  justify-content: center;
+}
+#skills .title {
+  max-width: fit-content;
+  padding-inline: 0%;
+  margin-inline: clamp(1rem, 2.5rem, 3vw);
+  margin-inline-start: auto;
+  border-color: white;
+  color: white;
+  /* outline: green solid 3px; */
+}
+#skills img {
+  max-width: min(5rem, 20vw);
+}
+#skills #skill-icons {
+  margin-top: 5rem;
+  max-width: 100%;
+  /* column-gap: 1%; */
+  row-gap: 5vh;
+}
+#skills #skill-icons .icon-container {
+  flex-basis: min(45vw, 19rem);
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 21%;
+  min-width: 7em;
+  /* outline: green solid 3px; */
+  justify-content: center;
+  filter: drop-shadow(0 0 0.2rem black);
+}
+#skills #skill-icons p {
+  flex-basis: 100%;
+  text-align: center;
+  color: white;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+/**********************
+         PROJECTS
+************************/
+#projects {
+  background-color: #E8EAE3;
+  padding-block-end: 4rem;
+}
+#projects .project {
+  max-width: min(35rem, 100%);
+}
+#projects p {
+  color: black;
+  margin-block: 1rem;
+}
+#projects > .title {
+  background-color: #373833;
+  display: flex;
+  flex-basis: 100%;
+  margin-block: 2rem;
+  margin-inline-end: 50%;
+  justify-content: flex-end;
+}
+#projects > .title h3 {
+  display: flex;
+  width: fit-content;
+  color: white;
+  padding: 0.5rem 4rem;
+  justify-self: flex-end;
+}
+#projects .content-block {
+  justify-content: space-around;
+  column-gap: 2rem;
+  row-gap: 7vh;
+}
+#projects .content-block .container {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 25rem;
+  align-self: flex-start;
+  min-width: 34%;
+  justify-content: center;
+  align-items: center;
+}
+#projects .content-block .container .project {
+  display: flex;
+  flex-wrap: wrap;
+  border: black 3px solid;
+  /* outline: white 3px solid; */
+}
+#projects .content-block .container .project .card {
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  max-width: 100%;
+  /* border: white 3px solid; */
+}
+#projects .content-block .container .project .card img {
+  display: flex;
+  max-width: 100%;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  align-self: center;
+  outline: black 3px solid;
+  /* outline: white 3px solid; */
+}
+#projects .content-block .container .project .card .link {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 50%;
+  justify-content: center;
+  outline: black 3px solid;
+}
+#projects .content-block .container .project .card a {
+  display: flex;
+  text-decoration: none;
+  color: black;
+}
+#projects .content-block .container .project .details {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  padding-block: 1rem;
+  /* outline: white 3px solid; */
+}
+#projects .content-block .container .project .details .desc {
+  flex-basis: 85%;
+}
+#projects .content-block .container .project .details .desc p,
+#projects .content-block .container .project .details .desc ul {
+  padding-inline: clamp(1rem, 2.5rem, 3vw);
+}
+#projects .content-block .container .project .details .desc h4 {
+  width: fit-content;
+  color: black;
+  padding-block: 0.5rem;
+  margin-inline: clamp(1rem, 2.5rem, 3vw);
+}
+#projects .content-block .container .project .details .desc ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+}
+#projects .content-block .container .project .details .desc ul li {
+  font-size: 0.95rem;
+  letter-spacing: 0.03rem;
+  font-weight: 400;
+  color: black;
+  margin-block-end: 0.5rem;
+}
+#projects .content-block .container .project .details .desc ul li span {
+  font-size: 1rem;
+  font-weight: 900;
+}
+#projects .content-block .container .project .details .desc .lessons {
+  display: flex;
+  padding: 0;
+  max-width: fit-content;
+  border-bottom: 0.2rem solid;
+  margin-inline: clamp(1rem, 2.5rem, 3vw);
+}
+#projects .content-block .container .project .details .stack {
+  display: flex;
+  height: 100%;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  width: min-content;
+  justify-content: center;
+  align-items: center;
+  margin-inline: 2%;
+  align-self: center;
+}
+#projects .content-block .container .project .details .stack .icon {
+  display: flex;
+  /* flex-wrap: wrap; */
+  /* flex-basis: min(45vw, 19rem); */
+  flex-basis: 20%;
+  /* min-width: 7em; */
+  /* outline: green solid 3px; */
+  justify-content: center;
+}
+#projects .content-block .container .project .details .stack .icon img {
+  color: black;
+  max-width: min(2rem, 20vw);
+  min-width: 2rem;
+  filter: brightness(0) saturate(100%) invert(43%) sepia(8%) saturate(292%) hue-rotate(29deg) brightness(91%) contrast(89%);
+  /* outline: white 3px solid; */
+}
+
+/**********************
+       FOOTER
+************************/
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+footer > .container {
+  display: flex;
+  flex: 1 1 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-inline: auto;
+}
+footer > .container p {
+  color: white;
+  flex: 1 1 35%;
+}
+footer > .container p:first-child {
+  padding-inline-end: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  text-align: right;
+  font-size: 0.9rem;
+}
+footer > .container p:nth-child(2) {
+  padding-inline-start: 0.25rem;
+  min-width: fit-content;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.1rem;
+}
+footer .contact-icons {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+}
+footer .contact-icons .container {
+  display: flex;
+  align-items: center;
+}
+footer .contact-icons .container a {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+nav ul .btn.hide i:before {
+  content: "\f00d";
+}

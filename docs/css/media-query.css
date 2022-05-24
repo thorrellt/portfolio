@@ -1,0 +1,44 @@
+@media (min-aspect-ratio: 16/9) {
+  #video-bg {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  #video-bg {
+    width: auto;
+    height: height;
+  }
+}
+/* NAV BAR */
+@media all and (max-width: 900px) {
+  nav {
+    padding: 5px 30px;
+    align-items: flex-start;
+  }
+
+  nav ul .nav-item {
+    width: 70%;
+    padding: 1rem 0.5rem;
+    display: none;
+  }
+
+  nav ul .nav-item.show {
+    display: block;
+  }
+
+  nav ul li.btn {
+    display: block;
+    padding: 1rem 1rem;
+    border: none;
+  }
+
+  /* nav ul .nav-item:hover{
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px #33ffff,
+                inset 0 0 10px #66ffff;
+  } */
+  nav ul nav-item:hover:after {
+    opacity: 0;
+  }
+}
