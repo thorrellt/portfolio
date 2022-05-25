@@ -87,7 +87,7 @@ a {
   transform: translate(-50%, -50%);
   height: 100%;
   width: 100%;
-  background: rgba(58, 175, 169, 0.6);
+  background: rgba(23, 37, 42, 0.6);
 }
 
 section,
@@ -357,26 +357,48 @@ section,
   grid-row: span 1;
   background-color: #FEFFFF;
 }
-.profile-photo-block img {
-  height: 50vh;
+.profile-photo-block h3 {
+  color: #17252A;
 }
-
+.profile-photo-block .shadow {
+  color: #3AAFA9;
+}
 .introduction-block {
   grid-column: 6/12;
   grid-row: span 1;
-  background-color: #17252A;
-}
-.introduction-block p {
+  display: flex;
   background-color: #3AAFA9;
-  color: #17252A;
+  padding-inline: 6rem;
+  padding-block: 4rem;
+}
+.introduction-block .container {
+  background-color: #17252A;
+  height: 100%;
+  display: block;
+  gap: 0%;
+  border-radius: 5rem;
+  outline: red solid 3px;
+  align-items: flex-start;
+}
+.introduction-block .container .title-container {
+  margin-block-start: 2rem;
+  margin-inline: 3rem;
+}
+.introduction-block .container h4 {
+  width: fit-content;
+  color: #FEFFFF;
+}
+.introduction-block .container p {
+  color: #DEF2F1;
+  display: flex;
+  margin-inline: 3rem;
   padding: 1rem;
-  margin: 1rem;
 }
 
 .resume-block {
   grid-column: 1/5;
   grid-row: span 1;
-  background-color: #17252A;
+  background-color: #3AAFA9;
 }
 .resume-block #resume-btn {
   border-radius: 5em;
@@ -388,7 +410,7 @@ section,
 .education-block {
   grid-column: 1/5;
   grid-row: span 1;
-  background-color: #17252A;
+  background-color: #3AAFA9;
 }
 
 .skills-block {

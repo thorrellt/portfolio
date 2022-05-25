@@ -258,28 +258,69 @@ nav {
     grid-row: span 1;
     // outline: white solid 3px;
     background-color: $white;
+    h3{
+        color: $black;
+    }
+    .shadow{
+        color: $prim-500;
+    }
     img{
-        height: 50vh;
+        // height: 50vh;
     }
 }
 .introduction-block {
     grid-column: 6 / 12;
     grid-row: span 1;
-    background-color: $black;
-    p{
-        background-color: $prim-500;
-        color: $black;
-        padding: 1rem;
-        margin: 1rem;
+    display: flex;
+    background-color: $prim-500;
+    padding-inline: 6rem;
+    padding-block: 4rem;
+    // outline: red solid 3px;
+    .container{
+        background-color: $black;
+        height: 100%;
+        display: block;
+        gap:0%;
+        border-radius: 5rem;
+        outline: red solid 3px;
+        align-items: flex-start;
+        
+        .title-container{
+            // outline: white solid 3px;
+            margin-block-start: 2rem;
+            margin-inline: 3rem;
+            // height: fit-content;
+            // flex-basis: 100%;
+            // flex-grow: 1;
+        }
+
+        h4{
+            width: fit-content;
+            color: $white;
+            
+        }
+        
+        p{
+            
+            color: $tert-500;
+            display: flex;
+            margin-inline: 3rem;
+            padding: 1rem;
+            // outline: white solid 3px;
+            // align-self: flex-start;
+            
+    
+        }
 
     }
+
     // outline: white solid 3px;
 }
 .resume-block{
     grid-column: 1 / 5;
     grid-row: span 1;
     // outline: red solid 3px;
-    background-color: $black;
+    background-color: $prim-500;
 
     #resume-btn{
         border-radius: 5em;
@@ -291,7 +332,7 @@ nav {
 .education-block {
     grid-column: 1 / 5;
     grid-row: span 1;
-    background-color: $black;
+    background-color: $prim-500;
     // outline: white solid 3px;
 }
 .skills-block {
