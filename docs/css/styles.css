@@ -27,21 +27,21 @@ h1 {
   font-family: "Montserrat", sans-serif;
   font-size: clamp(2.5rem, 5rem, 5vw);
   font-weight: 900;
-  color: white;
+  color: #FEFFFF;
 }
 
 h2 {
   font-family: "IBM Plex Mono", monospace;
   font-size: clamp(2rem, 3rem, 3.5vw);
   font-weight: 700;
-  color: white;
+  color: #FEFFFF;
 }
 
 h3 {
   font-family: "Montserrat", sans-serif;
   font-size: clamp(2rem, 4rem, 3vw);
   font-weight: 900;
-  color: white;
+  color: #FEFFFF;
 }
 
 h4 {
@@ -65,7 +65,7 @@ a {
   line-height: 1.7rem;
   letter-spacing: 0.03rem;
   font-weight: 500;
-  color: #686962;
+  color: #3AAFA9;
 }
 
 /**************
@@ -87,7 +87,7 @@ a {
   transform: translate(-50%, -50%);
   height: 100%;
   width: 100%;
-  background: rgba(55, 56, 51, 0.6);
+  background: rgba(58, 175, 169, 0.6);
 }
 
 section,
@@ -109,7 +109,7 @@ section,
 }
 
 .shadow {
-  text-shadow: 0.25rem 0.125rem #FA2742;
+  text-shadow: 0.25rem 0.125rem #DEF2F1;
   -webkit-text-stroke-width: 1px;
   -moz-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
@@ -288,7 +288,7 @@ header .welcome-card h2 {
 header .welcome-card #urlDisp {
   color: #fff;
   overflow: hidden;
-  border-right: 0.15em solid white;
+  border-right: 0.15em solid #FEFFFF;
   white-space: nowrap;
   margin: 0 auto;
   animation-direction: reverse;
@@ -346,13 +346,89 @@ section,
 /*******************
    ABOUT ME SECTION
 *********************/
+.grid-container-2 {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.profile-photo-block {
+  grid-column: 1/6;
+  grid-row: span 1;
+  background-color: #FEFFFF;
+}
+.profile-photo-block img {
+  height: 50vh;
+}
+
+.introduction-block {
+  grid-column: 6/12;
+  grid-row: span 1;
+  background-color: #17252A;
+}
+.introduction-block p {
+  background-color: #3AAFA9;
+  color: #17252A;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.resume-block {
+  grid-column: 1/5;
+  grid-row: span 1;
+  background-color: #17252A;
+}
+.resume-block #resume-btn {
+  border-radius: 5em;
+  border: 4px solid transparent;
+  height: 3rem;
+  width: 6rem;
+}
+
+.education-block {
+  grid-column: 1/5;
+  grid-row: span 1;
+  background-color: #17252A;
+}
+
+.skills-block {
+  grid-column: 5/12;
+  grid-row: span 2;
+  background-color: #FEFFFF;
+}
+
+.grid-container {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(4, 21vh);
+}
+
+.profile-picture {
+  grid-column: 1/5;
+  grid-row: span 1;
+  outline: white solid 3px;
+}
+
+.introduction {
+  grid-column: 6/9;
+  grid-row: span 2;
+  outline: white solid 3px;
+}
+
+.skills-upper {
+  grid-template-columns: repeat(5, 1fr);
+  grid-column: 1/6;
+  grid-row: span 1;
+}
+
 #about-me {
   justify-content: center;
   /* outline: blue solid 3px; */
 }
 #about-me .content-block {
   padding-inline: 0%;
-  background-color: #E8EAE3;
+  background-color: #2B7A78;
 }
 #about-me .content-block article {
   display: flex;
@@ -431,7 +507,7 @@ section,
   opacity: 1;
 }
 #about-me .content-block #education {
-  background-color: #E8EAE3;
+  background-color: #2B7A78;
   overflow: visible;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - (400px - 100vw) * -0.15), 0% 100%);
   padding-inline: 0%;
@@ -483,7 +559,7 @@ section,
     EDUCATION SECTION
  ************************/
 #education .content-block {
-  background-color: #E8EAE3;
+  background-color: #2B7A78;
   overflow: visible;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - (400px - 100vw) * -0.15), 0% 100%);
   padding-inline: 0%;
@@ -577,7 +653,7 @@ section,
          PROJECTS
 ************************/
 #projects {
-  background-color: #E8EAE3;
+  background-color: #2B7A78;
   padding-block-end: 4rem;
 }
 #projects .project {

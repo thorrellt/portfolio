@@ -14,14 +14,17 @@ body {
    VARIABLES
 **************/
 
-$prim-500: #686962;
+$prim-500: #3AAFA9;
 $prim-700: #373833;
 $prim-900: #2e302c;
 
-$sec-300: #E8EAE3;
-$tert-500: #FA2742;
 
-$white: white;
+$sec-300: #2B7A78;
+$sec-500: #2B7A78;
+$tert-500: #DEF2F1;
+
+$white: #FEFFFF;
+$black: #17252A;
 
 
 /**************
@@ -127,7 +130,7 @@ a {
     transform: translate(-50%, -50%);
     height: 100%;
     width: 100%;
-    background: rgba(55, 56, 51, .6);
+    background: rgba(58, 175, 169, .6);
 }
 
 
