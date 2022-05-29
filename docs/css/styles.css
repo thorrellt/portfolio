@@ -31,10 +31,16 @@ h1 {
 }
 
 h2 {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: clamp(2rem, 3rem, 3.5vw);
-  font-weight: 700;
-  color: #FEFFFF;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+  color: #17252A;
+  grid-column: 1/-1;
+  grid-row: span 1;
+  margin-block: 3rem;
+  text-align: center;
+  outline: green 2px solid;
 }
 
 h3 {
@@ -66,7 +72,7 @@ p {
   line-height: 1.7rem;
   letter-spacing: 0.03rem;
   font-weight: 500;
-  color: #17252A;
+  color: #205a58;
 }
 
 /**************
@@ -325,8 +331,20 @@ header #profile-picture img {
   z-index: 0;
 }
 
+#main-content-block {
+  padding-inline: 4.5rem;
+  width: 100%;
+}
+
 #about-me {
-  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  outline: red 1px solid;
+}
+#about-me article {
+  grid-column: 2/6;
+  grid-row: span 1;
+  padding-inline: 1rem;
 }
 
 /**************

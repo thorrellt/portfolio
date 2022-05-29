@@ -220,10 +220,24 @@
 
 
 
-
+#main-content-block {
+    padding-inline: 4.5rem;
+    width: 100%;
+    
+}
 
 #about-me {
-    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    
+    outline: red 1px solid;
+    
+    article {
+        grid-column: 2 / 6;
+        grid-row: span 1;
+        padding-inline: 1rem;
+
+    }
 }
 
 /**************
