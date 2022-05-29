@@ -48,6 +48,8 @@ h3 {
   letter-spacing: 0.1rem;
   font-weight: 900;
   color: #17252A;
+  padding-inline: 0.75rem;
+  margin-block-end: 1rem;
 }
 
 h4 {
@@ -72,7 +74,7 @@ p {
   line-height: 1.7rem;
   letter-spacing: 0.03rem;
   font-weight: 500;
-  color: #205a58;
+  color: #2B7A78;
 }
 
 /**************
@@ -270,6 +272,7 @@ header #introduction .container h1 .tertiary {
 header #introduction .container p {
   font-size: 1.25rem;
   font-weight: bold;
+  color: #205a58;
 }
 header #introduction .container #btn-cv {
   font-family: "IBM Plex Sans", sans-serif;
@@ -350,11 +353,12 @@ header #profile-picture img {
 }
 #about-me #skills {
   grid-column: 7/12;
+  grid-row: span 2;
 }
 #about-me #skills #skills-icons {
   display: flex;
   flex-wrap: wrap;
-  padding-block-start: 2rem;
+  padding-block-start: 1rem;
 }
 #about-me #skills #skills-icons .icon-container {
   display: flex;
@@ -369,6 +373,42 @@ header #profile-picture img {
   flex-basis: 100%;
   text-align: center;
   margin-block-start: 0.125rem;
+}
+#about-me #education {
+  grid-column: 2/6;
+  grid-row: span 1;
+}
+#about-me #education #degree {
+  display: flex;
+  flex-wrap: wrap;
+  padding-inline: 1rem;
+}
+#about-me #education #degree #degree-type,
+#about-me #education #degree #college-name {
+  flex: 1 0 100%;
+}
+#about-me #education #degree #degree-type,
+#about-me #education #degree #degree-year {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.05rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.03rem;
+  font-weight: 500;
+  color: #2B7A78;
+  color: #3AAFA9;
+  justify-content: end;
+  transform: translate(0%, 15%);
+  font-size: 0.875rem;
+}
+#about-me #education #degree #degree-field {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.375rem;
+  letter-spacing: 0.1rem;
+  font-weight: 900;
+  color: #17252A;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.5rem;
+  margin-inline-end: 0.25rem;
 }
 
 /**************

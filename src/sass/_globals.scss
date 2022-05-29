@@ -71,7 +71,7 @@ $neutral-light-gray: #DEF2F1;
 }
 
 
-@mixin p($color: $neutral-dark-gray-700){
+@mixin p($color: $neutral-dark-gray){
     font-family: 'IBM Plex Mono', monospace;
     font-size: clamp(1rem, 1.05rem, 1.15rem);
     line-height: 1.7rem;
@@ -103,6 +103,8 @@ h2 {
 
 h3 {
     @include h3();
+    padding-inline: .75rem;
+    margin-block-end: 1rem;
 }
 
 h4 {

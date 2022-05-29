@@ -151,7 +151,8 @@
     
             p{
                 font-size: 1.25rem;
-                font-weight: bold; 
+                font-weight: bold;
+                color: $neutral-dark-gray-700; 
             }
     
             #btn-cv {
@@ -242,12 +243,13 @@
 
     #skills {
         grid-column: 7 / 12;
+        grid-row: span 2;
         // outline: red 1px solid;
 
         #skills-icons {
             display: flex;
             flex-wrap: wrap;
-            padding-block-start: 2rem ;
+            padding-block-start: 1rem ;
             // outline: green 1px solid;
 
             .icon-container {
@@ -267,6 +269,41 @@
                     // outline: black 1px solid;
                 }
             }
+
+        }
+    }
+
+    #education{
+        grid-column: 2 / 6;
+        grid-row: span 1;
+        // padding-inline: 1rem;
+
+        #degree {
+            display: flex;
+            flex-wrap: wrap;
+            padding-inline: 1rem;
+
+            #degree-type,
+            #college-name {
+                flex: 1 0 100%;
+            }
+
+            #degree-type,
+            #degree-year{
+                @include p();
+                color: $sec-500;
+                justify-content: end;
+                transform: translate(0%, 15%);
+                font-size: .875rem;
+            }
+
+            #degree-field{
+                @include h3();
+                font-family: 'IBM Plex Mono', monospace;
+                font-size: 1.5rem;
+                margin-inline-end: .25rem;
+            }
+
 
         }
     }
