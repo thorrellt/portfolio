@@ -224,7 +224,7 @@
 ****************/
 
 section{
-    padding-inline: 4.5rem;
+    padding: 0rem 4.5rem 3.5rem 4.5rem;
 }
 
 #main-content-block {
@@ -240,10 +240,11 @@ section{
 ****************/
 
 #about-me {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    
-    
+
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
     
     article {
         grid-column: 2 / 6;
@@ -323,114 +324,127 @@ section{
     PROJECTS
  **************/
  #projects{
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
+     display: flex;
     background-color: $neutral-light-gray;
+    justify-content: center;
 
+    .grid-container{
 
-
-    .project{
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 1fr;
+        grid-row-gap: 5rem;
 
-        
-        border-radius: 10px;
-        overflow: hidden;
 
-        background-color: $neutral-white ;
 
-        filter: drop-shadow(7px 7px 7px $neutral-dark-gray);
+        .project{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: min-content 1fr;
+            min-height: 100%;
 
-        a{
-            grid-column: 1 / -1;
-            grid-row: span 1;
-        
-            img{
-                display: flex;
-                // min-width: 100%;
-                max-width: 100%;
-                flex-basis: 100%;
-                flex-wrap: wrap;
-                align-self: center;
-                // outline: black 3px solid;
-                /* outline: white 3px solid; */
-            } 
-        }
+            
+            border-radius: 10px;
+            overflow: hidden;
 
-        .description {
-            grid-column: 1 / 5;
-            grid-row: span 1;
-            margin-block: 2rem;
+            background-color: $neutral-white ;
 
-            margin-inline-start: 2rem;
+            filter: drop-shadow(7px 7px 7px $neutral-dark-gray);
 
-            p{
-                padding-inline: 1rem;
-                margin-block-end: 1.5rem;
+            a{
+                grid-column: 1 / -1;
+                
+                height: fit-content;
+            
+                img{
+                    display: flex;
+                    // min-width: 100%;
+                    max-width: 100%;
+                    flex-basis: 100%;
+                    flex-wrap: wrap;
+                    align-self: center;
+                    // outline: black 3px solid;
+                    /* outline: white 3px solid; */
+                } 
             }
 
-            // h4{
-            // }  
-
-            ul {
+            .description {
+                grid-column: 1 / 5;
+                grid-row: span 1;
+                margin-block: 2rem;
+                align-self: start;
                 display: flex;
-                flex-wrap: wrap;
-                flex-basis: 100%;
-                padding-inline: 1rem;
-                
-                li {
-                    @include p($neutral-dark-gray);
-                    font-size: 1.063rem;
-                    margin-block: .375rem;
+                // height: 100%;
+                flex-direction: column;
+                margin-inline-start: 2rem;
 
-                    span {
-                        font-size: 1.125em;
-                        font-weight: 900;
-                        color: $neutral-black;
+                p{
+                    padding-inline: 1rem;
+                    margin-block-end: 1.5rem;
+                }
+ 
+
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-basis: 100%;
+                    padding-inline: 1rem;
+                    
+                    li {
+                        @include p($neutral-dark-gray);
+                        font-size: 1.063rem;
+                        margin-block: .375rem;
+
+                        span {
+                            font-size: 1.125em;
+                            font-weight: 900;
+                            color: $neutral-black;
+                        }
                     }
                 }
             }
+
+            .stack {
+                grid-column: 5 / 6;
+                grid-row: span 1;
+
+                
+                display: flex;
+                height: 100%;
+                flex-wrap: wrap;                      
+                justify-content: center;
+                align-items: center;
+                margin-inline: 2%;
+                align-self: center;
+                // outline: white 3px solid;
+            
+                .icon{
+                    display: flex;
+                    flex-basis: 100%;
+                    justify-content: center;
+                    width: 100%;
+            
+                    img {
+                        max-width: 3rem;
+                        @include icon-color;
+                        /* outline: white 3px solid; */
+                    }
+                }
+            }
+
+        }
+        
+
+        .left-side {
+            grid-column: 2 / 6;
+            grid-row: span 1;
         }
 
-        .stack {
-            grid-column: 5 / 6;
+        .right-side {
+            grid-column: 8 / 12;
             grid-row: span 1;
-
-            
-            display: flex;
-            height: 100%;
-            flex-wrap: wrap;                      
-            justify-content: center;
-            align-items: center;
-            margin-inline: 2%;
-            align-self: center;
-            // outline: white 3px solid;
-         
-             .icon{
-                 display: flex;
-                 flex-basis: 100%;
-                 justify-content: center;
-                 width: 100%;
-         
-                 img {
-                     max-width: 3rem;
-                     @include icon-color;
-                     /* outline: white 3px solid; */
-                  }
-             }
-         }
-
+        }
     }
-    
-
-    .left-side {
-        grid-column: 2 / 6;
-        grid-row: span 1;
-    }
-
-
-
-
  }
  
 
@@ -571,12 +585,7 @@ section{
 }
 
 
-.grid-container {
-    width: 100vw;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(4, 21vh);
-}
+
 
 .profile-picture {
     grid-column: 1 / 5;
