@@ -162,6 +162,13 @@ header #profile-picture {
   display: flex;
   flex: 1 0 50%;
   background-color: #3AAFA9;
+  justify-content: center;
+}
+header #profile-picture img {
+  height: 90%;
+  align-self: flex-end;
+  transform: scaleX(-1);
+  filter: drop-shadow(7px 7px 7px #2B7A78);
 }
 header #contact-icons {
   display: flex;

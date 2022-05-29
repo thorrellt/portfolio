@@ -22,6 +22,15 @@
         display: flex;
         flex: 1 0 50%;
         background-color: $sec-500;
+        justify-content: center;
+        
+        img {
+            height: 90%;
+            align-self: flex-end;
+            transform: scaleX(-1); //flip image
+            filter: drop-shadow(7px 7px 7px $neutral-dark-gray);
+        
+        }
     }
 
 
