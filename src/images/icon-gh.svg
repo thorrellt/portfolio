@@ -7,8 +7,8 @@
    viewBox="0 0 48 48"
    version="1.1"
    id="svg5"
-   inkscape:version="1.1.2 (1:1.1+202202050950+0a00cf5339)"
-   sodipodi:docname="icon-li.svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="icon-gh.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -26,22 +26,26 @@
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:zoom="8"
-     inkscape:cx="-2.8125"
-     inkscape:cy="31.1875"
-     inkscape:window-width="1848"
-     inkscape:window-height="1016"
-     inkscape:window-x="72"
-     inkscape:window-y="27"
+     inkscape:cx="-2.875"
+     inkscape:cy="31.125"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="380"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1">
+     inkscape:current-layer="layer1"
+     inkscape:showpageshadow="0"
+     inkscape:deskcolor="#000000">
     <sodipodi:guide
        position="24.044159,50.13129"
        orientation="1,0"
-       id="guide1589" />
+       id="guide1589"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="-11.1875,24.0625"
        orientation="0,-1"
-       id="guide1921" />
+       id="guide1921"
+       inkscape:locked="false" />
   </sodipodi:namedview>
   <defs
      id="defs2" />
@@ -49,66 +53,41 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <rect
-       style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:3.6772;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect846"
-       width="44.322807"
-       height="44.322803"
-       x="1.8127115"
-       y="1.9856634"
-       ry="5.6346893" />
     <g
        id="g1125"
        transform="translate(-151.80569,-221.98578)">
       <g
-         id="g1071">
-	
-</g>
+         id="g1071" />
       <g
-         id="g1073">
-</g>
+         id="g1073" />
       <g
-         id="g1075">
-</g>
+         id="g1075" />
       <g
-         id="g1077">
-</g>
+         id="g1077" />
       <g
-         id="g1079">
-</g>
+         id="g1079" />
       <g
-         id="g1081">
-</g>
+         id="g1081" />
       <g
-         id="g1083">
-</g>
+         id="g1083" />
       <g
-         id="g1085">
-</g>
+         id="g1085" />
       <g
-         id="g1087">
-</g>
+         id="g1087" />
       <g
-         id="g1089">
-</g>
+         id="g1089" />
       <g
-         id="g1091">
-</g>
+         id="g1091" />
       <g
-         id="g1093">
-</g>
+         id="g1093" />
       <g
-         id="g1095">
-</g>
+         id="g1095" />
       <g
-         id="g1097">
-</g>
+         id="g1097" />
       <g
-         id="g1099">
-</g>
+         id="g1099" />
       <g
-         id="g1101">
-</g>
+         id="g1101" />
     </g>
     <g
        style="fill:#000000"

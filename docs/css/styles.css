@@ -151,7 +151,7 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   min-height: 100vh;
-  min-width: 100vw;
+  min-width: 100%;
   /* outline: green solid 3px; */
 }
 header #introduction {
@@ -166,17 +166,17 @@ header #introduction .container {
   transform: translate(-50%, -50%);
   height: fit-content;
 }
-header #introduction h1 {
+header #introduction .container h1 {
   line-height: 3.5rem;
 }
-header #introduction h1 .tertiary {
+header #introduction .container h1 .tertiary {
   color: #9B1D20;
 }
-header #introduction p {
+header #introduction .container p {
   font-size: 1.25rem;
   font-weight: bold;
 }
-header #introduction #btn-cv {
+header #introduction .container #btn-cv {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: clamp(1.1rem, 2rem, 1.4vw);
   font-weight: 600;
@@ -191,6 +191,44 @@ header #introduction #btn-cv {
   padding-inline: 1.5rem;
   background-color: #9B1D20;
 }
+header #introduction #contacts {
+  align-self: flex-end;
+  justify-self: flex-end;
+  bottom: 0px;
+  left: 0px;
+  background-color: #3AAFA9;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: fit-content;
+}
+header #introduction #contacts a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  margin-inline: 1.5rem;
+  margin-block: 1rem;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: clamp(1.1rem, 2rem, 1.4vw);
+  font-weight: 600;
+  color: #FEFFFF;
+}
+header #introduction #contacts a img {
+  display: flex;
+  flex-grow: 1;
+  width: 2rem;
+}
+header #introduction #contact-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
+  margin-block: 2rem;
+  /* outline: green solid 3px; */
+}
 header #profile-picture {
   display: flex;
   flex: 1 0 50%;
@@ -202,31 +240,6 @@ header #profile-picture img {
   align-self: flex-end;
   transform: scaleX(-1);
   filter: drop-shadow(7px 7px 7px #2B7A78);
-}
-header #contact-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  flex-basis: 100%;
-  margin-block: 2rem;
-  /* outline: green solid 3px; */
-}
-header #contact-icons a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 100%;
-  margin-inline: max(4vw, 3vh);
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: clamp(1.1rem, 2rem, 1.4vw);
-  font-weight: 600;
-  color: #FEFFFF;
-}
-header #contact-icons a img {
-  display: flex;
-  flex-grow: 1;
-  min-width: min(4vw, 7vh);
 }
 
 /**************
