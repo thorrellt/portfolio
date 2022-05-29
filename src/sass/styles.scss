@@ -218,7 +218,9 @@
 }
 
 
-
+/***************
+    ABOUT ME 
+****************/
 
 #main-content-block {
     padding-inline: 4.5rem;
@@ -230,13 +232,43 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     
-    outline: red 1px solid;
+    
     
     article {
         grid-column: 2 / 6;
         grid-row: span 1;
         padding-inline: 1rem;
+    }
 
+    #skills {
+        grid-column: 7 / 12;
+        // outline: red 1px solid;
+
+        #skills-icons {
+            display: flex;
+            flex-wrap: wrap;
+            padding-block-start: 2rem ;
+            // outline: green 1px solid;
+
+            .icon-container {
+                display: flex;
+                flex: 1 1 25%;
+                flex-direction: column;
+                margin-block-end: 2rem;
+
+                img{
+                    align-self: center;
+                }
+
+                p{
+                    flex-basis: 100%;
+                    text-align: center;
+                    margin-block-start: .125rem;
+                    // outline: black 1px solid;
+                }
+            }
+
+        }
     }
 }
 
@@ -256,9 +288,26 @@
      padding-block: min(1.5vw, 1vh);
  }
 
+
 /*******************
    ABOUT ME SECTION
 *********************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .grid-container-2 {
     width: 100vw;
     display: grid;
