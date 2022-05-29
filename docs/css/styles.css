@@ -56,9 +56,9 @@ h4 {
   font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
   letter-spacing: 0.1rem;
-  font-weight: 400;
-  line-height: 92%;
+  font-weight: bold;
   color: #17252A;
+  margin-block: 1rem;
 }
 
 h5 {
@@ -70,7 +70,7 @@ h5 {
 
 p {
   font-family: "IBM Plex Mono", monospace;
-  font-size: 1.05rem;
+  font-size: 1.125rem;
   line-height: 1.7rem;
   letter-spacing: 0.03rem;
   font-weight: 500;
@@ -335,13 +335,19 @@ header #profile-picture img {
 }
 
 /***************
-    ABOUT ME 
+  MAIN CONTENT
 ****************/
-#main-content-block {
+section {
   padding-inline: 4.5rem;
+}
+
+#main-content-block {
   width: 100%;
 }
 
+/***************
+    ABOUT ME 
+****************/
 #about-me {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -390,7 +396,7 @@ header #profile-picture img {
 #about-me #education #degree #degree-type,
 #about-me #education #degree #degree-year {
   font-family: "IBM Plex Mono", monospace;
-  font-size: 1.05rem;
+  font-size: 1.125rem;
   line-height: 1.7rem;
   letter-spacing: 0.03rem;
   font-weight: 500;
@@ -412,9 +418,94 @@ header #profile-picture img {
 }
 
 /**************
+    PROJECTS
+ **************/
+#projects {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  background-color: #DEF2F1;
+}
+#projects .project {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #FEFFFF;
+  filter: drop-shadow(7px 7px 7px #2B7A78);
+}
+#projects .project a {
+  grid-column: 1/-1;
+  grid-row: span 1;
+}
+#projects .project a img {
+  display: flex;
+  max-width: 100%;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  align-self: center;
+  /* outline: white 3px solid; */
+}
+#projects .project .description {
+  grid-column: 1/5;
+  grid-row: span 1;
+  margin-block: 2rem;
+  margin-inline-start: 2rem;
+}
+#projects .project .description p {
+  padding-inline: 1rem;
+  margin-block-end: 1.5rem;
+}
+#projects .project .description ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  padding-inline: 1rem;
+}
+#projects .project .description ul li {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.125rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.03rem;
+  font-weight: 500;
+  color: #2B7A78;
+  font-size: 1.063rem;
+  margin-block: 0.375rem;
+}
+#projects .project .description ul li span {
+  font-size: 1.125em;
+  font-weight: 900;
+  color: #17252A;
+}
+#projects .project .stack {
+  grid-column: 5/6;
+  grid-row: span 1;
+  display: flex;
+  height: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-inline: 2%;
+  align-self: center;
+}
+#projects .project .stack .icon {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+  width: 100%;
+}
+#projects .project .stack .icon img {
+  max-width: 3rem;
+  filter: brightness(0) saturate(100%) invert(53%) sepia(94%) saturate(287%) hue-rotate(128deg) brightness(94%) contrast(88%);
+  /* outline: white 3px solid; */
+}
+#projects .left-side {
+  grid-column: 2/6;
+  grid-row: span 1;
+}
+
+/**************
     CONTENT
  **************/
-section,
 .main-block {
   margin-inline: clamp(0.5rem, 5vw, 5rem);
 }
@@ -758,18 +849,14 @@ section,
 /**********************
          PROJECTS
 ************************/
-#projects {
-  background-color: #3AAFA9;
-  padding-block-end: 4rem;
-}
-#projects .project {
+#projectss .project {
   max-width: min(35rem, 100%);
 }
-#projects p {
+#projectss p {
   color: black;
   margin-block: 1rem;
 }
-#projects > .title {
+#projectss > .title {
   background-color: #17252A;
   display: flex;
   flex-basis: 100%;
@@ -777,19 +864,19 @@ section,
   margin-inline-end: 50%;
   justify-content: flex-end;
 }
-#projects > .title h3 {
+#projectss > .title h3 {
   display: flex;
   width: fit-content;
   color: white;
   padding: 0.5rem 4rem;
   justify-self: flex-end;
 }
-#projects .content-block {
+#projectss .content-block {
   justify-content: space-around;
   column-gap: 2rem;
   row-gap: 7vh;
 }
-#projects .content-block .container {
+#projectss .content-block .container {
   display: flex;
   flex-wrap: wrap;
   flex: 1 1 25rem;
@@ -798,20 +885,20 @@ section,
   justify-content: center;
   align-items: center;
 }
-#projects .content-block .container .project {
+#projectss .content-block .container .project {
   display: flex;
   flex-wrap: wrap;
   border: black 3px solid;
   /* outline: white 3px solid; */
 }
-#projects .content-block .container .project .card {
+#projectss .content-block .container .project .card {
   display: flex;
   flex-basis: 100%;
   flex-wrap: wrap;
   max-width: 100%;
   /* border: white 3px solid; */
 }
-#projects .content-block .container .project .card img {
+#projectss .content-block .container .project .card img {
   display: flex;
   max-width: 100%;
   flex-basis: 100%;
@@ -820,62 +907,62 @@ section,
   outline: black 3px solid;
   /* outline: white 3px solid; */
 }
-#projects .content-block .container .project .card .link {
+#projectss .content-block .container .project .card .link {
   display: flex;
   flex-wrap: wrap;
   flex: 1 1 50%;
   justify-content: center;
   outline: black 3px solid;
 }
-#projects .content-block .container .project .card a {
+#projectss .content-block .container .project .card a {
   display: flex;
   text-decoration: none;
   color: black;
 }
-#projects .content-block .container .project .details {
+#projectss .content-block .container .project .details {
   display: flex;
   flex-wrap: wrap;
   flex-basis: 100%;
   padding-block: 1rem;
   /* outline: white 3px solid; */
 }
-#projects .content-block .container .project .details .desc {
+#projectss .content-block .container .project .details .desc {
   flex-basis: 85%;
 }
-#projects .content-block .container .project .details .desc p,
-#projects .content-block .container .project .details .desc ul {
+#projectss .content-block .container .project .details .desc p,
+#projectss .content-block .container .project .details .desc ul {
   padding-inline: clamp(1rem, 2.5rem, 3vw);
 }
-#projects .content-block .container .project .details .desc h4 {
+#projectss .content-block .container .project .details .desc h4 {
   width: fit-content;
   color: black;
   padding-block: 0.5rem;
   margin-inline: clamp(1rem, 2.5rem, 3vw);
 }
-#projects .content-block .container .project .details .desc ul {
+#projectss .content-block .container .project .details .desc ul {
   display: flex;
   flex-wrap: wrap;
   flex-basis: 100%;
 }
-#projects .content-block .container .project .details .desc ul li {
+#projectss .content-block .container .project .details .desc ul li {
   font-size: 0.95rem;
   letter-spacing: 0.03rem;
   font-weight: 400;
   color: black;
   margin-block-end: 0.5rem;
 }
-#projects .content-block .container .project .details .desc ul li span {
+#projectss .content-block .container .project .details .desc ul li span {
   font-size: 1rem;
   font-weight: 900;
 }
-#projects .content-block .container .project .details .desc .lessons {
+#projectss .content-block .container .project .details .desc .lessons {
   display: flex;
   padding: 0;
   max-width: fit-content;
   border-bottom: 0.2rem solid;
   margin-inline: clamp(1rem, 2.5rem, 3vw);
 }
-#projects .content-block .container .project .details .stack {
+#projectss .content-block .container .project .details .stack {
   display: flex;
   height: 100%;
   flex-grow: 1;
@@ -886,7 +973,7 @@ section,
   margin-inline: 2%;
   align-self: center;
 }
-#projects .content-block .container .project .details .stack .icon {
+#projectss .content-block .container .project .details .stack .icon {
   display: flex;
   /* flex-wrap: wrap; */
   /* flex-basis: min(45vw, 19rem); */
@@ -895,11 +982,11 @@ section,
   /* outline: green solid 3px; */
   justify-content: center;
 }
-#projects .content-block .container .project .details .stack .icon img {
+#projectss .content-block .container .project .details .stack .icon img {
   color: black;
   max-width: min(2rem, 20vw);
   min-width: 2rem;
-  filter: brightness(0) saturate(100%) invert(43%) sepia(8%) saturate(292%) hue-rotate(29deg) brightness(91%) contrast(89%);
+  filter: brightness(0) saturate(100%) invert(53%) sepia(94%) saturate(287%) hue-rotate(128deg) brightness(94%) contrast(88%);
   /* outline: white 3px solid; */
 }
 

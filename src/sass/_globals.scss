@@ -58,8 +58,8 @@ $neutral-light-gray: #DEF2F1;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.25rem;
     letter-spacing: .1rem;
-    font-weight: 400;
-    line-height: 92%;
+    font-weight: bold;
+    // line-height: 92%;
     color: $color;
 }
 
@@ -73,7 +73,7 @@ $neutral-light-gray: #DEF2F1;
 
 @mixin p($color: $neutral-dark-gray){
     font-family: 'IBM Plex Mono', monospace;
-    font-size: clamp(1rem, 1.05rem, 1.15rem);
+    font-size: 1.125rem;
     line-height: 1.7rem;
     letter-spacing: .03rem;
     font-weight: 500;
@@ -81,8 +81,8 @@ $neutral-light-gray: #DEF2F1;
 }
 
 @mixin icon-color{
-    // filter:invert(0%) sepia(8%) saturate(100%) hue-rotate(115deg) brightness(0) contrast(107%);
-    filter: brightness(0) saturate(100%) invert(43%) sepia(8%) saturate(292%) hue-rotate(29deg) brightness(91%) contrast(89%);
+    // filter:invert(53%) sepia(94%) saturate(287%) hue-rotate(128deg) brightness(94%) contrast(88%);
+    filter: brightness(0) saturate(100%) invert(53%) sepia(94%) saturate(287%) hue-rotate(128deg) brightness(94%) contrast(88%);
 }
 
 /**************
@@ -109,6 +109,7 @@ h3 {
 
 h4 {
     @include h4();
+    margin-block: 1rem; 
 }
 
 h5 {
