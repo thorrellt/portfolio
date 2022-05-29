@@ -2,6 +2,56 @@
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&family=Montserrat:wght@700;800;900&display=swap');
 
+/************************
+    HEADER/WELCOME PAGE
+ ************************/
+ header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 100vh;
+    min-width: 100vw;
+    /* outline: green solid 3px; */
+    
+    #introduction {
+        display: flex;
+        flex: 1 0 50%;
+        background-color: $neutral-light-gray;
+    }
+    
+    #profile-picture {
+        display: flex;
+        flex: 1 0 50%;
+        background-color: $sec-500;
+    }
+
+
+
+    #contact-icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 100%;
+    
+        margin-block: 2rem;
+        /* outline: green solid 3px; */
+
+        a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 100%;
+            margin-inline: max(4vw, 3vh);
+
+            img{
+                display: flex;
+                flex-grow: 1;
+                min-width: min(4vw, 7vh);
+            }
+        }     
+    }
+}
+
 
 /**************
     NAV BAR
@@ -14,7 +64,7 @@ nav {
     height: 5rem;
     justify-content: center;
     align-items: center;
-    background-color: $prim-700;
+    background-color: $neutral-black;
 
     span{
         display: flex;
@@ -39,7 +89,7 @@ nav {
         padding: 0;
         align-items: center;
         justify-content: center;
-        background-color: $prim-700;
+        background-color: $neutral-black;
         list-style: none;
         // outline: black solid 3px;
 
@@ -132,101 +182,7 @@ nav {
 }
 
 
-/************************
-    HEADER/WELCOME PAGE
- ************************/
- header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
 
-    min-height: 100vh;
-    /* outline: green solid 3px; */
-
-    .welcome-card {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        margin-inline: 5%;
-        margin-block-start: min(40vw, 20vh);
-        background: radial-gradient(55% 60% at center, rgba(55, 56, 51, 1), rgba(55, 56, 51, 0));
-        /* outline: red solid 3px;  */
-
-        h1 {
-            display: flex;
-            justify-content: center;
-            flex-basis: 100%;
-            
-            margin-block: 0rem;
-            /* outline: black solid 3px;  */
-        }
-        
-        .container{
-            display: flex;
-            flex-wrap: wrap;            
-        }
-
-        h2{
-            display: flex;
-            transition: 2s;
-            margin-block: min(5vh, 8vw);
-        }
-
-        #urlDisp {
-            color: #fff;
-            overflow: hidden;
-            border-right: .15em solid $white; 
-            white-space: nowrap;
-            margin: 0 auto;
-            animation-direction: reverse;            
-          }
-
-
-
-        #contact-icons {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            flex-basis: 100%;
-        
-            margin-block: 2rem;
-            /* outline: green solid 3px; */
-
-            a{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                max-width: 100%;
-                margin-inline: max(4vw, 3vh);
-
-                img{
-                    display: flex;
-                    flex-grow: 1;
-                    min-width: min(4vw, 7vh);
-                }
-            }     
-        }
-    }
-
-    .container-down-arrow {
-        display: flex;
-        width: 100%;
-        align-self: flex-end;
-        justify-content: center;
-    
-        /* outline: black solid 3px; */
-
-        img {
-            width: 10vh;
-            color: white;
-        
-            margin-bottom: 1vh;
-        }
-    }   
-}
 
 
 /**************
@@ -257,12 +213,12 @@ nav {
     grid-column: 1 / 6;
     grid-row: span 1;
     // outline: white solid 3px;
-    background-color: $white;
+    background-color: $neutral-white;
     h3{
-        color: $black;
+        color: $neutral-black;
     }
     .shadow{
-        color: $prim-500;
+        color: $neutral-black;
     }
     img{
         // height: 50vh;
@@ -272,12 +228,12 @@ nav {
     grid-column: 6 / 12;
     grid-row: span 1;
     display: flex;
-    background-color: $prim-500;
+    background-color: $neutral-black;
     padding-inline: 6rem;
     padding-block: 4rem;
     // outline: red solid 3px;
     .container{
-        background-color: $black;
+        background-color: $neutral-black;
         height: 100%;
         display: block;
         gap:0%;
@@ -296,7 +252,7 @@ nav {
 
         h4{
             width: fit-content;
-            color: $white;
+            color: $neutral-white;
             
         }
         
@@ -320,7 +276,7 @@ nav {
     grid-column: 1 / 5;
     grid-row: span 1;
     // outline: red solid 3px;
-    background-color: $prim-500;
+    background-color: $neutral-black;
 
     #resume-btn{
         border-radius: 5em;
@@ -332,14 +288,14 @@ nav {
 .education-block {
     grid-column: 1 / 5;
     grid-row: span 1;
-    background-color: $prim-500;
+    background-color: $neutral-black;
     // outline: white solid 3px;
 }
 .skills-block {
     grid-column: 5 / 12;
     grid-row: span 2;
     // outline: white solid 3px;
-    background-color: $white;
+    background-color: $neutral-white;
 }
 
 
@@ -374,7 +330,7 @@ nav {
 
     .content-block {        
         padding-inline: 0%;
-        background-color: $sec-300;
+        background-color: $sec-500;
 
         article {
             display: flex;
@@ -395,7 +351,7 @@ nav {
                 max-height: fit-content;
                 margin-block: 1em 0;
                 padding: .5rem 2rem;
-                background-color: $prim-700;
+                background-color: $neutral-black;
                 /* outline: green solid 3px; */
                 
                 h3{
@@ -480,12 +436,12 @@ nav {
         }
 
         #education {
-            background-color: $sec-300;
+            background-color: $sec-500;
             overflow: visible;
             clip-path: polygon(0 0, 100% 0, 100% calc(100% - (400px - 100vw) * -.15), 0% 100%);
             padding-inline: 0%;
             padding-bottom: 5vh;
-            border-bottom: $prim-700;
+            border-bottom: $neutral-black;
 
             p {
                 flex-basis: 100%;
@@ -553,12 +509,12 @@ nav {
  ************************/
 #education {
     .content-block {
-    background-color: $sec-300;
+    background-color: $sec-500;
     overflow: visible;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - (400px - 100vw) * -.15), 0% 100%);
     padding-inline: 0%;
     padding-bottom: 5vh;
-    border-bottom: $prim-700;
+    border-bottom: $neutral-black;
 
         p {
             flex-basis: 100%;
@@ -680,7 +636,7 @@ nav {
 ************************/
 
 #projects {
-    background-color: $sec-300;
+    background-color: $sec-500;
     padding-block-end: 4rem;
 
     .project {
@@ -693,7 +649,7 @@ nav {
      }     
 
     & > .title {
-        background-color: $prim-700;
+        background-color: $neutral-black;
         display: flex;
         flex-basis: 100%;
         margin-block: 2rem;

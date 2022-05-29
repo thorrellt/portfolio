@@ -50,13 +50,13 @@ h4 {
   letter-spacing: 0.3rem;
   font-weight: 400;
   line-height: 92%;
-  color: #2e302c;
+  color: #17252A;
 }
 
 h5 {
   font-size: clamp(1.1rem, 2rem, 1.4vw);
   font-weight: 600;
-  color: #2e302c;
+  color: #17252A;
 }
 
 p,
@@ -65,7 +65,7 @@ a {
   line-height: 1.7rem;
   letter-spacing: 0.03rem;
   font-weight: 500;
-  color: #3AAFA9;
+  color: #17252A;
 }
 
 /**************
@@ -109,7 +109,7 @@ section,
 }
 
 .shadow {
-  text-shadow: 0.25rem 0.125rem #DEF2F1;
+  text-shadow: 0.25rem 0.125rem #9B1D20;
   -webkit-text-stroke-width: 1px;
   -moz-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
@@ -143,6 +143,48 @@ section,
     border-color: orange;
   }
 }
+/************************
+    HEADER/WELCOME PAGE
+ ************************/
+header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 100vh;
+  min-width: 100vw;
+  /* outline: green solid 3px; */
+}
+header #introduction {
+  display: flex;
+  flex: 1 0 50%;
+  background-color: #DEF2F1;
+}
+header #profile-picture {
+  display: flex;
+  flex: 1 0 50%;
+  background-color: #3AAFA9;
+}
+header #contact-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
+  margin-block: 2rem;
+  /* outline: green solid 3px; */
+}
+header #contact-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  margin-inline: max(4vw, 3vh);
+}
+header #contact-icons a img {
+  display: flex;
+  flex-grow: 1;
+  min-width: min(4vw, 7vh);
+}
+
 /**************
     NAV BAR
  **************/
@@ -154,7 +196,7 @@ nav {
   height: 5rem;
   justify-content: center;
   align-items: center;
-  background-color: #373833;
+  background-color: #17252A;
 }
 nav span {
   display: flex;
@@ -178,7 +220,7 @@ nav ul {
   padding: 0;
   align-items: center;
   justify-content: center;
-  background-color: #373833;
+  background-color: #17252A;
   list-style: none;
 }
 nav ul .btn {
@@ -248,85 +290,6 @@ nav ul .nav-item:after {
   transition: all 0.2s linear;
 }
 
-/************************
-    HEADER/WELCOME PAGE
- ************************/
-header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  /* outline: green solid 3px; */
-}
-header .welcome-card {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin-inline: 5%;
-  margin-block-start: min(40vw, 20vh);
-  background: radial-gradient(55% 60% at center, rgb(55, 56, 51), rgba(55, 56, 51, 0));
-  /* outline: red solid 3px;  */
-}
-header .welcome-card h1 {
-  display: flex;
-  justify-content: center;
-  flex-basis: 100%;
-  margin-block: 0rem;
-  /* outline: black solid 3px;  */
-}
-header .welcome-card .container {
-  display: flex;
-  flex-wrap: wrap;
-}
-header .welcome-card h2 {
-  display: flex;
-  transition: 2s;
-  margin-block: min(5vh, 8vw);
-}
-header .welcome-card #urlDisp {
-  color: #fff;
-  overflow: hidden;
-  border-right: 0.15em solid #FEFFFF;
-  white-space: nowrap;
-  margin: 0 auto;
-  animation-direction: reverse;
-}
-header .welcome-card #contact-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  flex-basis: 100%;
-  margin-block: 2rem;
-  /* outline: green solid 3px; */
-}
-header .welcome-card #contact-icons a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 100%;
-  margin-inline: max(4vw, 3vh);
-}
-header .welcome-card #contact-icons a img {
-  display: flex;
-  flex-grow: 1;
-  min-width: min(4vw, 7vh);
-}
-header .container-down-arrow {
-  display: flex;
-  width: 100%;
-  align-self: flex-end;
-  justify-content: center;
-  /* outline: black solid 3px; */
-}
-header .container-down-arrow img {
-  width: 10vh;
-  color: white;
-  margin-bottom: 1vh;
-}
-
 /**************
     CONTENT
  **************/
@@ -361,13 +324,13 @@ section,
   color: #17252A;
 }
 .profile-photo-block .shadow {
-  color: #3AAFA9;
+  color: #17252A;
 }
 .introduction-block {
   grid-column: 6/12;
   grid-row: span 1;
   display: flex;
-  background-color: #3AAFA9;
+  background-color: #17252A;
   padding-inline: 6rem;
   padding-block: 4rem;
 }
@@ -389,7 +352,7 @@ section,
   color: #FEFFFF;
 }
 .introduction-block .container p {
-  color: #DEF2F1;
+  color: #9B1D20;
   display: flex;
   margin-inline: 3rem;
   padding: 1rem;
@@ -398,7 +361,7 @@ section,
 .resume-block {
   grid-column: 1/5;
   grid-row: span 1;
-  background-color: #3AAFA9;
+  background-color: #17252A;
 }
 .resume-block #resume-btn {
   border-radius: 5em;
@@ -410,7 +373,7 @@ section,
 .education-block {
   grid-column: 1/5;
   grid-row: span 1;
-  background-color: #3AAFA9;
+  background-color: #17252A;
 }
 
 .skills-block {
@@ -450,7 +413,7 @@ section,
 }
 #about-me .content-block {
   padding-inline: 0%;
-  background-color: #2B7A78;
+  background-color: #3AAFA9;
 }
 #about-me .content-block article {
   display: flex;
@@ -468,7 +431,7 @@ section,
   max-height: fit-content;
   margin-block: 1em 0;
   padding: 0.5rem 2rem;
-  background-color: #373833;
+  background-color: #17252A;
   /* outline: green solid 3px; */
 }
 #about-me .content-block article .title h3 {
@@ -529,12 +492,12 @@ section,
   opacity: 1;
 }
 #about-me .content-block #education {
-  background-color: #2B7A78;
+  background-color: #3AAFA9;
   overflow: visible;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - (400px - 100vw) * -0.15), 0% 100%);
   padding-inline: 0%;
   padding-bottom: 5vh;
-  border-bottom: #373833;
+  border-bottom: #17252A;
 }
 #about-me .content-block #education p {
   flex-basis: 100%;
@@ -581,12 +544,12 @@ section,
     EDUCATION SECTION
  ************************/
 #education .content-block {
-  background-color: #2B7A78;
+  background-color: #3AAFA9;
   overflow: visible;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - (400px - 100vw) * -0.15), 0% 100%);
   padding-inline: 0%;
   padding-bottom: 5vh;
-  border-bottom: #373833;
+  border-bottom: #17252A;
 }
 #education .content-block p {
   flex-basis: 100%;
@@ -675,7 +638,7 @@ section,
          PROJECTS
 ************************/
 #projects {
-  background-color: #2B7A78;
+  background-color: #3AAFA9;
   padding-block-end: 4rem;
 }
 #projects .project {
@@ -686,7 +649,7 @@ section,
   margin-block: 1rem;
 }
 #projects > .title {
-  background-color: #373833;
+  background-color: #17252A;
   display: flex;
   flex-basis: 100%;
   margin-block: 2rem;

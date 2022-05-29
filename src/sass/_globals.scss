@@ -14,23 +14,20 @@ body {
    VARIABLES
 **************/
 
-$prim-500: #3AAFA9;
-$prim-700: #373833;
-$prim-900: #2e302c;
+// prim is neutral blend
+$sec-500: #3AAFA9;
+$tert-500: #9B1D20;
 
-
-$sec-300: #2B7A78;
-$sec-500: #2B7A78;
-$tert-500: #DEF2F1;
-
-$white: #FEFFFF;
-$black: #17252A;
+$neutral-white: #FEFFFF;
+$neutral-black: #17252A;
+$neutral-dark-gray: #2B7A78;
+$neutral-light-gray: #DEF2F1;
 
 
 /**************
    MIX-INS
 **************/
-@mixin h1($color: $white){
+@mixin h1($color: $neutral-white){
     font-family: 'Montserrat', sans-serif;
     font-size: clamp(2.5rem, 5rem, 5vw);
     font-weight: 900;
@@ -38,21 +35,21 @@ $black: #17252A;
     
 }
 
-@mixin h2($color: $white){
+@mixin h2($color: $neutral-white){
     font-family: 'IBM Plex Mono', monospace;
     font-size: clamp(2rem, 3rem, 3.5vw);
     font-weight: 700;
     color: $color;
 }
 
-@mixin h3($color: $white){
+@mixin h3($color: $neutral-white){
     font-family: 'Montserrat', sans-serif;
     font-size: clamp(2rem, 4rem, 3vw);
     font-weight: 900;
     color: $color;
 }
 
-@mixin h4($color: $prim-900){
+@mixin h4($color: $neutral-black){
     font-family: 'Montserrat', sans-serif;
     font-size: clamp(.75rem, 2rem, 1.1vw);
     letter-spacing: .3rem;
@@ -61,14 +58,14 @@ $black: #17252A;
     color: $color;
 }
 
-@mixin h5($color: $prim-900){
+@mixin h5($color: $neutral-black){
     font-size: clamp(1.1rem, 2rem, 1.4vw);
     font-weight: 600;
     color: $color;
 }
 
 
-@mixin p($color: $prim-500){
+@mixin p($color: $neutral-black){
     font-size: clamp(1rem, 1.05rem, 1.15rem);
     line-height: 1.7rem;
     letter-spacing: .03rem;
