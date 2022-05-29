@@ -15,10 +15,11 @@
   nav {
     padding: 5px 30px;
     align-items: flex-start;
+    background-color: transparent;
   }
 
   nav ul .nav-item {
-    width: 70%;
+    width: 100%;
     padding: 1rem 0.5rem;
     display: none;
   }

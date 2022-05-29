@@ -157,7 +157,6 @@ nav {
   right: 0px;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
 }
 nav ul {
   display: flex;
@@ -254,6 +253,7 @@ header #introduction .container {
   left: 45%;
   transform: translate(-50%, -50%);
   height: fit-content;
+  z-index: 1;
 }
 header #introduction .container h1 {
   line-height: 3.5rem;
@@ -287,10 +287,11 @@ header #introduction #contacts {
   left: 0px;
   background-color: #3AAFA9;
   display: flex;
+  flex: 0 1 33%;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  width: 33%;
+  min-width: fit-content;
 }
 header #introduction #contacts a {
   display: flex;
@@ -298,6 +299,7 @@ header #introduction #contacts a {
   align-items: center;
   max-width: 100%;
   margin-block: 0.75rem;
+  margin-inline: 1rem;
   font-family: "IBM Plex Sans", sans-serif;
   font-size: clamp(1.1rem, 2rem, 1.4vw);
   font-weight: 600;
@@ -313,12 +315,14 @@ header #profile-picture {
   flex: 1 0 50%;
   background-color: #3AAFA9;
   justify-content: center;
+  overflow: hidden;
 }
 header #profile-picture img {
   height: 90%;
   align-self: flex-end;
   transform: scaleX(-1);
   filter: drop-shadow(7px 7px 7px #2B7A78);
+  z-index: 0;
 }
 
 #about-me {

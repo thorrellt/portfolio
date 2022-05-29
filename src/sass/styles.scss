@@ -17,7 +17,7 @@
     right: 0px;
     justify-content: center;
     align-items: center;
-    background-color: transparent;
+    
 
 
     ul {
@@ -115,6 +115,10 @@
 }
 
 
+
+
+
+
 /************************
     HEADER/WELCOME PAGE
  ************************/
@@ -136,6 +140,7 @@
             left: 45%;
             transform: translate(-50%, -50%);
             height: fit-content;
+            z-index: 1;
 
             h1{
                 line-height: 3.5rem;
@@ -146,8 +151,7 @@
     
             p{
                 font-size: 1.25rem;
-                font-weight: bold;
-                
+                font-weight: bold; 
             }
     
             #btn-cv {
@@ -171,10 +175,12 @@
             left: 0px;
             background-color: $sec-500;
             display: flex;
+            flex: 0 1 33%;
             flex-wrap: wrap;
             justify-content: space-around;
             align-items: center;
-            width: 33%;
+            min-width: fit-content;
+            
 
             a{
                 display: flex;
@@ -182,6 +188,7 @@
                 align-items: center;
                 max-width: 100%;
                 margin-block: .75rem;
+                margin-inline: 1rem;
                 @include h5();
     
                 img{
@@ -198,12 +205,14 @@
         flex: 1 0 50%;
         background-color: $sec-500;
         justify-content: center;
+        overflow: hidden;
         
         img {
             height: 90%;
             align-self: flex-end;
             transform: scaleX(-1); //flip image
-            filter: drop-shadow(7px 7px 7px $neutral-dark-gray); 
+            filter: drop-shadow(7px 7px 7px $neutral-dark-gray);
+            z-index: 0;
         }
     }
 }
