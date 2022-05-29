@@ -192,27 +192,13 @@ nav {
   display: flex;
   position: fixed;
   z-index: 1;
-  width: 100%;
+  width: 33%;
   height: 5rem;
+  top: 0px;
+  right: 0px;
   justify-content: center;
   align-items: center;
-  background-color: #17252A;
-}
-nav span {
-  display: flex;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  height: 5rem;
-  margin: 0;
-  margin-left: 2%;
-  align-items: center;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 4rem;
-  font-weight: 700;
-  user-select: none;
-  cursor: default;
+  background-color: #3AAFA9;
 }
 nav ul {
   display: flex;
@@ -220,7 +206,7 @@ nav ul {
   padding: 0;
   align-items: center;
   justify-content: center;
-  background-color: #17252A;
+  background-color: #3AAFA9;
   list-style: none;
 }
 nav ul .btn {
@@ -233,7 +219,6 @@ nav ul .btn a::after {
   height: 0;
 }
 nav ul li {
-  /* min-width: 12em; */
   padding: 1rem 2rem;
   text-align: center;
   -webkit-transition: all 0.4s ease;
@@ -253,7 +238,7 @@ nav ul li a:after {
   position: absolute;
   height: 2px;
   background-color: white;
-  width: 50%;
+  width: 0%;
   left: 50%;
   margin-top: 1rem;
   bottom: 0;
@@ -274,7 +259,7 @@ nav ul li a:focus:after {
 nav ul .nav-item {
   position: relative;
   width: auto;
-  margin: 0 16px;
+  margin: 0 1rem;
   text-align: center;
   order: 3;
 }
@@ -285,7 +270,7 @@ nav ul .nav-item:after {
   bottom: 5px;
   height: 2px;
   width: 100%;
-  background: #33ffff;
+  background: #FEFFFF;
   opacity: 0;
   transition: all 0.2s linear;
 }
