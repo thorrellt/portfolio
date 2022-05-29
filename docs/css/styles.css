@@ -246,7 +246,6 @@ header #introduction {
   display: flex;
   flex: 1 0 50%;
   background-color: #DEF2F1;
-  overflow: visible;
 }
 header #introduction .container {
   position: absolute;
