@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="48"
-   height="48"
-   viewBox="0 0 48 48"
+   width="33.299999"
+   height="33.299999"
+   viewBox="0 0 33.299999 33.299999"
    version="1.1"
    id="svg5"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
@@ -26,8 +26,8 @@
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:zoom="8"
-     inkscape:cx="-2.875"
-     inkscape:cy="31.125"
+     inkscape:cx="-10.625"
+     inkscape:cy="23.375"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
@@ -37,12 +37,12 @@
      inkscape:showpageshadow="0"
      inkscape:deskcolor="#000000">
     <sodipodi:guide
-       position="24.044159,50.13129"
+       position="16.65,43.131278"
        orientation="1,0"
        id="guide1589"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="-11.1875,24.0625"
+       position="-18.581659,17.062489"
        orientation="0,-1"
        id="guide1921"
        inkscape:locked="false" />
@@ -52,7 +52,8 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-7.3941589,-7.6999894)">
     <g
        id="g1125"
        transform="translate(-151.80569,-221.98578)">

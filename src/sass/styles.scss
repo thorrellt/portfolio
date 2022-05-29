@@ -2,124 +2,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&family=Montserrat:wght@700;800;900&display=swap');
 
-/************************
-    HEADER/WELCOME PAGE
- ************************/
- header {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    min-height: 100vh;
-    min-width: 100%;
-    /* outline: green solid 3px; */
-    
-    #introduction {
-        display: flex;
-        flex: 1 0 50%;
-        background-color: $neutral-light-gray;
-
-        .container{
-            position: absolute;
-            top: 50%;
-            left: 45%;
-            transform: translate(-50%, -50%);
-            height: fit-content;
-
-            h1{
-                line-height: 3.5rem;
-                .tertiary {
-                    color: $tert-500;
-                }
-            }
-    
-            p{
-                font-size: 1.25rem;
-                font-weight: bold;
-                
-            }
-    
-            #btn-cv {
-                @include h5();
-                font-size: 1rem;
-                border-radius: 50em;
-                height: fit-content;
-                width: fit-content;
-                letter-spacing: .2rem;
-                margin-block: 2rem;
-                padding-block: 1rem;
-                padding-inline: 1.5rem;
-                background-color: $tert-500;
-            }
-        }
-
-        #contacts{
-            align-self: flex-end;
-            justify-self: flex-end;
-            bottom: 0px;
-            left: 0px;
-            background-color: $sec-500;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            max-width: fit-content;
-
-            a{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                max-width: 100%;
-                margin-inline: 1.5rem;
-                margin-block: 1rem;
-                @include h5();
-    
-                img{
-                    display: flex;
-                    flex-grow: 1;
-                    width: 2rem;
-
-                }
-            } 
-        }
-
-        #contact-icons {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            flex-basis: 100%;
-        
-            margin-block: 2rem;
-            /* outline: green solid 3px; */
-    
-    
-        }
-    }
-    
-    #profile-picture {
-        display: flex;
-        flex: 1 0 50%;
-        background-color: $sec-500;
-        justify-content: center;
-        
-        img {
-            height: 90%;
-            align-self: flex-end;
-            transform: scaleX(-1); //flip image
-            filter: drop-shadow(7px 7px 7px $neutral-dark-gray);
-        
-        }
-    }
-
-
-
-
-}
 
 
 /**************
     NAV BAR
  **************/
-nav {
+ nav {
     display: flex;
     position: fixed;
     z-index: 1;
@@ -225,6 +113,103 @@ nav {
         }
     } 
 }
+
+
+/************************
+    HEADER/WELCOME PAGE
+ ************************/
+ header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 100vh;
+    min-width: 100%;
+    /* outline: green solid 3px; */
+    
+    #introduction {
+        display: flex;
+        flex: 1 0 50%;
+        background-color: $neutral-light-gray;
+
+        .container{
+            position: absolute;
+            top: 50%;
+            left: 45%;
+            transform: translate(-50%, -50%);
+            height: fit-content;
+
+            h1{
+                line-height: 3.5rem;
+                .tertiary {
+                    color: $tert-500;
+                }
+            }
+    
+            p{
+                font-size: 1.25rem;
+                font-weight: bold;
+                
+            }
+    
+            #btn-cv {
+                @include h5();
+                font-size: 1rem;
+                border-radius: 50em;
+                height: fit-content;
+                width: fit-content;
+                letter-spacing: .2rem;
+                margin-block: 2rem;
+                padding-block: 1rem;
+                padding-inline: 1.5rem;
+                background-color: $tert-500;
+            }
+        }
+
+        #contacts{
+            align-self: flex-end;
+            justify-self: flex-end;
+            bottom: 0px;
+            left: 0px;
+            background-color: $sec-500;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            width: 33%;
+
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-width: 100%;
+                margin-block: .75rem;
+                @include h5();
+    
+                img{
+                    display: flex;
+                    flex-grow: 1;
+                    width: 2.25rem;
+                }
+            } 
+        }
+    }
+    
+    #profile-picture {
+        display: flex;
+        flex: 1 0 50%;
+        background-color: $sec-500;
+        justify-content: center;
+        
+        img {
+            height: 90%;
+            align-self: flex-end;
+            transform: scaleX(-1); //flip image
+            filter: drop-shadow(7px 7px 7px $neutral-dark-gray); 
+        }
+    }
+}
+
+
+
 
 
 
