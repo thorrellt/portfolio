@@ -289,6 +289,9 @@ header #introduction .container #btn-cv {
   padding-inline: 1.5rem;
   background-color: #9B1D20;
 }
+header #introduction .container #btn-cv:hover {
+  cursor: pointer;
+}
 header #introduction #contacts {
   align-self: flex-end;
   justify-self: flex-end;

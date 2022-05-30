@@ -166,6 +166,10 @@
                 padding-block: 1rem;
                 padding-inline: 1.5rem;
                 background-color: $tert-500;
+
+                &:hover{
+                    cursor: pointer;
+                }
             }
         }
 
