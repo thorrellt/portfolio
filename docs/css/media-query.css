@@ -1,5 +1,8 @@
-/* NAV BAR */
+/**************
+    TABLET
+ **************/
 @media all and (max-width: 900px) {
+  /* NAV BAR */
   nav {
     padding: 5px 30px;
     align-items: flex-start;
