@@ -427,18 +427,26 @@ section {
   display: flex;
   background-color: #DEF2F1;
   justify-content: center;
+  padding: 0;
 }
 #projects .grid-container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1fr;
-  grid-row-gap: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#projects .grid-container .flex-container {
+  display: flex;
+  flex: 1 1 40%;
+  justify-content: center;
+  margin-inline: 2rem;
+  margin-block-end: 4rem;
 }
 #projects .grid-container .project {
+  min-width: 32.75rem;
+  max-width: 35rem;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: min-content 1fr;
-  min-height: 100%;
   border-radius: 10px;
   overflow: hidden;
   background-color: #FEFFFF;
@@ -511,6 +519,54 @@ section {
   max-width: 3rem;
   filter: brightness(0) saturate(100%) invert(53%) sepia(94%) saturate(287%) hue-rotate(128deg) brightness(94%) contrast(88%);
   /* outline: white 3px solid; */
+}
+#projects .grid-container .project .more-info {
+  grid-column: 1/-1;
+  grid-row: span 1;
+  display: flex;
+}
+#projects .grid-container .project .more-info a {
+  width: fit-content;
+  align-self: center;
+  margin-block-end: 1.5rem;
+  margin-inline: auto;
+}
+#projects .grid-container .project .more-info a:link {
+  text-decoration: none;
+}
+#projects .grid-container .project .more-info a:visited {
+  text-decoration: none;
+}
+#projects .grid-container .project .more-info a .gh-btn {
+  display: flex;
+  flex: wrap;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: clamp(1.1rem, 2rem, 1.4vw);
+  font-weight: 600;
+  color: #FEFFFF;
+  font-size: 1rem;
+  border-radius: 50em;
+  height: fit-content;
+  letter-spacing: 0.2rem;
+  padding-block: 1rem;
+  padding-inline: 1.5rem;
+  background-color: #9B1D20;
+}
+#projects .grid-container .project .more-info a .gh-btn span {
+  display: flex;
+  text-align: center;
+  flex-shrink: 0;
+  flex-basis: 75%;
+  min-width: max-content;
+  align-self: center;
+}
+#projects .grid-container .project .more-info a .gh-btn img {
+  display: flex;
+  flex: 1 1 20%;
+  margin-inline: 0.5rem;
+}
+#projects .grid-container .project .more-info a .gh-btn:hover {
+  cursor: pointer;
 }
 #projects .grid-container .left-side {
   grid-column: 2/6;

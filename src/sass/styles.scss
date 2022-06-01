@@ -328,24 +328,39 @@ section{
     PROJECTS
  **************/
  #projects{
-     display: flex;
+    display: flex;
     background-color: $neutral-light-gray;
     justify-content: center;
+    padding: 0;
 
     .grid-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
 
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: 1fr;
-        grid-row-gap: 5rem;
+        // display: grid;
+        // grid-template-columns: repeat(12, 1fr);
+        // grid-template-rows: 1fr;
+        // grid-row-gap: 5rem;
 
-
+        .flex-container {
+            display: flex;
+            flex: 1 1 40%;
+            justify-content: center;
+            margin-inline: 2rem;
+            margin-block-end: 4rem;
+        }
 
         .project{
+            
+            
+            min-width: 32.75rem;
+            max-width: 35rem;
+            
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             grid-template-rows: min-content 1fr;
-            min-height: 100%;
+            // min-height: 100%;
 
             
             border-radius: 10px;
@@ -406,12 +421,15 @@ section{
                         }
                     }
                 }
+                
+                
             }
-
+            
             .stack {
                 grid-column: 5 / 6;
                 grid-row: span 1;
-
+                
+                
                 
                 display: flex;
                 height: 100%;
@@ -436,6 +454,56 @@ section{
                 }
             }
 
+            .more-info{
+
+                grid-column: 1/-1;
+                grid-row: span 1;
+
+                display: flex;
+                a{
+                    width: fit-content;
+                    align-self: center;
+                    margin-block-end: 1.5rem;
+                    margin-inline: auto;
+
+                    &:link { text-decoration: none; }
+                    &:visited { text-decoration: none; }
+    
+                    .gh-btn{
+    
+                        display: flex;
+                        flex: wrap;
+                        @include h5();
+                        font-size: 1rem;
+                        border-radius: 50em;
+                        height: fit-content;
+    
+                        letter-spacing: .2rem;
+                        padding-block: 1rem;
+                        padding-inline: 1.5rem;
+                        background-color: $tert-500;
+    
+                        span {
+                            display: flex;
+                            text-align: center;
+                            flex-shrink: 0;
+                            flex-basis: 75%;
+                            min-width: max-content;
+                            align-self: center;
+                        }
+    
+                        img{
+                            display: flex;
+                            flex: 1 1 20%;
+                            margin-inline: .5rem;
+                        }
+        
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
         }
         
 
