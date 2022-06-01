@@ -269,18 +269,21 @@ section{
 
             .icon-container {
                 display: flex;
-                flex: 1 1 25%;
+                flex: 1 0 25%;
                 flex-direction: column;
+                min-width: 6rem;
                 margin-block-end: 2rem;
 
                 img{
                     align-self: center;
+                    min-width: 4.5rem;
                 }
 
                 p{
                     flex-basis: 100%;
                     text-align: center;
                     margin-block-start: .125rem;
+                    font-size: .938rem;
                     // outline: black 1px solid;
                 }
             }
@@ -291,6 +294,7 @@ section{
     #education{
         grid-column: 2 / 6;
         grid-row: span 1;
+        margin-block-start: 2rem;
         // padding-inline: 1rem;
 
         #degree {

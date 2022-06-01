@@ -371,21 +371,25 @@ section {
 }
 #about-me #skills #skills-icons .icon-container {
   display: flex;
-  flex: 1 1 25%;
+  flex: 1 0 25%;
   flex-direction: column;
+  min-width: 6rem;
   margin-block-end: 2rem;
 }
 #about-me #skills #skills-icons .icon-container img {
   align-self: center;
+  min-width: 4.5rem;
 }
 #about-me #skills #skills-icons .icon-container p {
   flex-basis: 100%;
   text-align: center;
   margin-block-start: 0.125rem;
+  font-size: 0.938rem;
 }
 #about-me #education {
   grid-column: 2/6;
   grid-row: span 1;
+  margin-block-start: 2rem;
 }
 #about-me #education #degree {
   display: flex;
