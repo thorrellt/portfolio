@@ -1,20 +1,11 @@
-@media (min-aspect-ratio: 16/9) {
-    #video-bg {
-        width: 100%;
-        height: auto;
-    }
-}
-
-@media (max-aspect-ratio: 16/9) {
-    #video-bg {
-        width: auto;
-        height: height;
-    }
-}
-
-
-/* NAV BAR */
+/**************
+    TABLET
+ **************/
 @media all and (max-width: 900px){
+
+
+
+    /* NAV BAR */
     nav{
       padding: 5px 30px;
       align-items: flex-start;

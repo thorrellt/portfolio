@@ -1,21 +1,9 @@
-@media (min-aspect-ratio: 16/9) {
-  #video-bg {
-    width: 100%;
-    height: auto;
-  }
-}
-@media (max-aspect-ratio: 16/9) {
-  #video-bg {
-    width: auto;
-    height: height;
-  }
-}
 /* NAV BAR */
 @media all and (max-width: 900px) {
   nav {
     padding: 5px 30px;
     align-items: flex-start;
-    background-color: transparent;
+    background-color: #3AAFA9;
   }
 
   nav ul .nav-item {
