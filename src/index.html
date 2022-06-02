@@ -9,10 +9,11 @@
     <script src="scripts/scripts.js" type="module"></script>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <!-- <link rel="stylesheet" href="styles/styles.css"> -->
-    <!-- <link rel="stylesheet" href="styles.css"> -->
-    <link rel="stylesheet" href="css/media-query.css">
+
+    
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/media-query.css">
+    
     <title>thorrellt.com</title>
 </head>
 <body>
@@ -40,13 +41,15 @@
             <div class="container">
                 <p>hello world, I'm</p>
                 <h1>Thorrell <span class="tertiary">T</span>urner</h1>
-                <p>a Software Developer based<br>
-                out of the Washington<br>
+                <p>a Software Developer based
+                out of the Washington
                 Metropolitan area</p>
 
-                <button id="btn-cv">
-                    DOWNLOAD CV
-                </button>
+                <a href="images/thorrell_turner_resume.pdf" download="ThorrellT_Resume">
+                    <button id="btn-cv">
+                        DOWNLOAD CV
+                    </button>
+                </a>
             </div>
 
             <div id="contacts">
@@ -67,307 +70,110 @@
             <img src="images/img-profile-picture.png" alt="picture of Thorrell Turner">
         </div>
     </header>
-    <!-- <section id="about-me">
-        <h1>ABOUT ME</h1>
-    </section> -->
-    
-<!-- 
-    <nav id="nav-bar">
-        <span class="shadow">t</span>
-           
-        <ul class="nav-list">
-            <li class="nav-item">
-                <a href="#about-me" class="nav-link">About Me</a>
-            </li>
-            <li class="nav-item">
-                <a href="#projects" class="nav-link">Projects</a>
-            </li>
-            <li class="nav-item">
-                <a href="#header" class="nav-link" >Contact</a>
-            </li>
-            <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
-        </ul>
-    </nav>
+    <div id="main-content-block">
 
+        <!-------------- 
+             ABOUT ME 
+        ---------------->
+        <section id="about-me">
+            <h2>About Me</h2>
 
-    <video id="video-bg" poster="images/img-bg-stillshot.png" autoplay muted loop>
-        <source src="images/video-blurred-bg.mp4" type="video/mp4">
-    </video>
-    <div class="color-screen">
-
-    </div>
-    <header id="header">
-        <div class="welcome-card">
-            <h1>Hello World<span class="shadow">!</span> </h1>
-            <h1>I&apos;m</h1>
-            <div class="container">
-                <h2 id="urlDisp">thorrell <span class="shadow">t</span></h2>
-            </div>
-
-
-            <div id="contact-icons">
-                <a href="https://github.com/thorrellt" class="contact" id="gitHub" target="_blank" rel="noopener noreferrer">
-                    <img src="images/icon-gh.svg" alt="github" title="github.com/thorrellt">
-                </a>            
-                <a href="https://www.linkedin.com/in/thorrellt/" class="contact" id="linkedIn" target="_blank" rel="noopener noreferrer">
-                    <img src="images/icon-li.svg" alt="www.linkedin.com/in/thorrellt" title= "linkedin.com/in/thorrellt">
-                </a>             
-                <a href="mailto:thorrellt@gmail.com" class="contact" id="email" target="_blank" rel="noopener noreferrer">
-                    <img src="images/icon-mail.svg" alt="thorrellt@gmail.com" title= "thorrellt@gmail.com">
-                </a>                    
-            </div>
-        </div>
-
-        <div class="container-down-arrow">
-            <img src="images/icon-down.svg" alt="down arrow">
-        </div>
-    </header> -->
-
-
-
-    <!-------------- 
-        ABOUT-ME 
-    -------------->
-    <!-- ABOUT ME -->
-
-        <!-- ABOUT ME -->
-    <!-- <section id="about-me">
-        <div class="grid-container-2">
-            <div class="profile-photo-block">
-                <div class="title">
-                    <h3>About Me<span class="shadow">!</span></h3>
-                </div>
-                <img src="images/stock_img2.png" alt="a picture of thorrell waving">
-            </div>
-            <div class="introduction-block">
-                <div class="container">
-                    <div class="title-container">
-                        <h4 class="title">THORRELL T</h4>
-                    </div>
-                    
-                    <p>
-                        I&#39;m a software developer based out of the Washington Metropolitan area.<br>
-                        <br>
-                        I have always excelled at, &amp; enjoyed, being more of a logical problem solver &amp; tinkerer. So, after 15+ years in public relations &amp; customer service I decided to pursue a career in Software Development.
-                    </p>
-                </div>
-            </div>
-            <div class="resume-block">
-                <button id="resume-btn">Resume</button>
-            </div>
-            <div class="skills-block">
-                <h1>skills</h1>
-            </div>
-            <div class="education-block">
-                <h4 class="title">EDUCATION</h4>
-                <div id="degree">
-                    <p id="degree-type">B.S.</p>
-                    <h2 id="degree-field">Computer Science</h2>
-                </div>
-                <p class="deg-info">2021</p>
-                <p id="college-name" class="deg-info">Old Dominion University</p>
-                <p class="deg-info">Norfolk, Va.</p>
-            </div>
-            
-        </div>
-        <div class="grid-container">
-            <div class="flex-container profile-picture">
-                <div class="title">
-                    <h3>About Me<span class="shadow">!</span></h3>
-                </div>
-                <img src="images/stock_img2.png" alt="a picture of thorrell waving">
-            </div>
-            <article class="flex-container introduction">
-                <p>
-                    I&#39;m a software developer based out of the Washington Metropolitan area.<br>
-                    <br>
-                    I have always excelled at, &amp; enjoyed, being more of a logical problem solver &amp; tinkerer. So, after 15+ years in public relations &amp; customer service I decided to pursue a career in Software Development.
-                </p>
-                <div class="content-block" id="education">
-                    <h4 class="title">EDUCATION</h4>
-                    <div id="degree">
-                        <p id="degree-type">B.S.</p>
-                        <h2 id="degree-field">Computer Science</h2>
-                    </div>
-                    <p class="deg-info">2021</p>
-                    <p id="college-name" class="deg-info">Old Dominion University</p>
-                    <p class="deg-info">Norfolk, Va.</p>
-                </div>
-                
-            </article>
-            <div class="skills-upper">
-                <div class="content-block">
-                    <h4 class="skills-title title">SKILLS</h4>
-                </div> 
-                <div id="skill-icons" class="content-block">
-                    <div class="icon-container">
-                        <img src="images/logo-cpp.svg" alt="C++ Icon" title="C++">
-                        <p>C++</p>
-                    </div>
-                    <div class="icon-container">
-                        <img src="images/logo-css.svg" alt="CSS Icon" title="CSS">
-                        <p>CSS</p>
-                    </div>
-                    <div class="icon-container">
-                        <img src="images/logo-html.svg" alt="HTML Icon" title="HTML">
-                        <p>HTML</p>
-                    </div>
-                </div>
-            </div> 
-
-        </div>
-
-
-
-
-        <div class="content-block">
-            <div class="container">
-                <ul>
-                    <li class="slide visible" data-active>
-                        <img src="images/img-profile-1.png" alt="a picture of thorrell waving" title="Heyoo!">
-                    </li>
-                    <li class="slide">
-                        <img src="images/stock_img2.png" alt="a picture of thorrell waving">
-                    </li>
-                    <li class="slide">
-                        <img src="images/stock_img3.png" alt="a picture of thorrell waving">
-                    </li>
-                    <li class="slide">
-                        <img src="images/stock_img4.png" alt="a picture of thorrell waving">
-                    </li>
-                    <li class="slide">
-                        <img src="images/stock_img5.png" alt="a picture of thorrell waving">
-                    </li>
-                    <li class="slide">
-                        <img src="images/stock_img6.png" alt="a picture of thorrell waving">
-                    </li>
-                </ul>
-            </div>
-            <div class="container">
+            <div class="grid-container">
                 <article>
-                    <div class="title">
-                        <h3>About Me<span class="shadow">!</span></h3>
-                    </div>
                     <p>
-                        I&#39;m a software developer based out of the Washington Metropolitan area.<br>
-                        <br>
-                        I have always excelled at, &amp; enjoyed, being more of a logical problem solver &amp; tinkerer. So, after 15+ years in public relations &amp; customer service I decided to pursue a career in Software Development.
+                        I have always excelled at, &amp enjoyed, being more of a logical problem solver &amp tinkerer. So, after 15+ years in public relations &amp customer service I decided to pursue a career in Software Development. 
                     </p>
                 </article>
-                <div class="content-block" id="education">
-                    <h4 class="title">EDUCATION</h4>
+
+                <div id="skills">
+                    <h3>Skills</h3>
+                    <div id="skills-icons" >
+                        <div class="icon-container">
+                            <img src="images/logo-cplusplus.svg" alt="C++ Icon" title="C++">
+                            <p>C++</p>
+                        </div>
+                        <div class="icon-container">
+                            <img src="images/logo-css.svg" alt="CSS Icon" title="CSS">
+                            <p>CSS</p>
+                        </div>
+                        <div class="icon-container">
+                            <img src="images/logo-html.svg" alt="HTML Icon" title="HTML">
+                            <p>HTML</p>
+                        </div>
+                        <div class="icon-container">
+                            <img src="images/logo-java.svg" alt="Java Icon" title="Java">
+                            <p>Java</p>
+                        </div>
+                        <div class="icon-container">
+                            <img src="images/logo-kotlin.svg" alt="Kotlin Icon" title="Kotlin">
+                            <p>Kotlin</p>
+                        </div>
+                        <div class="icon-container">
+                            <img src="images/logo-git.svg" alt="GIT Logo" title="Version Control">
+                            <p>Version<br>Control</p>
+                        </div>
+                        <div class="icon-container">
+                            <img src="images/logo-javascript.svg" alt="JavaScript Logo" title="JavaScript">
+                            <p>JavaScript</p>
+                        </div>
+                        <div class="icon-container">
+                            <img src="images/logo-android.svg" alt="Android Logo" title="Android" height="87"
+                            width="100">
+                            <p>Android</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="education">
+                    <h3>Education</h3>
                     <div id="degree">
                         <p id="degree-type">B.S.</p>
-                        <h2 id="degree-field">Computer Science</h2>
+                        <span id="degree-field">Computer Science</span>
+                        <span id="degree-year">2021</span>
+                        <p id="college-name">Old Dominion University. Norfolk, Va.</p>
                     </div>
-                    <p class="deg-info">2021</p>
-                    <p id="college-name" class="deg-info">Old Dominion University</p>
-                    <p class="deg-info">Norfolk, Va.</p>
-                </div> 
+                </div>
             </div>
+        </section>
+
+        <!-------------- 
+             PROJECTS 
+        ---------------->
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <div class="grid-container">
+
             
-        </div>
-    </section>
- -->
+            
 
-    <!-- EDUCATION -->
-    <!-- <section >
-        <div class="content-block">
-            <h4 class="title">EDUCATION</h4>
-            <div id="degree">
-                <p id="degree-type">B.S.</p>
-                <h2 id="degree-field">Computer Science</h2>
-            </div>
-            <p class="deg-info">2021</p>
-            <p id="college-name" class="deg-info">Old Dominion University</p>
-            <p class="deg-info">Norfolk, Va.</p>
-        </div>       
-    </section> -->
-
-
-    <!-- SKILLS -->
-    <!-- <section id = "skills">
-        <div class="content-block">
-            <h4 class="skills-title title">SKILLS</h4>
-        </div> 
-        <div id="skill-icons" class="content-block">
-            <div class="icon-container">
-                <img src="images/logo-cpp.svg" alt="C++ Icon" title="C++">
-                <p>C++</p>
-            </div>
-            <div class="icon-container">
-                <img src="images/logo-css.svg" alt="CSS Icon" title="CSS">
-                <p>CSS</p>
-            </div>
-            <div class="icon-container">
-                <img src="images/logo-html.svg" alt="HTML Icon" title="HTML">
-                <p>HTML</p>
-            </div>
-            <div class="icon-container">
-                <img src="images/logo-java.svg" alt="Java Icon" title="Java">
-                <p>Java</p>
-            </div>
-            <div class="icon-container">
-                <img src="images/logo-kotlin.svg" alt="Kotlin Icon" title="Kotlin">
-                <p>Kotlin</p>
-            </div>
-            <div class="icon-container">
-                <img src="images/logo-git.svg" alt="GIT Logo" title="Version Control">
-                <p>Version Control</p>
-            </div>
-            <div class="icon-container">
-                <img src="images/logo-javascript.svg" alt="JavaScript Logo" title="JavaScript">
-                <p>JavaScript</p>
-            </div>
-            <div class="icon-container">
-                <img src="images/logo-android.svg" alt="Android Logo" title="Android" height="87"
-                width="100">
-                <p>Android</p>
-            </div>
-        </div> 
-    </section>
- -->
-
-    <!-------------- 
-        PROJECTS 
-    -------------->
-    <!-- <section id="projects">
-        <div class="title">
-            <h3>Projects<span class="shadow">!</span></h3>
-        </div>
-        <div class="content-block">
-            <div class="container">
-                <div class="project">
-                    <div class="card">
+                <!-- THORRELLT.COM -->
+                <!-- THORRELLT.COM -->
+                <div class="flex-container">
+                    <div class="project left-side">
+                    
+                        <!-- Project Image -->
                         <a href="https://github.com/thorrellt/thorrellt-portfolio" class="repo" target="_blank" rel="noopener noreferrer" title="Visit repo for thorrellt.com">
                         <img src="images/img-thorrellt-banner.jpeg" alt="banner image for my personal website project">
                         </a>
-                        <div class="link">
-                            <a href="https://github.com/thorrellt/thorrellt-portfolio" class="repo" target="_blank" rel="noopener noreferrer" >Repository</a>
-                        </div>
-                    </div>
-        
-                    <div class="details">
-                        <div class="desc">
-                            <h4 class="title">THORRELLT.COM</h4>
-
+                    
+                        <div class="description">
+                    
                             <p class="desc">This is, of course, my portfolio website. Outside of the standard front-end stack, I used SCSS to style my code. This served as my first project I created with the intentions of going live with it. </p>
-
-                            <p class="lessons">Some Key Takeaways</p>
-
+                            <h4 class="lessons">Some Key Takeaways</h4>
                             <ul>
                                 <li>
-                                    <span>SCSS </span> First time using SCSS to write more organized &amp; maintainable code. 
+                                    <span>SCSS </span> First time using SCSS to write more organized &amp; maintainable code.
                                 </li>
                                 <li>
-                                    <span>Layouts </span> Strengthened my familiarity with CSS layouts &amp; display properties. 
+                                    <span>Layouts </span> Strengthened my familiarity with CSS layouts &amp; display properties.
                                 </li>
                                 <li>
-                                    <span>DOM Manipulation </span> Built upon my JS knowledge &amp; ability to interact with DOM. 
+                                    <span>DOM Manipulation </span> Built upon my JS knowledge &amp; ability to interact with DOM.
                                 </li>
                             </ul>
+                    
                         </div>
-
                         <div class="stack">
                             <div class="icon">
                                 <img src="images/logo-html-plain.svg" alt="HTML Icon" title="HTML">
@@ -381,44 +187,47 @@
                             <div class="icon">
                                 <img src="images/logo-sass-plain.svg" alt="SASS Icon" title="SASS">
                             </div>
-                        </div>  
-                    </div>
-                </div> 
-             
-            </div>
-
-            <div class="container">
-                <div class="project">
-                    <div class="card">
-                        <a href="https://github.com/thorrellt/care-corner" class="repo" target="_blank" rel="noopener noreferrer" title="Visit repo for care corner">
-                        <img src="images/img-care-corner-banner.jpeg" alt="banner image for the care corner project">
-                        </a>
-                        <div class="link">
-                            <a href="https://github.com/thorrellt/care-corner" class="repo" target="_blank" rel="noopener noreferrer">Repository</a>
+                        </div>
+                    
+                        <div class="more-info">
+                            <a href="https://github.com/thorrellt/thorrellt-portfolio" target="_blank" rel="noopener noreferrer">
+                                <button class = "gh-btn" alt="Link to projects gitHub Page" title="github.com/thorrellt/thorrellt-portfolio">
+                                    <span>MORE INFO</span>
+                    
+                                    <img src="images/icon-gh.svg" alt="github">
+                                </button>
+                            </a>
                         </div>
                     </div>
-        
-                    <div class="details">
-                        <div class="desc">
-                            <h4 class="title">CARE CORNER</h4>
-
+                </div>
+                
+                
+                <!-- CARE CORNER -->
+                <!-- CARE CORNER -->
+                <div class="flex-container">
+                    <div class="project right-side">
+                    
+                        <!-- Project Banner -->
+                        <a href="https://github.com/thorrellt/care-corner" class="repo" target="_blank" rel="noopener noreferrer" title="Visit repo for care corner">
+                            <img src="images/img-care-corner-banner.jpeg" alt="banner image for the care corner project">
+                        </a>
+                    
+                        <div class="description">
+                    
                             <p class="desc">Care Corner is an Android application that served as the senior team project for my CS degree. This prototype served as my team&apos;s proof of concept for our application designed to increase the user&apos;s safety</p>
-
-                            <p class="lessons">Some Key Takeaways</p>
-
+                            <h4 class="lessons">Some Key Takeaways</h4>
                             <ul>
                                 <li>
-                                    <span>Android Development </span> Taught myself Android development independent of class curriculum. 
+                                    <span>Android Development </span> Taught myself Android development independent of class curriculum.
                                 </li>
                                 <li>
-                                    <span>API Integration </span> Integrated the HERE API to build our mapping features. 
+                                    <span>API Integration </span> Integrated the HERE API to build our mapping features.
                                 </li>
                                 <li>
                                     <span>Leadership </span> Served as the organizational head &amp; team lead of the project.
                                 </li>
                             </ul>
                         </div>
-
                         <div class="stack">
                             <div class="icon">
                                 <img src="images/logo-android-plain.svg" alt="Android Logo" title="Android">
@@ -432,11 +241,134 @@
                             <div class="icon">
                                 <img src="images/logo-docker-plain.svg" alt="Docker Icon" title="Docker">
                             </div>
-                        </div>  
+                        </div>
+                    
+                        <div class="more-info">
+                            <a href="https://github.com/thorrellt/care-corner" target="_blank" rel="noopener noreferrer">
+                                <button class = "gh-btn" alt="Link to projects gitHub Page" title="github.com/thorrellt/care-corner">
+                                    <span>MORE INFO</span>
+                    
+                                    <img src="images/icon-gh.svg" alt="github">
+                                </button>
+                            </a>
+                        </div>
                     </div>
-                </div> 
-             
+                </div>
+
+
+
+
+                <!-- ORDERS API -->
+                <!-- ORDERS API -->
+                <div class="flex-container">
+                    <div class="project left-side">
+                    
+                        <!-- Project Banner -->
+                        <a href="https://github.com/thorrellt/order-management-api" class="repo" target="_blank" rel="noopener noreferrer" title="Visit repo for the order management API">
+                            <img src="images/img-api-banner.jpeg" alt="banner image for the Order Managament Rest API project">
+                        </a>
+                    
+                        <div class="description">
+                    
+                            <p class="desc">This is a basic Node.js RESTful API modeled after an order management system. This API handles GET, PATCH, PULL, &amp; DELETE requests for Orders, Products, &amp; Users. Data is stored in a MongoDB Atlas database.</p>
+                            <h4 class="lessons">Some Key Takeaways</h4>
+                            <ul>
+                                <li>
+                                    <span>Node.js </span> Served as my intro to Node.js &sol; Express&apos; basic capabilities &amp; some of its related packages.
+                                </li>
+                                <li>
+                                    <span>MongoDB </span> Refined knowledge of NoSQL fundamentals &amp; served as an intro to related tools such as MongoDB&apos;s cloud platform Atlas, &amp; both the Mongoose &amp; Multer packages.
+                                </li>
+                                <li>
+                                    <span>REST </span> Learned the RESTful style of design &sol; architecture as well as the constraints all REST services should adhere to.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="stack">
+                            <div class="icon">
+                                <img src="images/logo-nodejs-plain.svg" alt="Node.JS Icon" title="Node.JS">
+                            </div>
+                            <div class="icon">
+                                <img src="images/logo-javascript-plain.svg" alt="Javascript Icon" title="Javascript">
+                            </div>
+                            <div class="icon">
+                                <img src="images/logo-mongodb-plain.svg" alt="MongoDB Icon" title="MongoDB">
+                            </div>
+                        </div>
+                    
+                        <div class="more-info">
+                            <a href="https://github.com/thorrellt/order-management-api" target="_blank" rel="noopener noreferrer">
+                                <button class = "gh-btn" alt="Link to projects gitHub Page" title="github.com/thorrellt/order-management-api">
+                                    <span>MORE INFO</span>
+                    
+                                    <img src="images/icon-gh.svg" alt="github">
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!-- PRACTICE PORTFOLIO -->
+                <!-- PRACTICE PORTFOLIO -->
+                <div class="flex-container">
+                    <div class="project right-side">
+                    
+                        <!-- Project Banner -->
+                        <a href="https://github.com/thorrellt/web-dev-portfolio" class="repo" target="_blank" rel="noopener noreferrer" title="Visit repo for the web developer portfolio">
+                            <img src="images/img-web-dev-banner.jpeg" alt="banner image for the Order Managament Rest API project">
+                        </a>
+                    
+                        <div class="description">
+                    
+                            <p class="desc">This is a basic Web Developer Portfolio. This is written in HTML, CSS &amp; JS. This project strengthened my understanding of code structure &amp; use. In the end, it ultimately became a sandbox for me to experiment in.</p>
+                            <h4 class="lessons">Some Key Takeaways</h4>
+                            <ul>
+                                <li>
+                                    <span>Code Structure &amp; Application </span> Provided me perspective for how I would approach future projects was gained by observing how this was structured, why it was written a certain way, &amp; the logic behind the decisions.
+                                </li>
+                                <li>
+                                    <span>Responsive Design: </span> Media queries were used to approach how the page is displayed on varying screen sizes. A lot was gained by viewing how these attributes altered the appearance &amp; layout of the page.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="stack">
+                            <div class="icon">
+                                <img src="images/logo-html-plain.svg" alt="HTML Icon" title="HTML">
+                            </div>
+                            <div class="icon">
+                                <img src="images/logo-css-plain.svg" alt="CSS Icon" title="CSS">
+                            </div>
+                            <div class="icon">
+                                <img src="images/logo-javascript-plain.svg" alt="JavaScript Icon" title="JavaScript">
+                            </div>
+                        </div>
+                        <div class="more-info">
+                            <a href="https://github.com/thorrellt/web-dev-portfolio" target="_blank" rel="noopener noreferrer">
+                                <button class = "gh-btn" title="github.com/thorrellt/web-dev-portfolio">
+                                    <span>MORE INFO</span>
+                    
+                                    <img src="images/icon-gh.svg" alt="github" >
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
+
+    </div>
+
+
+
+
+    <!-------------- 
+        PROJECTS 
+    -------------->
+    <!-- <section id="projects">
+       
             <div class="container">
                 <div class="project">
                     <div class="card">
