@@ -273,6 +273,7 @@ header #introduction .container p {
   font-size: 1.25rem;
   font-weight: bold;
   color: #205a58;
+  width: 30ch;
 }
 header #introduction .container #btn-cv {
   font-family: "IBM Plex Sans", sans-serif;

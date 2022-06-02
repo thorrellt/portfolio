@@ -1,35 +1,64 @@
+@import "./globals";
+
 /**************
     TABLET
  **************/
 @media all and (max-width: 900px){
 
+    body {
 
+        #introduction {    
+            .container{
+                top: 30%;
+                               
+            }
+        }
+        #profile-picture {
+        justify-content:left;
+                
+            img {
+                height: 80vw;
+                
+            }
+        }
 
-    /* NAV BAR */
-    nav{
-      padding: 5px 30px;
-      align-items: flex-start;
-      background-color: #3AAFA9;
+        #about-me {
+            padding-inline: 0;
+            
+            article{
+                padding-inline: 0;
+            }
+        }
+    
+        
+    
+        /* NAV BAR */
+        nav{
+          padding: 5px 30px;
+          align-items: flex-start;
+          background-color: #3AAFA9;
+        }
+        nav ul .nav-item{
+          width: 100%;
+          padding: 1rem .5rem;
+          display: none;
+        }
+        nav ul .nav-item.show{
+          display: block;
+        }
+        nav ul li.btn{
+          display: block;
+          padding: 1rem 1rem;
+          border: none;
+        }
+        /* nav ul .nav-item:hover{
+          border-radius: 5px;
+          box-shadow: inset 0 0 5px #33ffff,
+                      inset 0 0 10px #66ffff;
+        } */
+        nav ul nav-item:hover:after{
+          opacity: 0;
+        }
     }
-    nav ul .nav-item{
-      width: 100%;
-      padding: 1rem .5rem;
-      display: none;
-    }
-    nav ul .nav-item.show{
-      display: block;
-    }
-    nav ul li.btn{
-      display: block;
-      padding: 1rem 1rem;
-      border: none;
-    }
-    /* nav ul .nav-item:hover{
-      border-radius: 5px;
-      box-shadow: inset 0 0 5px #33ffff,
-                  inset 0 0 10px #66ffff;
-    } */
-    nav ul nav-item:hover:after{
-      opacity: 0;
-    }
+    
 }

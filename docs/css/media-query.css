@@ -1,36 +1,202 @@
+/* RESET RULE */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100 vh;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+/**************
+   VARIABLES
+**************/
+/**************
+   MIX-INS
+**************/
+/**************
+   TYPOGRAPHY
+ **************/
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.75rem;
+  font-weight: 900;
+  color: #17252A;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+  color: #17252A;
+  grid-column: 1/-1;
+  grid-row: span 1;
+  margin-block: 3rem;
+  text-align: center;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.375rem;
+  letter-spacing: 0.1rem;
+  font-weight: 900;
+  color: #17252A;
+  padding-inline: 0.75rem;
+  margin-block-end: 1rem;
+}
+
+h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  color: #17252A;
+  margin-block: 1rem;
+}
+
+h5 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: clamp(1.1rem, 2rem, 1.4vw);
+  font-weight: 600;
+  color: #FEFFFF;
+}
+
+p {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.125rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.03rem;
+  font-weight: 500;
+  color: #2B7A78;
+}
+
+/**************
+   BACKGROUND
+ **************/
+#video-bg {
+  position: fixed;
+  z-index: -2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.color-screen {
+  position: fixed;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  background: rgba(23, 37, 42, 0.6);
+}
+
+section,
+.main-block {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content-block {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  overflow: hidden;
+}
+
+.title {
+  margin-block: 1vh;
+  border-bottom: 0.2rem solid;
+}
+
+.shadow {
+  text-shadow: 0.25rem 0.125rem #9B1D20;
+  -webkit-text-stroke-width: 1px;
+  -moz-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  -moz-text-stroke-color: white;
+  color: transparent;
+}
+
+.drop-shadow {
+  float: right;
+}
+
+.typed {
+  animation: typing 2s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
 /**************
     TABLET
  **************/
 @media all and (max-width: 900px) {
-  /* NAV BAR */
-  nav {
+  body {
+    /* NAV BAR */
+    /* nav ul .nav-item:hover{
+      border-radius: 5px;
+      box-shadow: inset 0 0 5px #33ffff,
+                  inset 0 0 10px #66ffff;
+    } */
+  }
+  body #introduction .container {
+    top: 30%;
+  }
+  body #profile-picture {
+    justify-content: left;
+  }
+  body #profile-picture img {
+    height: 80vw;
+  }
+  body #about-me {
+    padding-inline: 0;
+  }
+  body #about-me article {
+    padding-inline: 0;
+  }
+  body nav {
     padding: 5px 30px;
     align-items: flex-start;
     background-color: #3AAFA9;
   }
-
-  nav ul .nav-item {
+  body nav ul .nav-item {
     width: 100%;
     padding: 1rem 0.5rem;
     display: none;
   }
-
-  nav ul .nav-item.show {
+  body nav ul .nav-item.show {
     display: block;
   }
-
-  nav ul li.btn {
+  body nav ul li.btn {
     display: block;
     padding: 1rem 1rem;
     border: none;
   }
-
-  /* nav ul .nav-item:hover{
-    border-radius: 5px;
-    box-shadow: inset 0 0 5px #33ffff,
-                inset 0 0 10px #66ffff;
-  } */
-  nav ul nav-item:hover:after {
+  body nav ul nav-item:hover:after {
     opacity: 0;
   }
 }

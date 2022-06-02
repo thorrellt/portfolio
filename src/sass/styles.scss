@@ -1,5 +1,6 @@
 @import "./globals";
 
+
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&family=Montserrat:wght@700;800;900&display=swap');
 
 
@@ -152,7 +153,8 @@
             p{
                 font-size: 1.25rem;
                 font-weight: bold;
-                color: $neutral-dark-gray-700; 
+                color: $neutral-dark-gray-700;
+                width: 30ch;
             }
     
             #btn-cv {
@@ -1240,6 +1242,8 @@ footer {
 nav ul .btn.hide i:before{
     content: '\f00d';
   }
+
+
 
 
 
