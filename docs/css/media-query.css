@@ -204,17 +204,17 @@ section,
      MOBILE
  **************/
 @media all and (max-width: 500px) {
-  header {
+  body header {
     grid-template-columns: 1fr;
     grid-template-rows: 50vh 50vh;
   }
-  header #introduction {
+  body header #introduction {
     flex-direction: column-reverse;
     height: 100%;
     align-self: flex-start;
     justify-self: flex-start;
   }
-  header #introduction .container {
+  body header #introduction .container {
     position: static;
     transform: translate(0, 0);
     display: flex;
@@ -224,38 +224,64 @@ section,
     margin-inline-start: 2rem;
     margin-block-end: 1rem;
   }
-  header #introduction .container h1 {
+  body header #introduction .container h1 {
     font-size: 3rem;
   }
-  header #introduction .container p {
+  body header #introduction .container p {
     font-size: 1rem;
   }
-  header #introduction .container #desktop-cv {
+  body header #introduction .container #desktop-cv {
     visibility: hidden;
     position: absolute;
   }
-  header #introduction #contacts {
+  body header #introduction #contacts {
     position: absolute;
     top: 0%;
     height: fit-content;
   }
-  header #introduction #contacts a img {
+  body header #introduction #contacts a img {
     width: 2.75rem;
   }
-  header #profile-picture #mobile-cv {
+  body header #profile-picture #mobile-cv {
     visibility: visible;
     z-index: 1;
   }
-  header #profile-picture #mobile-cv .btn-cv {
+  body header #profile-picture #mobile-cv .btn-cv {
     margin-block-start: 1rem;
     margin-inline-start: 1.5rem;
   }
-  header #profile-picture img {
+  body header #profile-picture img {
     position: absolute;
     bottom: 0%;
     right: 0%;
     transform: translate(18%, 0%) scaleX(-1);
     height: 48%;
     z-index: 0;
+  }
+  body #about-me .grid-container {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 1rem;
+  }
+  body #about-me h2 {
+    margin-block-start: 2rem;
+    margin-block-end: 0.5rem;
+  }
+  body #about-me h3 {
+    margin-block-end: 0;
+  }
+  body #about-me #skills {
+    margin-block-start: 2rem;
+  }
+  body #about-me #skills #skills-icons .icon-container {
+    flex: 1 0 50%;
+    margin-block-start: 0.5rem;
+    margin-block-end: 0;
+  }
+  body #about-me #education {
+    margin-block-start: 2rem;
+  }
+  body #about-me #education #degree {
+    margin-block-start: 0.5rem;
   }
 }
