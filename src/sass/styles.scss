@@ -3,7 +3,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&family=Montserrat:wght@700;800;900&display=swap');
 
-
+body{
+   
+}
 
 /**************
     NAV BAR
@@ -357,10 +359,7 @@ section{
         flex-wrap: wrap;
         justify-content: space-between;
 
-        // display: grid;
-        // grid-template-columns: repeat(12, 1fr);
-        // grid-template-rows: 1fr;
-        // grid-row-gap: 5rem;
+        max-width: 100%;
 
         .flex-container {
             display: flex;
