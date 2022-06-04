@@ -339,6 +339,7 @@ header #profile-picture img {
 }
 header #profile-picture #mobile-cv {
   visibility: hidden;
+  position: absolute;
 }
 
 /***************
