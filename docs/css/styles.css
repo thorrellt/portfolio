@@ -275,24 +275,6 @@ header #introduction .container p {
   color: #205a58;
   width: 30ch;
 }
-header #introduction .container #btn-cv {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: clamp(1.1rem, 2rem, 1.4vw);
-  font-weight: 600;
-  color: #FEFFFF;
-  font-size: 1rem;
-  border-radius: 50em;
-  height: fit-content;
-  width: fit-content;
-  letter-spacing: 0.2rem;
-  margin-block: 2rem;
-  padding-block: 1rem;
-  padding-inline: 1.5rem;
-  background-color: #9B1D20;
-}
-header #introduction .container #btn-cv:hover {
-  cursor: pointer;
-}
 header #introduction #contacts {
   align-self: flex-end;
   justify-self: flex-end;
@@ -323,6 +305,24 @@ header #introduction #contacts a img {
   flex-grow: 1;
   width: 2.25rem;
 }
+header .btn-cv {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: clamp(1.1rem, 2rem, 1.4vw);
+  font-weight: 600;
+  color: #FEFFFF;
+  font-size: 1rem;
+  border-radius: 50em;
+  height: fit-content;
+  width: max-content;
+  letter-spacing: 0.2rem;
+  margin-block: 2rem;
+  padding-block: 1rem;
+  padding-inline: 1.5rem;
+  background-color: #9B1D20;
+}
+header .btn-cv:hover {
+  cursor: pointer;
+}
 header #profile-picture {
   display: flex;
   flex: 1 0 50%;
@@ -335,7 +335,13 @@ header #profile-picture img {
   align-self: flex-end;
   transform: scaleX(-1);
   filter: drop-shadow(7px 7px 7px #2B7A78);
+  margin-inline-start: 12rem;
+  margin-inline-end: auto;
   z-index: 0;
+}
+header #profile-picture #mobile-cv {
+  visibility: hidden;
+  position: absolute;
 }
 
 /***************
@@ -359,11 +365,10 @@ section {
 #about-me article {
   grid-column: 2/6;
   grid-row: span 1;
-  padding-inline: 1rem;
 }
 #about-me #skills {
   grid-column: 7/12;
-  grid-row: span 2;
+  grid-row: span 3;
 }
 #about-me #skills #skills-icons {
   display: flex;
@@ -395,7 +400,6 @@ section {
 #about-me #education #degree {
   display: flex;
   flex-wrap: wrap;
-  padding-inline: 1rem;
 }
 #about-me #education #degree #degree-type,
 #about-me #education #degree #college-name {
