@@ -193,8 +193,11 @@ section,
   body #about-me #skills {
     grid-column: 7/13;
   }
+  body #projects .grid-container .flex-container {
+    margin-inline: 16px;
+  }
   body #projects .grid-container .flex-container .project {
-    min-width: 480px;
+    min-width: 460px;
   }
   body #projects .grid-container .flex-container .project .description {
     margin-inline-start: 1rem;
@@ -288,16 +291,19 @@ section,
     z-index: 1;
   }
   body header #profile-picture #mobile-cv .btn-cv {
+    position: absolute;
+    top: 0%;
+    left: 0%;
     margin-block-start: 1rem;
-    margin-inline-start: 1.5rem;
+    margin-inline-start: 1rem;
   }
   body header #profile-picture img {
-    position: absolute;
-    bottom: 0%;
-    right: 0%;
     transform: translate(18%, 0%) scaleX(-1);
-    height: 48%;
+    height: 95%;
     z-index: 0;
+    align-self: flex-end;
+    margin-inline-start: auto;
+    margin-inline-end: 0;
   }
   body h2 {
     margin-block-start: 2rem;
@@ -327,9 +333,11 @@ section,
   }
   body #projects .grid-container .flex-container {
     flex-basis: 100%;
+    margin-inline: 0;
   }
   body #projects .grid-container .flex-container .project {
     min-width: 95vw;
+    max-width: 95vw;
   }
   body #projects .grid-container .flex-container .project .repo {
     grid-column: 1/-1;
