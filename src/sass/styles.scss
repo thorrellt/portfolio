@@ -223,6 +223,8 @@
             align-self: flex-end;
             transform: scaleX(-1); //flip image
             filter: drop-shadow(7px 7px 7px $neutral-dark-gray);
+            margin-inline-start: 12rem;
+            margin-inline-end: auto;
             z-index: 0;
         }
 
