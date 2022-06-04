@@ -200,3 +200,62 @@ section,
     opacity: 0;
   }
 }
+/**************
+     MOBILE
+ **************/
+@media all and (max-width: 500px) {
+  header {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50vh 50vh;
+  }
+  header #introduction {
+    flex-direction: column-reverse;
+    height: 100%;
+    align-self: flex-start;
+    justify-self: flex-start;
+  }
+  header #introduction .container {
+    position: static;
+    transform: translate(0, 0);
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    justify-content: flex-end;
+    margin-inline-start: 2rem;
+    margin-block-end: 1rem;
+  }
+  header #introduction .container h1 {
+    font-size: 3rem;
+  }
+  header #introduction .container p {
+    font-size: 1rem;
+  }
+  header #introduction .container #desktop-cv {
+    visibility: hidden;
+    position: absolute;
+  }
+  header #introduction #contacts {
+    position: absolute;
+    top: 0%;
+    height: fit-content;
+  }
+  header #introduction #contacts a img {
+    width: 2.75rem;
+  }
+  header #profile-picture #mobile-cv {
+    visibility: visible;
+    z-index: 1;
+  }
+  header #profile-picture #mobile-cv .btn-cv {
+    margin-block-start: 1rem;
+    margin-inline-start: 1.5rem;
+  }
+  header #profile-picture img {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    transform: translate(18%, 0%) scaleX(-1);
+    height: 48%;
+    z-index: 0;
+  }
+}

@@ -157,23 +157,10 @@
                 width: 30ch;
             }
     
-            #btn-cv {
-                @include h5();
-                font-size: 1rem;
-                border-radius: 50em;
-                height: fit-content;
-                width: fit-content;
-                letter-spacing: .2rem;
-                margin-block: 2rem;
-                padding-block: 1rem;
-                padding-inline: 1.5rem;
-                background-color: $tert-500;
-
-                &:hover{
-                    cursor: pointer;
-                }
-            }
+            
         }
+
+        
 
         #contacts{
             align-self: flex-end;
@@ -207,6 +194,23 @@
         }
     }
     
+    .btn-cv {
+        @include h5();
+        font-size: 1rem;
+        border-radius: 50em;
+        height: fit-content;
+        width: max-content;
+        letter-spacing: .2rem;
+        margin-block: 2rem;
+        padding-block: 1rem;
+        padding-inline: 1.5rem;
+        background-color: $tert-500;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
     #profile-picture {
         display: flex;
         flex: 1 0 50%;
@@ -220,6 +224,10 @@
             transform: scaleX(-1); //flip image
             filter: drop-shadow(7px 7px 7px $neutral-dark-gray);
             z-index: 0;
+        }
+
+        #mobile-cv {
+            visibility: hidden;
         }
     }
 }

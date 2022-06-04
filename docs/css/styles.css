@@ -275,24 +275,6 @@ header #introduction .container p {
   color: #205a58;
   width: 30ch;
 }
-header #introduction .container #btn-cv {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: clamp(1.1rem, 2rem, 1.4vw);
-  font-weight: 600;
-  color: #FEFFFF;
-  font-size: 1rem;
-  border-radius: 50em;
-  height: fit-content;
-  width: fit-content;
-  letter-spacing: 0.2rem;
-  margin-block: 2rem;
-  padding-block: 1rem;
-  padding-inline: 1.5rem;
-  background-color: #9B1D20;
-}
-header #introduction .container #btn-cv:hover {
-  cursor: pointer;
-}
 header #introduction #contacts {
   align-self: flex-end;
   justify-self: flex-end;
@@ -323,6 +305,24 @@ header #introduction #contacts a img {
   flex-grow: 1;
   width: 2.25rem;
 }
+header .btn-cv {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: clamp(1.1rem, 2rem, 1.4vw);
+  font-weight: 600;
+  color: #FEFFFF;
+  font-size: 1rem;
+  border-radius: 50em;
+  height: fit-content;
+  width: max-content;
+  letter-spacing: 0.2rem;
+  margin-block: 2rem;
+  padding-block: 1rem;
+  padding-inline: 1.5rem;
+  background-color: #9B1D20;
+}
+header .btn-cv:hover {
+  cursor: pointer;
+}
 header #profile-picture {
   display: flex;
   flex: 1 0 50%;
@@ -336,6 +336,9 @@ header #profile-picture img {
   transform: scaleX(-1);
   filter: drop-shadow(7px 7px 7px #2B7A78);
   z-index: 0;
+}
+header #profile-picture #mobile-cv {
+  visibility: hidden;
 }
 
 /***************
