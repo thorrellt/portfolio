@@ -365,11 +365,10 @@ section {
 #about-me article {
   grid-column: 2/6;
   grid-row: span 1;
-  padding-inline: 1rem;
 }
 #about-me #skills {
   grid-column: 7/12;
-  grid-row: span 2;
+  grid-row: span 3;
 }
 #about-me #skills #skills-icons {
   display: flex;
@@ -401,7 +400,6 @@ section {
 #about-me #education #degree {
   display: flex;
   flex-wrap: wrap;
-  padding-inline: 1rem;
 }
 #about-me #education #degree #degree-type,
 #about-me #education #degree #college-name {
