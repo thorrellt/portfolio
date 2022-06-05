@@ -5,123 +5,123 @@
  **************/
 @media all and (max-width: 900px){
 
-    body {
+  body {
 
-        #introduction {    
-            .container{
-                top: 30%;
-                               
-            }
+    #introduction {    
+        .container{
+            top: 30%;
+                            
         }
-        #profile-picture {
-        justify-content:left;
-                
-            img {
-                height: 80vw;
-                margin-inline: 0;                
-            }
+    }
+    #profile-picture {
+    justify-content:left;
+            
+        img {
+            height: 80vw;
+            margin-inline: 0;                
+        }
+    }
+
+
+    #about-me {
+        padding-inline: 2rem;
+        
+        article{
+            padding-inline: 0;
+            grid-column: 1 / 6;
         }
 
-        #about-me {
-            padding-inline: 2rem;
-            
-            
-            article{
-                padding-inline: 0;
-                grid-column: 1 / 6;
-            }
+        #education {
+          grid-column: 1 / 6;
+          margin-block-start:1.5rem;
 
-            #education {
-              grid-column: 1 / 6;
-              margin-block-start:1.5rem;
+          h3 {
+            margin-block-end: 0;
+          }
 
-              h3 {
+          #degree {
+            margin-block-start: .25rem;
+          }
+        }
+
+        #skills{
+          grid-column: 7 / 13;
+        }
+    }
+
+    
+
+    #projects{
+      .grid-container{
+        .flex-container{
+          margin-inline: 16px;
+
+          .project{
+            min-width: 460px;
+
+            .description{
+              margin-inline-start: 1rem;
+              margin-block-start: 1.5rem;
+              margin-block-end: 0rem;
+
+              .desc{
+                padding-inline: .25rem;
                 margin-block-end: 0;
               }
 
-              #degree {
-                margin-block-start: .25rem;
+              h4{
+                margin-block-start: 1.5rem;
+                margin-block-end: 0;
+              }
+
+              ul{
+                margin-block-start: .5rem;
               }
             }
 
-            #skills{
-              grid-column: 7 / 13;
-            }
-        }
+            .more-info{
+              margin-block: 1.5rem;
 
-        
-
-        #projects{
-          .grid-container{
-            .flex-container{
-              margin-inline: 16px;
-              .project{
-
-                min-width: 460px;
-
-                .description{
-                  margin-inline-start: 1rem;
-                  margin-block-start: 1.5rem;
-                  margin-block-end: 0rem;
-
-                  .desc{
-                    padding-inline: .25rem;
-                    margin-block-end: 0;
-                  }
-
-                  h4{
-                    margin-block-start: 1.5rem;
-                    margin-block-end: 0;
-                  }
-
-                  ul{
-                    margin-block-start: .5rem;
-                  }
-                }
-
-                .more-info{
-                  margin-block: 1.5rem;
-
-                  a {
-                    margin-block-end: 0;
-                  }
-                }
+              a {
+                margin-block-end: 0;
               }
             }
           }
         }
-        
-    
-        
-    
-        /* NAV BAR */
-        nav{
-          padding: 5px 30px;
-          align-items: flex-start;
-          background-color: #3AAFA9;
-        }
-        nav ul .nav-item{
-          width: 100%;
-          padding: 1rem .5rem;
-          display: none;
-        }
-        nav ul .nav-item.show{
-          display: block;
-        }
-        nav ul li.btn{
-          display: block;
-          padding: 1rem 1rem;
-          border: none;
-        }
-        /* nav ul .nav-item:hover{
-          border-radius: 5px;
-          box-shadow: inset 0 0 5px #33ffff,
-                      inset 0 0 10px #66ffff;
-        } */
-        nav ul nav-item:hover:after{
-          opacity: 0;
-        }
+      }
     }
+    
+    /* NAV BAR */
+    nav{
+      padding: 5px 30px;
+      align-items: flex-start;
+      width: fit-content;
+      min-height: 4rem;
+      height: fit-content;
+    }
+    nav ul .nav-item{
+      width: 100%;
+      padding: 1rem .5rem;
+      display: none;
+    }
+    nav ul .nav-item.show{
+      display: block;
+    }
+    nav ul li.btn{
+      display: block;
+      padding: 1rem 1rem;
+      border: none;
+      // left: 0px;
+    }
+    /* nav ul .nav-item:hover{
+      border-radius: 5px;
+      box-shadow: inset 0 0 5px #33ffff,
+                  inset 0 0 10px #66ffff;
+    } */
+    nav ul nav-item:hover:after{
+      opacity: 0;
+    }
+  }
     
 }
 

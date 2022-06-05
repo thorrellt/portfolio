@@ -195,7 +195,7 @@ nav ul li {
   cursor: pointer;
 }
 nav ul li a {
-  color: white;
+  color: #FEFFFF;
   position: relative;
   font-size: 1.5rem;
   font-weight: 700;
@@ -242,6 +242,13 @@ nav ul .nav-item:after {
   background: #FEFFFF;
   opacity: 0;
   transition: all 0.2s linear;
+}
+nav ul .btn {
+  color: #FEFFFF;
+}
+nav ul .btn i {
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 /************************
