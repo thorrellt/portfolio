@@ -93,7 +93,7 @@
     
     /* NAV BAR */
     nav{
-      padding: 5px 30px;
+      padding: 0 2rem;
       align-items: flex-start;
       width: fit-content;
       min-height: 4rem;
@@ -132,6 +132,25 @@
 
 @media all and (max-width: 500px){
   body{
+
+    #nav-bar{
+      padding: 0;
+      width: 100%;
+      
+      #nav-list{
+        width: 100%;
+
+        .btn.hide{
+          background-color: transparent;
+        }
+      }
+      
+      #nav-hamburger{
+        z-index: 2;
+        background-color: $sec-transparent;
+      }
+    }
+    
     header {
       grid-template-columns: 1fr;
       grid-template-rows: 50vh 50vh;
