@@ -316,13 +316,8 @@ section,
     margin-inline-start: 1rem;
   }
   body header #profile-picture img {
-<<<<<<< HEAD
     transform: translate(18%, 0%);
     height: 65vh;
-=======
-    transform: translate(18%, 0%) scaleX(-1);
-    height: 95%;
->>>>>>> fc17f3cf365c8e7e14ec641bb2f8496065042aab
     z-index: 0;
     align-self: flex-end;
     margin-inline-start: auto;
