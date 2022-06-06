@@ -240,6 +240,7 @@ section,
     display: block;
     padding: 1rem 1rem;
     border: none;
+    filter: drop-shadow(0px 0px 7px #17252A);
   }
   body nav ul nav-item:hover:after {
     opacity: 0;
@@ -261,7 +262,8 @@ section,
   }
   body #nav-bar #nav-hamburger {
     z-index: 2;
-    background-color: rgba(58, 175, 169, 0.7);
+    color: #3AAFA9;
+    filter: drop-shadow(0px 0px 16px #17252A);
   }
   body header {
     grid-template-columns: 1fr;
@@ -304,7 +306,7 @@ section,
   }
   body header #profile-picture #mobile-cv {
     visibility: visible;
-    z-index: 1;
+    z-index: 2;
   }
   body header #profile-picture #mobile-cv .btn-cv {
     position: absolute;
@@ -314,8 +316,8 @@ section,
     margin-inline-start: 1rem;
   }
   body header #profile-picture img {
-    transform: translate(18%, 0%) scaleX(-1);
-    height: 95%;
+    transform: translate(18%, 0%);
+    height: 65vh;
     z-index: 0;
     align-self: flex-end;
     margin-inline-start: auto;

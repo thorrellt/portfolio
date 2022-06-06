@@ -158,7 +158,7 @@ section,
 nav {
   display: flex;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   min-width: fit-content;
   width: 48%;
   height: 5rem;
@@ -260,6 +260,7 @@ header {
   grid-template-columns: repeat(2, 1fr);
   min-height: 100vh;
   min-width: 100%;
+  overflow: hidden;
   /* outline: green solid 3px; */
 }
 header #introduction {
@@ -273,7 +274,7 @@ header #introduction .container {
   left: 45%;
   transform: translate(-50%, -50%);
   height: fit-content;
-  z-index: 1;
+  z-index: 2;
 }
 header #introduction .container h1 {
   line-height: 3.5rem;
@@ -340,12 +341,11 @@ header #profile-picture {
   flex: 1 0 50%;
   background-color: #3AAFA9;
   justify-content: center;
-  overflow: hidden;
+  overflow: visible;
 }
 header #profile-picture img {
-  height: 90%;
+  height: 90vh;
   align-self: flex-end;
-  transform: scaleX(-1);
   filter: drop-shadow(7px 7px 7px #2B7A78);
   margin-inline-start: 12rem;
   margin-inline-end: auto;
