@@ -93,10 +93,9 @@
     
     /* NAV BAR */
     nav{
-      padding: 0 2rem;
       align-items: flex-start;
-      width: fit-content;
-      min-height: 4rem;
+      width: 49vw;
+      min-width: min-content;
       height: fit-content;
     }
     nav ul .nav-item{
@@ -112,6 +111,7 @@
       padding: 1rem 1rem;
       border: none;
       filter: drop-shadow(0px 0px 7px $neutral-black);
+      z-index: 2;
       // left: 0px;
     }
     /* nav ul .nav-item:hover{
