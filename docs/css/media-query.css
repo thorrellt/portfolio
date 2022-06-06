@@ -193,8 +193,11 @@ section,
   body #about-me #skills {
     grid-column: 7/13;
   }
+  body #projects .grid-container .flex-container {
+    margin-inline: 16px;
+  }
   body #projects .grid-container .flex-container .project {
-    min-width: 480px;
+    min-width: 460px;
   }
   body #projects .grid-container .flex-container .project .description {
     margin-inline-start: 1rem;
@@ -219,9 +222,11 @@ section,
     margin-block-end: 0;
   }
   body nav {
-    padding: 5px 30px;
+    padding: 0 2rem;
     align-items: flex-start;
-    background-color: #3AAFA9;
+    width: fit-content;
+    min-height: 4rem;
+    height: fit-content;
   }
   body nav ul .nav-item {
     width: 100%;
@@ -235,6 +240,7 @@ section,
     display: block;
     padding: 1rem 1rem;
     border: none;
+    filter: drop-shadow(0px 0px 7px #17252A);
   }
   body nav ul nav-item:hover:after {
     opacity: 0;
@@ -244,6 +250,21 @@ section,
      MOBILE
  **************/
 @media all and (max-width: 500px) {
+  body #nav-bar {
+    padding: 0;
+    width: 100%;
+  }
+  body #nav-bar #nav-list {
+    width: 100%;
+  }
+  body #nav-bar #nav-list .btn.hide {
+    background-color: transparent;
+  }
+  body #nav-bar #nav-hamburger {
+    z-index: 2;
+    color: #3AAFA9;
+    filter: drop-shadow(0px 0px 16px #17252A);
+  }
   body header {
     grid-template-columns: 1fr;
     grid-template-rows: 50vh 50vh;
@@ -285,19 +306,22 @@ section,
   }
   body header #profile-picture #mobile-cv {
     visibility: visible;
-    z-index: 1;
+    z-index: 2;
   }
   body header #profile-picture #mobile-cv .btn-cv {
+    position: absolute;
+    top: 0%;
+    left: 0%;
     margin-block-start: 1rem;
-    margin-inline-start: 1.5rem;
+    margin-inline-start: 1rem;
   }
   body header #profile-picture img {
-    position: absolute;
-    bottom: 0%;
-    right: 0%;
-    transform: translate(18%, 0%) scaleX(-1);
-    height: 48%;
+    transform: translate(18%, 0%);
+    height: 65vh;
     z-index: 0;
+    align-self: flex-end;
+    margin-inline-start: auto;
+    margin-inline-end: 0;
   }
   body h2 {
     margin-block-start: 2rem;
@@ -327,9 +351,11 @@ section,
   }
   body #projects .grid-container .flex-container {
     flex-basis: 100%;
+    margin-inline: 0;
   }
   body #projects .grid-container .flex-container .project {
     min-width: 95vw;
+    max-width: 95vw;
   }
   body #projects .grid-container .flex-container .project .repo {
     grid-column: 1/-1;
