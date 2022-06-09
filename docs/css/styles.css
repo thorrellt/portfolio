@@ -546,12 +546,17 @@ section {
   grid-column: 1/-1;
   grid-row: span 1;
   display: flex;
+  flex-wrap: wrap;
 }
 #projects .grid-container .project .more-info a {
-  width: fit-content;
+  display: flex;
   align-self: center;
   margin-block-end: 1.5rem;
   margin-inline: auto;
+  align-content: center;
+  justify-content: center;
+  max-width: 40%;
+  min-width: 40%;
 }
 #projects .grid-container .project .more-info a:link {
   text-decoration: none;
@@ -561,7 +566,6 @@ section {
 }
 #projects .grid-container .project .more-info a .gh-btn {
   display: flex;
-  flex: wrap;
   font-family: "IBM Plex Sans", sans-serif;
   font-size: clamp(1.1rem, 2rem, 1.4vw);
   font-weight: 600;
@@ -569,26 +573,30 @@ section {
   font-size: 1rem;
   border-radius: 50em;
   height: fit-content;
+  width: 100%;
   letter-spacing: 0.2rem;
   padding-block: 1rem;
   padding-inline: 1.5rem;
   background-color: #9B1D20;
 }
 #projects .grid-container .project .more-info a .gh-btn span {
-  display: flex;
+  flex: 1 1 80%;
   text-align: center;
   flex-shrink: 0;
-  flex-basis: 75%;
+  flex-basis: 50%;
   min-width: max-content;
   align-self: center;
 }
 #projects .grid-container .project .more-info a .gh-btn img {
   display: flex;
-  flex: 1 1 20%;
+  max-width: 2rem;
   margin-inline: 0.5rem;
 }
 #projects .grid-container .project .more-info a .gh-btn:hover {
   cursor: pointer;
+}
+#projects .grid-container .project .more-info a .live-link {
+  background-color: #3AAFA9;
 }
 #projects .grid-container .left-side {
   grid-column: 2/6;
@@ -597,6 +605,57 @@ section {
 #projects .grid-container .right-side {
   grid-column: 8/12;
   grid-row: span 1;
+}
+
+/**********************
+       FOOTER
+************************/
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #3AAFA9;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  overflow: hidden;
+}
+footer > .container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+footer > .container p {
+  color: white;
+}
+footer > .container p:first-child {
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  text-align: left;
+  font-size: 0.9rem;
+}
+footer > .container p:nth-child(2) {
+  padding-inline-start: 0.25rem;
+  min-width: fit-content;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.1rem;
+}
+footer .contact-icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+}
+footer .contact-icons .container {
+  display: flex;
+  align-items: center;
+}
+footer .contact-icons .container a {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 2rem;
 }
 
 /**************
@@ -1077,56 +1136,6 @@ section {
   min-width: 2rem;
   filter: brightness(0) saturate(100%) invert(53%) sepia(94%) saturate(287%) hue-rotate(128deg) brightness(94%) contrast(88%);
   /* outline: white 3px solid; */
-}
-
-/**********************
-       FOOTER
-************************/
-footer {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-footer > .container {
-  display: flex;
-  flex: 1 1 100%;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-inline: auto;
-}
-footer > .container p {
-  color: white;
-  flex: 1 1 35%;
-}
-footer > .container p:first-child {
-  padding-inline-end: 0.25rem;
-  text-transform: uppercase;
-  letter-spacing: 0.15rem;
-  text-align: right;
-  font-size: 0.9rem;
-}
-footer > .container p:nth-child(2) {
-  padding-inline-start: 0.25rem;
-  min-width: fit-content;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 1.1rem;
-}
-footer .contact-icons {
-  display: flex;
-  flex-wrap: wrap;
-  flex: 1 1 100%;
-  align-items: center;
-  justify-content: center;
-  gap: 5vw;
-}
-footer .contact-icons .container {
-  display: flex;
-  align-items: center;
-}
-footer .contact-icons .container a {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
 }
 
 nav ul .btn.hide i:before {
