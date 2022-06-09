@@ -336,15 +336,23 @@
 
               a{
                 margin-block-end: .75rem;
+                max-width: 48%;
+                min-width: 40%;
+                
+                span{
+                  font-size: .875rem;
+                }
+              }
+
+              .gh-btn{
+                img{
+                  display: none;
+                  position: absolute;
+                }
               }
             }
 
-            .gh-btn{
-              img{
-                display: none;
-                position: absolute;
-              }
-            }
+            
 
 
 
@@ -354,6 +362,14 @@
 
 
       
+    }
+    footer{
+      flex-wrap: wrap;
+      justify-content: center;
+      & > .container{
+        flex-basis: 100%;
+        justify-content: center;
+      }
     }
   }
 }

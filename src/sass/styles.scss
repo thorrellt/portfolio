@@ -566,6 +566,81 @@ section{
  }
  
 
+/**********************
+       FOOTER
+************************/
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: $sec-500;
+    padding-block: .5rem;
+    padding-inline: 1rem;
+    overflow: hidden;
+
+    // outline: 3px red solid;
+    
+    
+
+    & > .container {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+
+
+        
+        p{
+            color: white;
+            
+        }
+    
+        p:first-child {
+            
+            text-transform: uppercase;
+            letter-spacing: .15rem;
+            text-align: left;
+            font-size: clamp(0.9rem, .90rem, 1.15rem);
+            
+        }
+    
+        p:nth-child(2) {
+            padding-inline-start: .25rem;
+            min-width: fit-content;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 1.1rem;
+            
+        }
+
+    }
+
+    .contact-icons {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+ 
+        justify-content: center;
+        gap: 5vw;
+        
+        // outline: white solid 3px;
+
+        .container {
+            display: flex;
+            align-items: center;
+
+            a {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                width: 2rem;
+                
+            }
+        }
+    }
+}
+
+
+
 
 
 
@@ -1214,69 +1289,7 @@ section{
 }
 
 
-/**********************
-       FOOTER
-************************/
-footer {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    
 
-    & > .container {
-        display: flex;
-        flex: 1 1 100%;
-        flex-wrap: wrap;
-        align-items: center;
-        margin-inline: auto;
-
-        p{
-            color: white;
-            flex: 1 1 35%;
-        }
-    
-        p:first-child {
-            padding-inline-end: .25rem;
-            text-transform: uppercase;
-            letter-spacing: .15rem;
-            text-align: right;
-            font-size: clamp(0.9rem, .90rem, 1.15rem);
-            
-        }
-    
-        p:nth-child(2) {
-            padding-inline-start: .25rem;
-            min-width: fit-content;
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 1.1rem;
-            
-        }
-
-    }
-
-    .contact-icons {
-        display: flex;
-        flex-wrap: wrap;
-        flex: 1 1 100%;
-        align-items: center;
-        justify-content: center;
-        gap: 5vw;
-        
-        // outline: white solid 3px;
-
-        .container {
-            display: flex;
-            align-items: center;
-
-            a {
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-                
-            }
-        }
-    }
-}
 
 
 nav ul .btn.hide i:before{
