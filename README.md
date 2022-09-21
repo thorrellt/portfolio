@@ -8,10 +8,11 @@ Welcome to the repo for thorrellt.com. This is written in HTML, CSS, & JS with a
 
 ## Key Takeaways
 
+**SCSS** First time using SCSS to write more organized & maintainable code. I was able to learn and utilize a lot of the core concepts and features SCSS provides.   
 
-**
+**Layouts** I was able to strengthen my familiarity with CSS layouts & display properties because this project did not use any CSS frameworks.  
 
-**
+**DOM Manipulation** Since this project did not use any JS framework, it helped me build upon my JS knowledge & ability to interact with DOM.  
 
 ## As I Continue to Improve Upon This Page, 
 #### I plan to...
